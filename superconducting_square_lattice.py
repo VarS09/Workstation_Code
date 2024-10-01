@@ -15,6 +15,7 @@ import logging
 from jaxlib.xla_extension import XlaRuntimeError
 import time
 import gc
+from numpy import linalg as LA
 #from jax.profiler import start_trace, stop_trace
 
 from jax.lax import dynamic_slice
@@ -151,7 +152,27 @@ def horizontal_10_N_pbc_vec(): #Only applies to a square lattice
 def horizontal_10_NN_pbc_vec(): #Only applies to a square lattice
     return np.pad(np.ones(N),(0,N),'constant') #vector to be placed at k=N*(N-2) in diag matrix because bond is between (i)th and (i+N*(N-2))th sites in a square lattice --> np.abs(N - (n-N*(N-2))) = N
 
-#(GPU diagonalization possible for N = 73, N_diag = 63, n = 3376 with N_repeat = 10 --> Peak memory usage: 16.36/18.18 GB, Time taken to diagonalize Composite Hamiltonian with 3376 sites is 100.6677 s)
+def lorenzian(x, x0, eeta):
+    return (1/np.pi)*(eeta/((x-x0)**2 + eeta**2))
+def lorentzian_LDOS(omega, eeta):
+    def rho(state_val): #state_val corresponds to one energy in [omega-"energy"] --> rho encapsulates the spatial information/lattice sites
+        PA = np.array(eigenstates[:,int(state_val)]).reshape(n,2,2) #This gives [[u_up, u_down], [v_up, v_down]] for each site for the selected energy 
+        #print(PA.shape)
+        PA2 = LA.norm(PA, axis=2)**2 #This gives (|u_i_up|^2 + |u_i_down|^2) --> index 0, and (|v_i_up|^2 + |v_i_down|^2 --> index 1, for each site
+        #print(PA2.shape)
+        PA3 = np.zeros(n)
+        for i in range(n): #i is the site index accessing probability amplitudes/weights at each site (|u_i_up|^2 + |u_i_down|^2), (|v_i_up|^2 + |v_i_down|^2
+            PA3[i] = PA2[i][0]*lorenzian(omega,eigenenergies[state_val],eeta)+PA2[i][1]*lorenzian(omega,eigenenergies[state_val]*(-1),eeta)
+        #print(PA3.shape)
+        return PA3
+    LDOS_for_each_energy = [rho(state_val) for state_val in range(len(eigenenergies))] #This gives the LDOS at each site "i" for each [omega-"energy"] value
+    LDOS = np.sum(np.array(LDOS_for_each_energy), axis=0) #Sum over all energies to get the total LDOS at each site "i"
+    max_val = np.max(LDOS)
+    LDOS = LDOS/max_val #Normalize the LDOS to 1 with the maximum value
+    #print(LDOS.shape) #LDOS is a 1D array with n elements
+    return LDOS
+
+#(GPU diagonalization possible for N = 73, N_diag = 63, n = 3376 with N_repeat = 10 --> Peak memory usage: 16.36/18.18 GB, Time taken for first run with jit to diagonalize Composite Hamiltonian with 3376 sites is 100.6677 s)
 #Can vary N and N_repeat accordingly to GPU diagonalize just a slightly larger lattice 
 #Main code with parameters 
 N = 73 #number of lattice sites in x and y direction
@@ -174,7 +195,7 @@ H_on = np.kron(Z, np.eye(2, 2, k=0)) * (-1*mu)
 H_off_N_int = np.kron(Z, np.eye(2, 2, k=0)) * (1*t_N)
 H_off_NN_int = np.kron(Z, np.eye(2, 2, k=0)) * (1*t_NN)
 
-#Construct the "static" part of the Composite Hamiltonian --> Going beyond 5000 sites
+#Construct the "static" part of the Composite Hamiltonian
 print('Memory before H_comp_upper_off construction:')
 gpu_memory_stats()
 t0 = time.time()
@@ -199,19 +220,20 @@ H_comp_on = jax.device_put(H_comp_on, jax.devices('cpu')[0])
 print('Memory after moving H_comp_on to CPU:')
 gpu_memory_stats()
 
-H_comp_static = H_comp_on+H_comp_off
+H_comp_static = H_comp_on+H_comp_off #H_comp_static is on the CPU
 t1 = time.time()
 print('Memory after H_comp_static construction:')
 gpu_memory_stats()
 print(f'Time taken to construct Composite Hamiltonian with {n} sites is {t1 - t0:.4f} s')
 
-t0 = time.time()
-H_comp_static = jax.device_put(H_comp_static, jax.devices('gpu')[0])
-print('Memory after moving H_comp_static to GPU:')
-gpu_memory_stats()
-eigenvalues, eigenvectors = jnp.linalg.eigh(H_comp_static)
-print('Memory after diagonalization:')
-gpu_memory_stats()
-t1 = time.time()
-print(f'Time taken to diagonalize Composite Hamiltonian with {n} sites is {t1 - t0:.4f} s')
-print('Checkpoint')
+#Testing the limits of GPU Diagonalization with Composite Hamiltonian
+#t0 = time.time()
+#H_comp_static = jax.device_put(H_comp_static, jax.devices('gpu')[0])
+#print('Memory after moving H_comp_static to GPU:')
+#gpu_memory_stats()
+#eigenvalues, eigenvectors = jnp.linalg.eigh(H_comp_static)
+#print('Memory after diagonalization:')
+#gpu_memory_stats()
+#t1 = time.time()
+#print(f'Time taken to diagonalize Composite Hamiltonian with {n} sites is {t1 - t0:.4f} s')
+#print('Checkpoint')
