@@ -152,25 +152,34 @@ def horizontal_10_N_pbc_vec(): #Only applies to a square lattice
 def horizontal_10_NN_pbc_vec(): #Only applies to a square lattice
     return np.pad(np.ones(N),(0,N),'constant') #vector to be placed at k=N*(N-2) in diag matrix because bond is between (i)th and (i+N*(N-2))th sites in a square lattice --> np.abs(N - (n-N*(N-2))) = N
 
-def lorenzian(x, x0, eeta):
+def lorentzian(x, x0, eeta):
     return (1/np.pi)*(eeta/((x-x0)**2 + eeta**2))
-def lorentzian_LDOS(omega, eeta):
-    def rho(state_val): #state_val corresponds to one energy in [omega-"energy"] --> rho encapsulates the spatial information/lattice sites
+def rho(omega, state_val, eeta): #state_val corresponds to one energy in [omega-"energy"] --> rho encapsulates the spatial information/lattice sites
         PA = np.array(eigenstates[:,int(state_val)]).reshape(n,2,2) #This gives [[u_up, u_down], [v_up, v_down]] for each site for the selected energy 
         #print(PA.shape)
         PA2 = LA.norm(PA, axis=2)**2 #This gives (|u_i_up|^2 + |u_i_down|^2) --> index 0, and (|v_i_up|^2 + |v_i_down|^2 --> index 1, for each site
         #print(PA2.shape)
         PA3 = np.zeros(n)
-        for i in range(n): #i is the site index accessing probability amplitudes/weights at each site (|u_i_up|^2 + |u_i_down|^2), (|v_i_up|^2 + |v_i_down|^2
-            PA3[i] = PA2[i][0]*lorenzian(omega,eigenenergies[state_val],eeta)+PA2[i][1]*lorenzian(omega,eigenenergies[state_val]*(-1),eeta)
+        for i in range(n): #i is the site index accessing probability amplitudes/weights at each site (|u_i_up|^2 + |u_i_down|^2), (|v_i_up|^2 + |v_i_down|^2)
+            PA3[i] = PA2[i][0]*lorentzian(omega,eigenenergies[state_val],eeta)+PA2[i][1]*lorentzian(omega,eigenenergies[state_val]*(-1),eeta)
         #print(PA3.shape)
         return PA3
-    LDOS_for_each_energy = [rho(state_val) for state_val in range(len(eigenenergies))] #This gives the LDOS at each site "i" for each [omega-"energy"] value
+def lorentzian_LDOS(omega, eeta):
+    LDOS_for_each_energy = [rho(omega, state_val, eeta) for state_val in range(len(eigenenergies))] #This gives the LDOS at each site "i" for each [omega-"energy"] value
     LDOS = np.sum(np.array(LDOS_for_each_energy), axis=0) #Sum over all energies to get the total LDOS at each site "i"
-    max_val = np.max(LDOS)
-    LDOS = LDOS/max_val #Normalize the LDOS to 1 with the maximum value
-    #print(LDOS.shape) #LDOS is a 1D array with n elements
-    return LDOS
+    LDOS = LDOS/np.max(LDOS) #Normalize the LDOS to 1 with the maximum value
+    #print(LDOS.shape) #LDOS is a 1D array with "n" elements corresponding to total sites "n"
+    return LDOS #--> Pass this 1D LDOS array to a plotter function to plot the LDOS at each site "i" for a given [omega-"energy"] value
+def lorentzian_DOS(eeta):
+    max_energy, min_energy = np.max(eigenenergies), np.min(eigenenergies)
+    omega_axes = np.arange(min_energy,max_energy+0.005,0.005) #Energy range, points, and spacing for DOS calculation
+    DOS = np.zeros(len(omega_axes))
+    for i in range(len(omega_axes)):
+        for state_val in range(len(eigenenergies)):
+            DOS[i]+=lorentzian(omega_axes[i],eigenenergies[state_val],eeta)+lorentzian(omega_axes[i],eigenenergies[state_val]*(-1),eeta)
+    DOS = DOS/np.max(DOS) #Normalize the DOS to 1 with the maximum value
+    #print(DOS.shape) #DOS is a 1D array with "len(omega)" elements corresponding to the energy range
+    return omega_axes, DOS #--> Pass this 1D DOS array to a plotter function to plot the DOS for a given energy range
 
 #(GPU diagonalization possible for N = 73, N_diag = 63, n = 3376 with N_repeat = 10 --> Peak memory usage: 16.36/18.18 GB, Time taken for first run with jit to diagonalize Composite Hamiltonian with 3376 sites is 100.6677 s)
 #Can vary N and N_repeat accordingly to GPU diagonalize just a slightly larger lattice 
