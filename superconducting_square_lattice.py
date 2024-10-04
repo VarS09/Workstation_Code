@@ -161,8 +161,14 @@ def horizontal_10_N_pbc_vec(): #Only applies to a square lattice
 def horizontal_10_NN_pbc_vec(): #Only applies to a square lattice
     return np.pad(np.ones(N),(0,N),'constant') #vector to be placed at k=N*(N-2) in diag matrix because bond is between (i)th and (i+N*(N-2))th sites in a square lattice --> np.abs(N - (n-N*(N-2))) = N
 
-def lorentzian(x, x0, eeta):
+def lorentzian(eeta, x, x0):
     return (1/np.pi)*(eeta/((x-x0)**2 + eeta**2))
+def lorentzian_weighing(eeta, omega, energy):
+    return lorentzian(eeta, omega, energy)+lorentzian(eeta, omega, energy*(-1))
+lorentzian_weighing_v = jax.vmap(lorentzian_weighing, in_axes=(None, None, 0))
+def lorentzian_DOS(eeta, omega_axes, energy):
+    return jnp.sum(lorentzian_weighing_v(eeta, omega_axes, energy)) #Add contribution from each eigenenergy for one omega value
+lorentzian_DOS_v = jax.vmap(lorentzian_DOS, in_axes=(None, 0, None))
 def rho(omega, state_val, eeta): #state_val corresponds to one energy in [omega-"energy"] --> rho encapsulates the spatial information/lattice sites
         PA = np.array(eigenstates[:,int(state_val)]).reshape(n,2,2) #This gives [[u_up, u_down], [v_up, v_down]] for each site for the selected energy 
         #print(PA.shape)
@@ -170,7 +176,7 @@ def rho(omega, state_val, eeta): #state_val corresponds to one energy in [omega-
         #print(PA2.shape)
         PA3 = np.zeros(n)
         for i in range(n): #i is the site index accessing probability amplitudes/weights at each site (|u_i_up|^2 + |u_i_down|^2), (|v_i_up|^2 + |v_i_down|^2)
-            PA3[i] = PA2[i][0]*lorentzian(omega,eigenenergies[state_val],eeta)+PA2[i][1]*lorentzian(omega,eigenenergies[state_val]*(-1),eeta)
+            PA3[i] = PA2[i][0]*lorentzian(eeta,omega,eigenenergies[state_val])+PA2[i][1]*lorentzian(eeta,omega,eigenenergies[state_val]*(-1))
         #print(PA3.shape)
         return PA3
 def lorentzian_LDOS(omega, eeta):
@@ -179,51 +185,43 @@ def lorentzian_LDOS(omega, eeta):
     LDOS = LDOS/np.max(LDOS) #Normalize the LDOS to 1 with the maximum value
     #print(LDOS.shape) #LDOS is a 1D array with "n" elements corresponding to total sites "n"
     return LDOS #--> Pass this 1D LDOS array to a plotter function to plot the LDOS at each site "i" for a given [omega-"energy"] value
-def lorentzian_DOS(eeta):
-    max_energy, min_energy = jnp.max(eigenenergies), jnp.min(eigenenergies)
-    print(max_energy, min_energy)
-    omega_axes = jnp.arange(min_energy,max_energy+0.01,0.01) #Energy range, points, and spacing for DOS calculation
-    DOS = jnp.zeros(len(omega_axes))
-    print('Entering DOS calculation...')
-    for i in range(len(omega_axes)):
-        for state_val in range(len(eigenenergies)):
-            #DOS[i]+=lorentzian(omega_axes[i],eigenenergies[state_val],eeta)+lorentzian(omega_axes[i],eigenenergies[state_val]*(-1),eeta)
-            DOS = DOS.at[i].add(lorentzian(omega_axes[i],eigenenergies[state_val],eeta)+lorentzian(omega_axes[i],eigenenergies[state_val]*(-1),eeta))
-    DOS = DOS/jnp.max(DOS) #Normalize the DOS to 1 with the maximum value
-    print(DOS.shape) #DOS is a 1D array with "len(omega)" elements corresponding to the energy range
-    return omega_axes, DOS #--> Pass this 1D DOS array to a plotter function to plot the DOS for a given energy range
 
 def H_comp_s(delta_s_vec): 
     H_on_s_SC = jnp.zeros((df*n,df*n),dtype=jnp.complex128)
     for i in range(n):
         s_sc_mat = SC_mat*delta_s_vec[i] + hermitian_conjugate(SC_mat*delta_s_vec[i]) #Construct 4x4 site specific s-wave SC Hamiltonian
         H_on_s_SC = H_on_s_SC.at[df*i:df*(i+1),df*(i):df*(i+1)].set(s_sc_mat) #Place the site specific s-wave SC Hamilton on the diagonal on-site part of main Hamiltonian
-    print('Memory before moving H_on_s_SC to CPU:')
-    gpu_memory_stats()
-    H_on_s_SC = jax.device_put(H_on_s_SC, jax.devices('cpu')[0])
-    print('Memory after moving H_on_s_SC to CPU:')
-    gpu_memory_stats()
+    #print('Memory before moving H_on_s_SC to CPU:')
+    #gpu_memory_stats()
+    H_on_s_SC = jax.device_put(H_on_s_SC, jax.devices('cpu')[0]) #Move H_on_s_SC to CPU
+    #print('Memory after moving H_on_s_SC to CPU:')
+    #gpu_memory_stats()
     H_comp = H_comp_static + H_on_s_SC #Construct composite Hamiltonian on CPU
     del s_sc_mat #Delete intermediate matrices to free up memory
     gc.collect()
-    print('Memory after constructing H_comp on CPU and deleting intermediate Hamiltonians on GPU:')
+    print('Memory after constructing H_comp with s-wave SC (moved to CPU) and deleting intermediate matrices on GPU:')
     gpu_memory_stats()
     return H_comp
 
 def delta_s_selfconsistency(delta_s_vec): 
     global eigenenergies, eigenstates
-    H = jax.device_put(H_comp_s(delta_s_vec), jax.devices('gpu')[0]) #Move H_comp to GPU
+    H = jax.device_put(H_comp_s(delta_s_vec), jax.devices('gpu')[0]) #Move H_comp to GPU for diagonalizing
     print('Memory after after moving H_comp to GPU for diagonalizing:')
     gpu_memory_stats()
+    t0 = time.time()
     eigenenergies, eigenstates = eigh_jit(H)
+    t1 = time.time()
     print('Memory after diagonalizing Composite Hamiltonian:')
     gpu_memory_stats()
+    print(f'Time taken to diagonalize Composite Hamiltonian with {n} sites is {t1 - t0:.4f} s')
     print(eigenenergies.shape,eigenstates.shape)
     eigenenergies_window = eigenenergies[int((n*df)/2)-int((n*df)/4):int((n*df)/2)+int((n*df)/4)] #Window half the spectrum around zero energy
     #eigenstates_window = eigenstates[:,int((n*df)/2)-200:int((n*df/2))+200]
     print(eigenenergies_window.shape)
-    omega_axes, DOS = lorentzian_DOS(eeta)
-    np.savez('/home/susva433/Test_Data/SC_s_square_lattice_N=55_delta_s=0.4_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS)
+    omega_axes = jnp.arange(jnp.min(eigenenergies),jnp.max(eigenenergies)+0.01,0.01) #Energy range, points, and spacing for DOS calculation
+    DOS = lorentzian_DOS_v(eeta, omega_axes, eigenenergies) #--> Pass normalized 1D DOS array to a plotter function to plot the DOS for a given energy range
+    DOS = DOS/jnp.max(DOS) #Normalize the DOS to 1 with the maximum value
+    np.savez('/home/susva433/Test_Data/SC_s_square_lattice_N=58_delta_s=0.4_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS)
     return delta_s_vec
 
 #(GPU diagonalization possible for N = 73, N_diag = 63, n = 3376 with N_repeat = 10 --> Peak memory usage: 16.36/18.18 GB, Time taken for first run with jit to diagonalize Composite Hamiltonian with 3376 sites is 100.6677 s)
@@ -255,33 +253,33 @@ H_off_N_int = np.kron(Z, np.eye(2, 2, k=0)) * (1*t_N)
 H_off_NN_int = np.kron(Z, np.eye(2, 2, k=0)) * (1*t_NN)
 
 #region Construct the "static" part of the Composite Hamiltonian and place it on CPU (+timing this one-time operation)
-print('Memory before H_comp_upper_off construction:')
-gpu_memory_stats()
+#print('Memory before H_comp_upper_off construction:')
+#gpu_memory_stats()
 t0 = time.time()
 
 H_comp_upper_off = jnp.kron(jnp.diag(vertical_01_N_int_vec(),k=1), H_off_N_int) + jnp.kron(jnp.diag(vertical_01_NN_int_vec(),k=2), H_off_NN_int) + jnp.kron(horizontal_10_N_interactions(), H_off_N_int) + jnp.kron(horizontal_10_NN_interactions(), H_off_NN_int)
-print('Memory after H_comp_upper_off construction:')
-gpu_memory_stats()
+#print('Memory after H_comp_upper_off construction:')
+#gpu_memory_stats()
 
 H_comp_off = H_comp_upper_off + herm_conj(H_comp_upper_off)
 del H_comp_upper_off
-print('Memory after H_comp_off construction and deletion of intermediate arrays:')
-gpu_memory_stats()
+#print('Memory after H_comp_off construction and deletion of intermediate arrays:')
+#gpu_memory_stats()
 
 H_comp_off = jax.device_put(H_comp_off, jax.devices('cpu')[0])
-print('Memory after moving H_comp_upper to CPU:')
-gpu_memory_stats()
+#print('Memory after moving H_comp_upper to CPU:')
+#gpu_memory_stats()
 
 H_comp_on = jnp.kron(jnp.eye(n, n, k=0), H_on)
-print('Memory after H_comp_on construction:')
-gpu_memory_stats()
+#print('Memory after H_comp_on construction:')
+#gpu_memory_stats()
 H_comp_on = jax.device_put(H_comp_on, jax.devices('cpu')[0])
-print('Memory after moving H_comp_on to CPU:')
-gpu_memory_stats()
+#print('Memory after moving H_comp_on to CPU:')
+#gpu_memory_stats()
 
-H_comp_static = H_comp_on+H_comp_off #H_comp_static is on the CPU
+H_comp_static = H_comp_on + H_comp_off #H_comp_static is on the CPU
 t1 = time.time()
-print('Memory after H_comp_static construction:')
+print('Memory after H_comp_static construction and moving it to CPU:')
 gpu_memory_stats()
 print(f'Time taken to construct Composite Hamiltonian with {n} sites is {t1 - t0:.4f} s')
 #endregion
