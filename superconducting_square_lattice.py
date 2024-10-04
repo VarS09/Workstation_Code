@@ -79,7 +79,13 @@ def gpu_memory_stats():
     bytes_limit = ms["bytes_limit"] / 1024**3
     bytes_peak = ms["peak_bytes_in_use"] / 1024**3
     bytes_usage = ms["bytes_in_use"] / 1024**3  
-    print(f'Memory usage: {bytes_usage:.2f}/{bytes_limit:.2f} GB, Peak memory usage: {bytes_peak:.2f}/{bytes_limit:.2f} GB')
+    print(f'Memory usage of gpu 0: {bytes_usage:.2f}/{bytes_limit:.2f} GB, Peak memory usage: {bytes_peak:.2f}/{bytes_limit:.2f} GB')
+def gpu_memory_stats_1():
+    ms = jax.devices()[1].memory_stats()
+    bytes_limit = ms["bytes_limit"] / 1024**3
+    bytes_peak = ms["peak_bytes_in_use"] / 1024**3
+    bytes_usage = ms["bytes_in_use"] / 1024**3  
+    print(f'Memory usage of gpu 1: {bytes_usage:.2f}/{bytes_limit:.2f} GB, Peak memory usage: {bytes_peak:.2f}/{bytes_limit:.2f} GB')
 
 def vertical_01_N_int_vec(): #Creates a vector for vertical interactions between pairwise sites (N-interactions) in adjacent rows --> create diag matrix with this vector with k=+1 (+ h.c for lower triangular matrix)
     vertical_01 = []
@@ -192,34 +198,38 @@ def H_comp_s(delta_s_vec):
     for i in range(n):
         s_sc_mat = SC_mat*delta_s_vec[i] + hermitian_conjugate(SC_mat*delta_s_vec[i]) #Construct 4x4 site specific s-wave SC Hamiltonian
         H_on_s_SC = H_on_s_SC.at[df*i:df*(i+1),df*(i):df*(i+1)].set(s_sc_mat) #Place the site specific s-wave SC Hamilton on the diagonal on-site part of main Hamiltonian
-    print('Memory before moving H_comp_static to GPU:')
+    print('Memory before moving H_on_s_SC to CPU:')
     gpu_memory_stats()
-    H_comp_static_gpu = jax.device_put(H_comp_static, jax.devices('gpu')[0])
-    H_comp = H_comp_static_gpu + H_on_s_SC #Add the s-wave SC Hamiltonian to the static part of the Composite Hamiltonian
-    print('Memory after constructing H_comp:')
+    H_on_s_SC = jax.device_put(H_on_s_SC, jax.devices('cpu')[0])
+    print('Memory after moving H_on_s_SC to CPU:')
     gpu_memory_stats()
-    del H_comp_static_gpu, H_on_s_SC #Delete the intermediate Hamiltonians
-    print('Memory after deleting intermediate Hamiltonians:')
+    H_comp = H_comp_static + H_on_s_SC #Construct composite Hamiltonian on CPU
+    del s_sc_mat #Delete intermediate matrices to free up memory
+    gc.collect()
+    print('Memory after constructing H_comp on CPU and deleting intermediate Hamiltonians on GPU:')
     gpu_memory_stats()
     return H_comp
 
 def delta_s_selfconsistency(delta_s_vec): 
     global eigenenergies, eigenstates
-    eigenenergies, eigenstates = jnp.linalg.eigh(H_comp_s(delta_s_vec))
+    H = jax.device_put(H_comp_s(delta_s_vec), jax.devices('gpu')[0]) #Move H_comp to GPU
+    print('Memory after after moving H_comp to GPU for diagonalizing:')
+    gpu_memory_stats()
+    eigenenergies, eigenstates = eigh_jit(H)
     print('Memory after diagonalizing Composite Hamiltonian:')
     gpu_memory_stats()
     print(eigenenergies.shape,eigenstates.shape)
-    eigenenergies_window = eigenenergies[int((n*df)/2)-200:int((n*df)/2)+200]
+    eigenenergies_window = eigenenergies[int((n*df)/2)-int((n*df)/4):int((n*df)/2)+int((n*df)/4)] #Window half the spectrum around zero energy
     #eigenstates_window = eigenstates[:,int((n*df)/2)-200:int((n*df/2))+200]
     print(eigenenergies_window.shape)
     omega_axes, DOS = lorentzian_DOS(eeta)
-    np.savez('/home/susva433/Test_Data/SC_s_square_lattice_N=60_delta_s=0.4_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS)
+    np.savez('/home/susva433/Test_Data/SC_s_square_lattice_N=55_delta_s=0.4_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS)
     return delta_s_vec
 
 #(GPU diagonalization possible for N = 73, N_diag = 63, n = 3376 with N_repeat = 10 --> Peak memory usage: 16.36/18.18 GB, Time taken for first run with jit to diagonalize Composite Hamiltonian with 3376 sites is 100.6677 s)
 #Can vary N and N_repeat accordingly to GPU diagonalize just a slightly larger lattice 
 #Main code with parameters 
-N = 55 #number of lattice sites in x and y direction
+N = 58 #number of lattice sites in x and y direction
 N_diag = 0 #number of lattice sites in the isosceles right triangle hypotenuse edge
 N_repeat = N - N_diag #number of lattice sites in the repeating/extra horizontal and vertical chains besides the isosceles right triangle
 n = int((N_diag*(N_diag+1))/2) + N_repeat*N_diag + (N_diag+N_repeat)*N_repeat #Total number of lattice sites
