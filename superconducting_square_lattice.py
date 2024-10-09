@@ -53,6 +53,7 @@ tanh_jit=jax.jit(jnp.tanh)
 sum_jit = jit(jnp.sum)
 subtract_jit = jit(jnp.subtract)
 max_jit = jit(jnp.max)
+argmax_jit = jit(jnp.argmax)
 average_jit = jit(jnp.mean)
 
 @partial(jit, in_shardings=None, out_shardings=None)
@@ -65,8 +66,7 @@ def eigh_jit(H):
 
 @partial(jit, in_shardings=None, out_shardings=None)
 def s_wave_selfconsistent_condition(ui_up, ui_down, vi_up, vi_down, eigen_index):
-    #return (ui_up * conjugate_jit(vi_up) * (-1) + ui_down * conjugate_jit(vi_down)) #Zero-temperature formula
-    return (jnp.abs(ui_up * conjugate_jit(vi_up)) + jnp.abs(ui_down * conjugate_jit(vi_down))) #Zero-temperature formula
+    return (ui_up * conjugate_jit(vi_down) * (1))# + ui_down * conjugate_jit(vi_up)) #Zero-temperature formula
 
 def hermitian_conjugate(H): #non-jitted version
     return jnp.conjugate(jnp.transpose(H))
@@ -244,13 +244,13 @@ def check_structure_of_U():
 def delta_s_selfconsistency(delta_s_vec): 
     global eigenenergies, eigenstates, run_count
     H = jax.device_put(H_comp_s(delta_s_vec), jax.devices('gpu')[0]) #Move H_comp to GPU for diagonalizing
-    print('Memory after after moving H_comp to GPU for diagonalizing:')
-    gpu_memory_stats()
+    #print('Memory after after moving H_comp to GPU for diagonalizing:')
+    #gpu_memory_stats()
     t0 = time.time()
     eigenenergies, eigenstates = eigh_jit(H)
     t1 = time.time()
-    print('Memory after diagonalizing Composite Hamiltonian:')
-    gpu_memory_stats()
+    #print('Memory after diagonalizing Composite Hamiltonian:')
+    #gpu_memory_stats()
     #print(f'Time taken to diagonalize Composite Hamiltonian for run: {run_count} with {n} sites is {t1 - t0:.4f} s')
     #print(eigenenergies.shape,eigenstates.shape)
     #check_structure_of_U()
@@ -277,7 +277,7 @@ def delta_s_selfconsistency(delta_s_vec):
     
     if max_error > convergence_limit:
         run_count += 1
-        logging.info('Maximum error for run: %s is %s',run_count,max_error)
+        logging.info('Maximum error for run: %s is %s with index %s',run_count,max_error, argmax_jit(error_vec))
         if run_count>max_runs:
             print('Run Count Exceeded %f - Self-Consistency not achieved for set convergence limit: %f'%(max_runs,convergence_limit))
             logging.info('Run Count Exceeded %s - Self-Consistency not achieved for set convergence limit: %s',max_runs,convergence_limit)
@@ -304,15 +304,15 @@ df = 4 #degrees of freedom at each site
 t_N = 1+0j #neighbour (N) hopping
 t_NN = 0 #-0.25+0j #next-neighbour (NN) hopping
 mu = 0 #Chemical Potential
-V_sc = 4*t_N #s-wave SC coupling strength
+V_sc = 2*t_N #s-wave SC coupling strength
 eeta = 0.04 #Lorentzian broadening factor for DOS and LDOS calculations
-delta_s_init = 0.3+0j #s-wave superconducting order parameter
+delta_s_init = 0.4+0j #s-wave superconducting order parameter
 delta_s_vec = np.ones(n,dtype=np.complex128)*delta_s_init #s-wave superconducting order parameter vector for each site in square lattice
-max_runs = 50
-convergence_limit = 1e-5
+max_runs = 100
+convergence_limit = 1e-4
 alpha = 0.4 #Mixing parameter for the new and old s-wave SC order parameter vectors
 site_index_vec = jnp.arange(n)
-eigen_index_vec = jnp.arange(int(n*df/2)) 
+eigen_index_vec = jnp.arange(int(n*df/2),int(n*df)) 
 
 #Pauli Matrices and other base matrices
 X=np.array([[0,1],[1,0]])
@@ -331,7 +331,10 @@ H_off_NN_int = np.kron(Z, np.eye(2, 2, k=0)) * (1*t_NN)
 #gpu_memory_stats()
 t0 = time.time()
 
+#OBC Hamiltonian
 H_comp_upper_off = jnp.kron(jnp.diag(vertical_01_N_int_vec(),k=1), H_off_N_int) + jnp.kron(jnp.diag(vertical_01_NN_int_vec(),k=2), H_off_NN_int) + jnp.kron(horizontal_10_N_interactions(), H_off_N_int) + jnp.kron(horizontal_10_NN_interactions(), H_off_NN_int)
+#PBC Hamiltonian
+#H_comp_upper_off = jnp.kron(jnp.diag(vertical_01_N_int_vec(),k=1), H_off_N_int) + jnp.kron(jnp.diag(vertical_01_N_pbc_vec(),k=N-1), hermitian_conjugate(H_off_N_int)) + jnp.kron(jnp.diag(vertical_01_NN_int_vec(),k=2), H_off_NN_int) + jnp.kron(horizontal_10_N_interactions(), H_off_N_int) + jnp.kron(jnp.diag(horizontal_10_N_pbc_vec(),k=N*(N-1)), hermitian_conjugate(H_off_N_int)) + jnp.kron(horizontal_10_NN_interactions(), H_off_NN_int)
 #print('Memory after H_comp_upper_off construction:')
 #gpu_memory_stats()
 
@@ -373,10 +376,11 @@ if False:
 eigenenergies, eigenstates, run_count = None, None, 0
 print('Entering self-consistent calculations...')
 delta_s_new_vec = delta_s_selfconsistency(delta_s_vec)
+print(delta_s_new_vec)
 eigenenergies_window = eigenenergies[int((n*df)/2)-int((n*df)/4):int((n*df)/2)+int((n*df)/4)] #Window half the spectrum around zero energy
 #eigenstates_window = eigenstates[:,int((n*df)/2)-200:int((n*df/2))+200]
 print('Saving DOS and half the spectrum of eigenvalues around zero energy:',eigenenergies_window.shape)
 omega_axes = jnp.arange(jnp.min(eigenenergies),jnp.max(eigenenergies)+0.01,0.01) #Energy range, points, and spacing for DOS calculation
 DOS = lorentzian_DOS_v(eeta, omega_axes, eigenenergies) #--> Pass normalized 1D DOS array to a plotter function to plot the DOS for a given energy range
 DOS = DOS/jnp.max(DOS) #Normalize the DOS to 1 with the maximum value
-np.savez('/home/susva433/Test_Data/SC_s_square_lattice_N=20_delta_s_init=0.4_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_s=delta_s_new_vec)
+np.savez('/home/susva433/Test_Data/SC_s_square_lattice_N=30_delta_s_init=0.4_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_s=delta_s_new_vec)
