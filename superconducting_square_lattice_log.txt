@@ -5917,3 +5917,587 @@
 2024-10-09 14:11:18,822 - Eigenenergy and eigenvector computation for Run: 42 took 1.2164604663848877 seconds
 2024-10-09 14:11:19,937 - New (unmixed) s-wave SC order parameter vector computed for run: 42 has the average value: (0.0625200541974138+0j)
 2024-10-09 14:11:19,937 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-09 16:08:16,041 - ----------------------------------------------------------------------------------------
+2024-10-09 16:08:20,161 - ########################
+2024-10-09 16:08:20,161 - Eigenenergy and eigenvector computation for Run: 0 took 2.2998809814453125 seconds
+2024-10-09 16:08:20,541 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.13770538132758348+0j)
+2024-10-09 16:08:20,679 - Maximum error for run: 1 is 0.16229461867241668 with index 40
+2024-10-09 16:08:23,180 - ########################
+2024-10-09 16:08:23,180 - Eigenenergy and eigenvector computation for Run: 1 took 1.1606996059417725 seconds
+2024-10-09 16:08:24,263 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.1160750122726999+0j)
+2024-10-09 16:08:24,272 - Maximum error for run: 2 is 0.11900714025833362 with index 97
+2024-10-09 16:08:26,644 - ########################
+2024-10-09 16:08:26,644 - Eigenenergy and eigenvector computation for Run: 2 took 1.162616491317749 seconds
+2024-10-09 16:08:27,728 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.09852138720641501+0j)
+2024-10-09 16:08:27,729 - Maximum error for run: 3 is 0.08895790922128513 with index 144
+2024-10-09 16:09:38,656 - ----------------------------------------------------------------------------------------
+2024-10-09 16:09:39,531 - ########################
+2024-10-09 16:09:39,531 - Eigenenergy and eigenvector computation for Run: 0 took 0.11591291427612305 seconds
+2024-10-09 16:09:39,852 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.14486902599984997+0j)
+2024-10-09 16:09:39,961 - Maximum error for run: 1 is 0.15513097400015027 with index 82
+2024-10-09 16:09:40,232 - ########################
+2024-10-09 16:09:40,232 - Eigenenergy and eigenvector computation for Run: 1 took 0.001119852066040039 seconds
+2024-10-09 16:09:40,261 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.12644375296941668+0j)
+2024-10-09 16:09:40,270 - Maximum error for run: 2 is 0.11150385743052352 with index 24
+2024-10-09 16:09:40,425 - ########################
+2024-10-09 16:09:40,425 - Eigenenergy and eigenvector computation for Run: 2 took 0.001069784164428711 seconds
+2024-10-09 16:09:40,455 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.11218913929281278+0j)
+2024-10-09 16:09:40,455 - Maximum error for run: 3 is 0.08115692813491812 with index 39
+2024-10-09 16:09:40,589 - ########################
+2024-10-09 16:09:40,590 - Eigenenergy and eigenvector computation for Run: 3 took 0.0011093616485595703 seconds
+2024-10-09 16:09:40,619 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.10122599504224254+0j)
+2024-10-09 16:09:40,619 - Maximum error for run: 4 is 0.05965730113152114 with index 94
+2024-10-09 16:09:40,767 - ########################
+2024-10-09 16:09:40,767 - Eigenenergy and eigenvector computation for Run: 4 took 0.001100778579711914 seconds
+2024-10-09 16:09:40,797 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.09283592729951924+0j)
+2024-10-09 16:09:40,797 - Maximum error for run: 5 is 0.04418444842163616 with index 19
+2024-10-09 16:09:40,943 - ########################
+2024-10-09 16:09:40,943 - Eigenenergy and eigenvector computation for Run: 5 took 0.0010726451873779297 seconds
+2024-10-09 16:09:40,972 - New (unmixed) s-wave SC order parameter vector computed for run: 5 has the average value: (0.08643991950937156+0j)
+2024-10-09 16:09:40,972 - Maximum error for run: 6 is 0.032906676843129395 with index 7
+2024-10-09 16:09:41,106 - ########################
+2024-10-09 16:09:41,106 - Eigenenergy and eigenvector computation for Run: 6 took 0.0011327266693115234 seconds
+2024-10-09 16:09:41,136 - New (unmixed) s-wave SC order parameter vector computed for run: 6 has the average value: (0.08157785051298128+0j)
+2024-10-09 16:09:41,136 - Maximum error for run: 7 is 0.02460607510226802 with index 4
+2024-10-09 16:09:41,284 - ########################
+2024-10-09 16:09:41,284 - Eigenenergy and eigenvector computation for Run: 7 took 0.0013225078582763672 seconds
+2024-10-09 16:09:41,314 - New (unmixed) s-wave SC order parameter vector computed for run: 7 has the average value: (0.07788908386881997+0j)
+2024-10-09 16:09:41,314 - Maximum error for run: 8 is 0.018452411705522226 with index 14
+2024-10-09 16:09:41,447 - ########################
+2024-10-09 16:09:41,447 - Eigenenergy and eigenvector computation for Run: 8 took 0.0011162757873535156 seconds
+2024-10-09 16:09:41,477 - New (unmixed) s-wave SC order parameter vector computed for run: 8 has the average value: (0.07509415447585706+0j)
+2024-10-09 16:09:41,478 - Maximum error for run: 9 is 0.01386637641627643 with index 51
+2024-10-09 16:09:41,610 - ########################
+2024-10-09 16:09:41,610 - Eigenenergy and eigenvector computation for Run: 9 took 0.0010895729064941406 seconds
+2024-10-09 16:09:41,640 - New (unmixed) s-wave SC order parameter vector computed for run: 9 has the average value: (0.07297830391184668+0j)
+2024-10-09 16:09:41,641 - Maximum error for run: 10 is 0.01043567641377624 with index 38
+2024-10-09 16:09:41,781 - ########################
+2024-10-09 16:09:41,781 - Eigenenergy and eigenvector computation for Run: 10 took 0.001065969467163086 seconds
+2024-10-09 16:09:41,811 - New (unmixed) s-wave SC order parameter vector computed for run: 10 has the average value: (0.07137744477493131+0j)
+2024-10-09 16:09:41,811 - Maximum error for run: 11 is 0.007862264985181278 with index 60
+2024-10-09 16:09:41,951 - ########################
+2024-10-09 16:09:41,951 - Eigenenergy and eigenvector computation for Run: 11 took 0.0010030269622802734 seconds
+2024-10-09 16:09:41,980 - New (unmixed) s-wave SC order parameter vector computed for run: 11 has the average value: (0.07016668084395863+0j)
+2024-10-09 16:09:41,980 - Maximum error for run: 12 is 0.005928122922081461 with index 22
+2024-10-09 16:09:42,112 - ########################
+2024-10-09 16:09:42,112 - Eigenenergy and eigenvector computation for Run: 12 took 0.0011336803436279297 seconds
+2024-10-09 16:09:42,142 - New (unmixed) s-wave SC order parameter vector computed for run: 12 has the average value: (0.06925118059610628+0j)
+2024-10-09 16:09:42,142 - Maximum error for run: 13 is 0.004472374001101342 with index 77
+2024-10-09 16:09:42,288 - ########################
+2024-10-09 16:09:42,288 - Eigenenergy and eigenvector computation for Run: 13 took 0.0011060237884521484 seconds
+2024-10-09 16:09:42,318 - New (unmixed) s-wave SC order parameter vector computed for run: 13 has the average value: (0.06855905440178318+0j)
+2024-10-09 16:09:42,318 - Maximum error for run: 14 is 0.0033755505949839976 with index 37
+2024-10-09 16:09:42,451 - ########################
+2024-10-09 16:09:42,452 - Eigenenergy and eigenvector computation for Run: 14 took 0.0011730194091796875 seconds
+2024-10-09 16:09:42,481 - New (unmixed) s-wave SC order parameter vector computed for run: 14 has the average value: (0.06803586025281254+0j)
+2024-10-09 16:09:42,481 - Maximum error for run: 15 is 0.002548524505961103 with index 15
+2024-10-09 16:09:42,626 - ########################
+2024-10-09 16:09:42,626 - Eigenenergy and eigenvector computation for Run: 15 took 0.0010933876037597656 seconds
+2024-10-09 16:09:42,656 - New (unmixed) s-wave SC order parameter vector computed for run: 15 has the average value: (0.06764039677052143+0j)
+2024-10-09 16:09:42,656 - Maximum error for run: 16 is 0.0019245781858678868 with index 62
+2024-10-09 16:09:42,790 - ########################
+2024-10-09 16:09:42,790 - Eigenenergy and eigenvector computation for Run: 16 took 0.00107574462890625 seconds
+2024-10-09 16:09:42,819 - New (unmixed) s-wave SC order parameter vector computed for run: 16 has the average value: (0.06734149674621198+0j)
+2024-10-09 16:09:42,820 - Maximum error for run: 17 is 0.0014536469358302773 with index 55
+2024-10-09 16:09:42,955 - ########################
+2024-10-09 16:09:42,955 - Eigenenergy and eigenvector computation for Run: 17 took 0.0010690689086914062 seconds
+2024-10-09 16:09:42,985 - New (unmixed) s-wave SC order parameter vector computed for run: 17 has the average value: (0.06711559037938707+0j)
+2024-10-09 16:09:42,985 - Maximum error for run: 18 is 0.0010980945283231708 with index 21
+2024-10-09 16:09:43,121 - ########################
+2024-10-09 16:09:43,121 - Eigenenergy and eigenvector computation for Run: 18 took 0.0010938644409179688 seconds
+2024-10-09 16:09:43,150 - New (unmixed) s-wave SC order parameter vector computed for run: 18 has the average value: (0.06694485688924734+0j)
+2024-10-09 16:09:43,151 - Maximum error for run: 19 is 0.0008295902071337596 with index 45
+2024-10-09 16:09:43,304 - ########################
+2024-10-09 16:09:43,304 - Eigenenergy and eigenvector computation for Run: 19 took 0.0011436939239501953 seconds
+2024-10-09 16:09:43,334 - New (unmixed) s-wave SC order parameter vector computed for run: 19 has the average value: (0.06681582411362762+0j)
+2024-10-09 16:09:43,334 - Maximum error for run: 20 is 0.0006267868999000892 with index 50
+2024-10-09 16:09:43,470 - ########################
+2024-10-09 16:09:43,470 - Eigenenergy and eigenvector computation for Run: 20 took 0.0011279582977294922 seconds
+2024-10-09 16:09:43,500 - New (unmixed) s-wave SC order parameter vector computed for run: 20 has the average value: (0.06671830835232825+0j)
+2024-10-09 16:09:43,501 - Maximum error for run: 21 is 0.00047358790123949723 with index 55
+2024-10-09 16:09:43,646 - ########################
+2024-10-09 16:09:43,646 - Eigenenergy and eigenvector computation for Run: 21 took 0.0011556148529052734 seconds
+2024-10-09 16:09:43,675 - New (unmixed) s-wave SC order parameter vector computed for run: 21 has the average value: (0.06664461220905411+0j)
+2024-10-09 16:09:43,676 - Maximum error for run: 22 is 0.0003578488840179084 with index 7
+2024-10-09 16:09:43,812 - ########################
+2024-10-09 16:09:43,812 - Eigenenergy and eigenvector computation for Run: 22 took 0.0011012554168701172 seconds
+2024-10-09 16:09:43,841 - New (unmixed) s-wave SC order parameter vector computed for run: 22 has the average value: (0.06658891786151806+0j)
+2024-10-09 16:09:43,842 - Maximum error for run: 23 is 0.0002704036779469371 with index 8
+2024-10-09 16:09:43,982 - ########################
+2024-10-09 16:09:43,982 - Eigenenergy and eigenvector computation for Run: 23 took 0.001077890396118164 seconds
+2024-10-09 16:09:44,012 - New (unmixed) s-wave SC order parameter vector computed for run: 23 has the average value: (0.06654682826050758+0j)
+2024-10-09 16:09:44,012 - Maximum error for run: 24 is 0.00020433180777872095 with index 77
+2024-10-09 16:09:44,158 - ########################
+2024-10-09 16:09:44,158 - Eigenenergy and eigenvector computation for Run: 24 took 0.0012059211730957031 seconds
+2024-10-09 16:09:44,188 - New (unmixed) s-wave SC order parameter vector computed for run: 24 has the average value: (0.06651502025046353+0j)
+2024-10-09 16:09:44,188 - Maximum error for run: 25 is 0.0001544070947113313 with index 52
+2024-10-09 16:09:44,323 - ########################
+2024-10-09 16:09:44,323 - Eigenenergy and eigenvector computation for Run: 25 took 0.0011446475982666016 seconds
+2024-10-09 16:09:44,352 - New (unmixed) s-wave SC order parameter vector computed for run: 25 has the average value: (0.06649098234107434+0j)
+2024-10-09 16:09:44,353 - Maximum error for run: 26 is 0.00011668216621611716 with index 11
+2024-10-09 16:09:44,495 - ########################
+2024-10-09 16:09:44,495 - Eigenenergy and eigenvector computation for Run: 26 took 0.0011081695556640625 seconds
+2024-10-09 16:09:44,525 - New (unmixed) s-wave SC order parameter vector computed for run: 26 has the average value: (0.06647281648941819+0j)
+2024-10-09 16:09:44,525 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-09 16:21:47,642 - ----------------------------------------------------------------------------------------
+2024-10-09 16:21:51,770 - ########################
+2024-10-09 16:21:51,770 - Eigenenergy and eigenvector computation for Run: 0 took 2.2985782623291016 seconds
+2024-10-09 16:21:52,167 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.19453151906267596+0j)
+2024-10-09 16:21:52,305 - Maximum error for run: 1 is 0.20546848093732423 with index 72
+2024-10-09 16:21:54,739 - ########################
+2024-10-09 16:21:54,739 - Eigenenergy and eigenvector computation for Run: 1 took 1.1588249206542969 seconds
+2024-10-09 16:21:55,822 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.17135574392565608+0j)
+2024-10-09 16:21:55,830 - Maximum error for run: 2 is 0.1464568636994145 with index 29
+2024-10-09 16:21:58,130 - ########################
+2024-10-09 16:21:58,130 - Eigenenergy and eigenvector computation for Run: 2 took 1.159623146057129 seconds
+2024-10-09 16:21:59,212 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.1526513713076401+0j)
+2024-10-09 16:21:59,213 - Maximum error for run: 3 is 0.10657849083766469 with index 18
+2024-10-09 16:22:01,511 - ########################
+2024-10-09 16:22:01,511 - Eigenenergy and eigenvector computation for Run: 3 took 1.160722255706787 seconds
+2024-10-09 16:22:02,594 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.13763714035750257+0j)
+2024-10-09 16:22:02,595 - Maximum error for run: 4 is 0.07896132545273635 with index 22
+2024-10-09 16:22:04,887 - ########################
+2024-10-09 16:22:04,887 - Eigenenergy and eigenvector computation for Run: 4 took 1.1595203876495361 seconds
+2024-10-09 16:22:05,970 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.12561992319109241+0j)
+2024-10-09 16:22:05,971 - Maximum error for run: 5 is 0.059394012438052035 with index 90
+2024-10-09 16:22:08,269 - ########################
+2024-10-09 16:22:08,269 - Eigenenergy and eigenvector computation for Run: 5 took 1.1628496646881104 seconds
+2024-10-09 16:22:09,359 - New (unmixed) s-wave SC order parameter vector computed for run: 5 has the average value: (0.11601341052025028+0j)
+2024-10-09 16:22:09,360 - Maximum error for run: 6 is 0.045242920133673425 with index 14
+2024-10-09 16:22:11,651 - ########################
+2024-10-09 16:22:11,651 - Eigenenergy and eigenvector computation for Run: 6 took 1.1636219024658203 seconds
+2024-10-09 16:22:12,741 - New (unmixed) s-wave SC order parameter vector computed for run: 6 has the average value: (0.10833575271607265+0j)
+2024-10-09 16:22:12,742 - Maximum error for run: 7 is 0.034823409884381734 with index 39
+2024-10-09 16:22:15,036 - ########################
+2024-10-09 16:22:15,036 - Eigenenergy and eigenvector computation for Run: 7 took 1.163496971130371 seconds
+2024-10-09 16:22:16,126 - New (unmixed) s-wave SC order parameter vector computed for run: 7 has the average value: (0.10219757378552084+0j)
+2024-10-09 16:22:16,126 - Maximum error for run: 8 is 0.027032224861180953 with index 122
+2024-10-09 16:22:18,416 - ########################
+2024-10-09 16:22:18,416 - Eigenenergy and eigenvector computation for Run: 8 took 1.1650588512420654 seconds
+2024-10-09 16:22:19,506 - New (unmixed) s-wave SC order parameter vector computed for run: 8 has the average value: (0.09728711179817616+0j)
+2024-10-09 16:22:19,507 - Maximum error for run: 9 is 0.02112979690405331 with index 185
+2024-10-09 16:22:21,803 - ########################
+2024-10-09 16:22:21,803 - Eigenenergy and eigenvector computation for Run: 9 took 1.158813238143921 seconds
+2024-10-09 16:22:22,882 - New (unmixed) s-wave SC order parameter vector computed for run: 9 has the average value: (0.09335589119242248+0j)
+2024-10-09 16:22:22,883 - Maximum error for run: 10 is 0.01660909874818571 with index 23
+2024-10-09 16:22:25,176 - ########################
+2024-10-09 16:22:25,176 - Eigenenergy and eigenvector computation for Run: 10 took 1.1577317714691162 seconds
+2024-10-09 16:22:26,254 - New (unmixed) s-wave SC order parameter vector computed for run: 10 has the average value: (0.09020624755389073+0j)
+2024-10-09 16:22:26,255 - Maximum error for run: 11 is 0.013115102887443289 with index 333
+2024-10-09 16:22:28,541 - ########################
+2024-10-09 16:22:28,541 - Eigenenergy and eigenvector computation for Run: 11 took 1.1567633152008057 seconds
+2024-10-09 16:22:29,620 - New (unmixed) s-wave SC order parameter vector computed for run: 11 has the average value: (0.08768098530346356+0j)
+2024-10-09 16:22:29,620 - Maximum error for run: 12 is 0.010394323982893153 with index 30
+2024-10-09 16:22:31,909 - ########################
+2024-10-09 16:22:31,909 - Eigenenergy and eigenvector computation for Run: 12 took 1.1569867134094238 seconds
+2024-10-09 16:22:32,988 - New (unmixed) s-wave SC order parameter vector computed for run: 12 has the average value: (0.08565501896140612+0j)
+2024-10-09 16:22:32,988 - Maximum error for run: 13 is 0.00826256073179342 with index 83
+2024-10-09 16:22:35,278 - ########################
+2024-10-09 16:22:35,278 - Eigenenergy and eigenvector computation for Run: 13 took 1.1566064357757568 seconds
+2024-10-09 16:22:36,356 - New (unmixed) s-wave SC order parameter vector computed for run: 13 has the average value: (0.08402870887514018+0j)
+2024-10-09 16:22:36,357 - Maximum error for run: 14 is 0.00658384652534201 with index 101
+2024-10-09 16:22:38,651 - ########################
+2024-10-09 16:22:38,651 - Eigenenergy and eigenvector computation for Run: 14 took 1.161240577697754 seconds
+2024-10-09 16:22:39,738 - New (unmixed) s-wave SC order parameter vector computed for run: 14 has the average value: (0.08272258510419508+0j)
+2024-10-09 16:22:39,739 - Maximum error for run: 15 is 0.00525643168615042 with index 393
+2024-10-09 16:22:42,034 - ########################
+2024-10-09 16:22:42,034 - Eigenenergy and eigenvector computation for Run: 15 took 1.1633079051971436 seconds
+2024-10-09 16:22:43,121 - New (unmixed) s-wave SC order parameter vector computed for run: 15 has the average value: (0.08167318297004944+0j)
+2024-10-09 16:22:43,122 - Maximum error for run: 16 is 0.0042032611458359265 with index 11
+2024-10-09 16:22:45,417 - ########################
+2024-10-09 16:22:45,417 - Eigenenergy and eigenvector computation for Run: 16 took 1.163546085357666 seconds
+2024-10-09 16:22:46,504 - New (unmixed) s-wave SC order parameter vector computed for run: 16 has the average value: (0.08082975785843598+0j)
+2024-10-09 16:22:46,505 - Maximum error for run: 17 is 0.0033653817991150803 with index 330
+2024-10-09 16:22:48,806 - ########################
+2024-10-09 16:22:48,806 - Eigenenergy and eigenvector computation for Run: 17 took 1.1635217666625977 seconds
+2024-10-09 16:22:49,893 - New (unmixed) s-wave SC order parameter vector computed for run: 17 has the average value: (0.08015169120110567+0j)
+2024-10-09 16:22:49,893 - Maximum error for run: 18 is 0.0026972957367994432 with index 33
+2024-10-09 16:22:52,187 - ########################
+2024-10-09 16:22:52,187 - Eigenenergy and eigenvector computation for Run: 18 took 1.1620807647705078 seconds
+2024-10-09 16:22:53,273 - New (unmixed) s-wave SC order parameter vector computed for run: 18 has the average value: (0.07960643864139022+0j)
+2024-10-09 16:22:53,274 - Maximum error for run: 19 is 0.002163630001795161 with index 0
+2024-10-09 16:22:55,573 - ########################
+2024-10-09 16:22:55,573 - Eigenenergy and eigenvector computation for Run: 19 took 1.1637241840362549 seconds
+2024-10-09 16:22:56,659 - New (unmixed) s-wave SC order parameter vector computed for run: 19 has the average value: (0.07916790366304169+0j)
+2024-10-09 16:22:56,659 - Maximum error for run: 20 is 0.0017367129794257086 with index 258
+2024-10-09 16:22:58,957 - ########################
+2024-10-09 16:22:58,958 - Eigenenergy and eigenvector computation for Run: 20 took 1.166717529296875 seconds
+2024-10-09 16:23:00,048 - New (unmixed) s-wave SC order parameter vector computed for run: 20 has the average value: (0.07881514568999057+0j)
+2024-10-09 16:23:00,049 - Maximum error for run: 21 is 0.0013947857607065905 with index 86
+2024-10-09 16:23:02,354 - ########################
+2024-10-09 16:23:02,354 - Eigenenergy and eigenvector computation for Run: 21 took 1.1680963039398193 seconds
+2024-10-09 16:23:03,445 - New (unmixed) s-wave SC order parameter vector computed for run: 21 has the average value: (0.07853135178358883+0j)
+2024-10-09 16:23:03,446 - Maximum error for run: 22 is 0.0011206653628257623 with index 19
+2024-10-09 16:23:05,752 - ########################
+2024-10-09 16:23:05,752 - Eigenenergy and eigenvector computation for Run: 22 took 1.1680221557617188 seconds
+2024-10-09 16:23:06,843 - New (unmixed) s-wave SC order parameter vector computed for run: 22 has the average value: (0.07830301665085372+0j)
+2024-10-09 16:23:06,843 - Maximum error for run: 23 is 0.0009007343504306015 with index 278
+2024-10-09 16:23:09,141 - ########################
+2024-10-09 16:23:09,141 - Eigenenergy and eigenvector computation for Run: 23 took 1.168083906173706 seconds
+2024-10-09 16:23:10,232 - New (unmixed) s-wave SC order parameter vector computed for run: 23 has the average value: (0.07811928771550397+0j)
+2024-10-09 16:23:10,233 - Maximum error for run: 24 is 0.0007241695456081665 with index 392
+2024-10-09 16:23:12,540 - ########################
+2024-10-09 16:23:12,540 - Eigenenergy and eigenvector computation for Run: 24 took 1.169245719909668 seconds
+2024-10-09 16:23:13,631 - New (unmixed) s-wave SC order parameter vector computed for run: 24 has the average value: (0.07797144130716616+0j)
+2024-10-09 16:23:13,631 - Maximum error for run: 25 is 0.0005823481357028759 with index 0
+2024-10-09 16:23:15,998 - ########################
+2024-10-09 16:23:15,998 - Eigenenergy and eigenvector computation for Run: 25 took 1.1677210330963135 seconds
+2024-10-09 16:23:17,090 - New (unmixed) s-wave SC order parameter vector computed for run: 25 has the average value: (0.07785246323440319+0j)
+2024-10-09 16:23:17,091 - Maximum error for run: 26 is 0.00046838695418471854 with index 125
+2024-10-09 16:23:19,398 - ########################
+2024-10-09 16:23:19,398 - Eigenenergy and eigenvector computation for Run: 26 took 1.168367624282837 seconds
+2024-10-09 16:23:20,489 - New (unmixed) s-wave SC order parameter vector computed for run: 26 has the average value: (0.077756712616833+0j)
+2024-10-09 16:23:20,490 - Maximum error for run: 27 is 0.00037678279008108995 with index 41
+2024-10-09 16:23:22,796 - ########################
+2024-10-09 16:23:22,796 - Eigenenergy and eigenvector computation for Run: 27 took 1.172227144241333 seconds
+2024-10-09 16:23:23,895 - New (unmixed) s-wave SC order parameter vector computed for run: 27 has the average value: (0.07767965223447494+0j)
+2024-10-09 16:23:23,895 - Maximum error for run: 28 is 0.00030313005640675295 with index 291
+2024-10-09 16:23:26,170 - ########################
+2024-10-09 16:23:26,170 - Eigenenergy and eigenvector computation for Run: 28 took 1.1736249923706055 seconds
+2024-10-09 16:23:27,270 - New (unmixed) s-wave SC order parameter vector computed for run: 28 has the average value: (0.07761763209127023+0j)
+2024-10-09 16:23:27,270 - Maximum error for run: 29 is 0.00024389817704881245 with index 751
+2024-10-09 16:23:29,529 - ########################
+2024-10-09 16:23:29,529 - Eigenenergy and eigenvector computation for Run: 29 took 1.1737589836120605 seconds
+2024-10-09 16:23:30,627 - New (unmixed) s-wave SC order parameter vector computed for run: 29 has the average value: (0.07756771559839964+0j)
+2024-10-09 16:23:30,628 - Maximum error for run: 30 is 0.0001962553990999122 with index 54
+2024-10-09 16:23:32,880 - ########################
+2024-10-09 16:23:32,880 - Eigenenergy and eigenvector computation for Run: 30 took 1.1726415157318115 seconds
+2024-10-09 16:23:33,979 - New (unmixed) s-wave SC order parameter vector computed for run: 30 has the average value: (0.07752753992409837+0j)
+2024-10-09 16:23:33,980 - Maximum error for run: 31 is 0.00015792891376130436 with index 89
+2024-10-09 16:23:36,251 - ########################
+2024-10-09 16:23:36,251 - Eigenenergy and eigenvector computation for Run: 31 took 1.1749622821807861 seconds
+2024-10-09 16:23:37,350 - New (unmixed) s-wave SC order parameter vector computed for run: 31 has the average value: (0.0774952037542798+0j)
+2024-10-09 16:23:37,351 - Maximum error for run: 32 is 0.00012709351807545233 with index 20
+2024-10-09 16:23:39,616 - ########################
+2024-10-09 16:23:39,616 - Eigenenergy and eigenvector computation for Run: 32 took 1.1737558841705322 seconds
+2024-10-09 16:23:40,714 - New (unmixed) s-wave SC order parameter vector computed for run: 32 has the average value: (0.0774691770578291+0j)
+2024-10-09 16:23:40,714 - Maximum error for run: 33 is 0.00010228280729598915 with index 13
+2024-10-09 16:23:42,971 - ########################
+2024-10-09 16:23:42,971 - Eigenenergy and eigenvector computation for Run: 33 took 1.1740522384643555 seconds
+2024-10-09 16:23:44,070 - New (unmixed) s-wave SC order parameter vector computed for run: 33 has the average value: (0.07744822852566166+0j)
+2024-10-09 16:23:44,071 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-09 17:06:34,031 - ----------------------------------------------------------------------------------------
+2024-10-09 17:06:34,904 - ########################
+2024-10-09 17:06:34,904 - Eigenenergy and eigenvector computation for Run: 0 took 0.11453628540039062 seconds
+2024-10-09 17:06:35,220 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.20250287735754718+0j)
+2024-10-09 17:06:35,331 - Maximum error for run: 1 is 0.19749712264245306 with index 30
+2024-10-09 17:06:35,613 - ########################
+2024-10-09 17:06:35,613 - Eigenenergy and eigenvector computation for Run: 1 took 0.0011434555053710938 seconds
+2024-10-09 17:06:35,643 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.15241968008753937+0j)
+2024-10-09 17:06:35,651 - Maximum error for run: 2 is 0.05008319727000812 with index 26
+2024-10-09 17:06:35,794 - ########################
+2024-10-09 17:06:35,794 - Eigenenergy and eigenvector computation for Run: 2 took 0.0011403560638427734 seconds
+2024-10-09 17:06:35,824 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.13787129412661056+0j)
+2024-10-09 17:06:35,824 - Maximum error for run: 3 is 0.014548385960929056 with index 4
+2024-10-09 17:06:35,967 - ########################
+2024-10-09 17:06:35,967 - Eigenenergy and eigenvector computation for Run: 3 took 0.0011260509490966797 seconds
+2024-10-09 17:06:35,997 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.13350893169222203+0j)
+2024-10-09 17:06:35,997 - Maximum error for run: 4 is 0.004362362434388728 with index 7
+2024-10-09 17:06:36,142 - ########################
+2024-10-09 17:06:36,142 - Eigenenergy and eigenvector computation for Run: 4 took 0.0010831356048583984 seconds
+2024-10-09 17:06:36,171 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.13218961901050802+0j)
+2024-10-09 17:06:36,171 - Maximum error for run: 5 is 0.0013193126817142575 with index 41
+2024-10-09 17:06:36,317 - ########################
+2024-10-09 17:06:36,317 - Eigenenergy and eigenvector computation for Run: 5 took 0.0010936260223388672 seconds
+2024-10-09 17:06:36,346 - New (unmixed) s-wave SC order parameter vector computed for run: 5 has the average value: (0.13178962123732066+0j)
+2024-10-09 17:06:36,347 - Maximum error for run: 6 is 0.00039999777318763807 with index 10
+2024-10-09 17:06:36,484 - ########################
+2024-10-09 17:06:36,484 - Eigenenergy and eigenvector computation for Run: 6 took 0.0011057853698730469 seconds
+2024-10-09 17:06:36,513 - New (unmixed) s-wave SC order parameter vector computed for run: 6 has the average value: (0.1316682565962985+0j)
+2024-10-09 17:06:36,514 - Maximum error for run: 7 is 0.00012136464102241451 with index 29
+2024-10-09 17:06:36,656 - ########################
+2024-10-09 17:06:36,656 - Eigenenergy and eigenvector computation for Run: 7 took 0.0011091232299804688 seconds
+2024-10-09 17:06:36,685 - New (unmixed) s-wave SC order parameter vector computed for run: 7 has the average value: (0.13163142462529467+0j)
+2024-10-09 17:06:36,686 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-09 17:13:21,645 - ----------------------------------------------------------------------------------------
+2024-10-09 17:13:22,524 - ########################
+2024-10-09 17:13:22,524 - Eigenenergy and eigenvector computation for Run: 0 took 0.11556196212768555 seconds
+2024-10-09 17:13:22,849 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.17855198277449297+0j)
+2024-10-09 17:13:22,961 - Maximum error for run: 1 is 0.12144801722550719 with index 2
+2024-10-09 17:13:23,252 - ########################
+2024-10-09 17:13:23,252 - Eigenenergy and eigenvector computation for Run: 1 took 0.0011219978332519531 seconds
+2024-10-09 17:13:23,281 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.1455555475371128+0j)
+2024-10-09 17:13:23,290 - Maximum error for run: 2 is 0.03299643523738041 with index 51
+2024-10-09 17:13:23,447 - ########################
+2024-10-09 17:13:23,447 - Eigenenergy and eigenvector computation for Run: 2 took 0.0011217594146728516 seconds
+2024-10-09 17:13:23,476 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.13582036332145997+0j)
+2024-10-09 17:13:23,476 - Maximum error for run: 3 is 0.00973518421565317 with index 17
+2024-10-09 17:13:23,611 - ########################
+2024-10-09 17:13:23,611 - Eigenenergy and eigenvector computation for Run: 3 took 0.0011432170867919922 seconds
+2024-10-09 17:13:23,641 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.1328893006541709+0j)
+2024-10-09 17:13:23,641 - Maximum error for run: 4 is 0.0029310626672894857 with index 0
+2024-10-09 17:13:23,792 - ########################
+2024-10-09 17:13:23,792 - Eigenenergy and eigenvector computation for Run: 4 took 0.0011169910430908203 seconds
+2024-10-09 17:13:23,822 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.13200181253388008+0j)
+2024-10-09 17:13:23,822 - Maximum error for run: 5 is 0.0008874881202911578 with index 58
+2024-10-09 17:13:23,977 - ########################
+2024-10-09 17:13:23,977 - Eigenenergy and eigenvector computation for Run: 5 took 0.0011382102966308594 seconds
+2024-10-09 17:13:24,006 - New (unmixed) s-wave SC order parameter vector computed for run: 5 has the average value: (0.1317326435021154+0j)
+2024-10-09 17:13:24,007 - Maximum error for run: 6 is 0.00026916903176493756 with index 3
+2024-10-09 17:13:24,157 - ########################
+2024-10-09 17:13:24,157 - Eigenenergy and eigenvector computation for Run: 6 took 0.001032114028930664 seconds
+2024-10-09 17:13:24,187 - New (unmixed) s-wave SC order parameter vector computed for run: 6 has the average value: (0.13165096536776982+0j)
+2024-10-09 17:13:24,187 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-09 17:17:57,312 - ----------------------------------------------------------------------------------------
+2024-10-09 17:17:58,190 - ########################
+2024-10-09 17:17:58,190 - Eigenenergy and eigenvector computation for Run: 0 took 0.11496901512145996 seconds
+2024-10-09 17:17:58,509 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.0026346157594003892+0j)
+2024-10-09 17:17:58,617 - Maximum error for run: 1 is 0.02639046100309602 with index 95
+2024-10-09 17:17:58,891 - ########################
+2024-10-09 17:17:58,891 - Eigenenergy and eigenvector computation for Run: 1 took 0.0011577606201171875 seconds
+2024-10-09 17:17:58,922 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.030850670995102504+0j)
+2024-10-09 17:17:58,930 - Maximum error for run: 2 is 0.08968892245028609 with index 97
+2024-10-09 17:17:59,088 - ########################
+2024-10-09 17:17:59,088 - Eigenenergy and eigenvector computation for Run: 2 took 0.001268625259399414 seconds
+2024-10-09 17:17:59,119 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.049890839846202475+0j)
+2024-10-09 17:17:59,119 - Maximum error for run: 3 is 0.12174907061507777 with index 71
+2024-10-09 17:17:59,261 - ########################
+2024-10-09 17:17:59,261 - Eigenenergy and eigenvector computation for Run: 3 took 0.001108407974243164 seconds
+2024-10-09 17:17:59,292 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.05600991442192942+0j)
+2024-10-09 17:17:59,293 - Maximum error for run: 4 is 0.03568448651272495 with index 90
+2024-10-09 17:17:59,438 - ########################
+2024-10-09 17:17:59,438 - Eigenenergy and eigenvector computation for Run: 4 took 0.0010726451873779297 seconds
+2024-10-09 17:17:59,469 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.057952638534594154+0j)
+2024-10-09 17:17:59,470 - Maximum error for run: 5 is 0.028147648209227785 with index 63
+2024-10-09 17:17:59,612 - ########################
+2024-10-09 17:17:59,612 - Eigenenergy and eigenvector computation for Run: 5 took 0.001104593276977539 seconds
+2024-10-09 17:17:59,643 - New (unmixed) s-wave SC order parameter vector computed for run: 5 has the average value: (0.05857420927394582+0j)
+2024-10-09 17:17:59,644 - Maximum error for run: 6 is 0.020483980906082923 with index 18
+2024-10-09 17:17:59,783 - ########################
+2024-10-09 17:17:59,783 - Eigenenergy and eigenvector computation for Run: 6 took 0.001088857650756836 seconds
+2024-10-09 17:17:59,815 - New (unmixed) s-wave SC order parameter vector computed for run: 6 has the average value: (0.058781973922867936+0j)
+2024-10-09 17:17:59,815 - Maximum error for run: 7 is 0.014275395480801215 with index 52
+2024-10-09 17:17:59,962 - ########################
+2024-10-09 17:17:59,962 - Eigenenergy and eigenvector computation for Run: 7 took 0.0012755393981933594 seconds
+2024-10-09 17:17:59,994 - New (unmixed) s-wave SC order parameter vector computed for run: 7 has the average value: (0.058859103941513065+0j)
+2024-10-09 17:17:59,994 - Maximum error for run: 8 is 0.009881214103761402 with index 90
+2024-10-09 17:18:00,132 - ########################
+2024-10-09 17:18:00,132 - Eigenenergy and eigenvector computation for Run: 8 took 0.0011491775512695312 seconds
+2024-10-09 17:18:00,164 - New (unmixed) s-wave SC order parameter vector computed for run: 8 has the average value: (0.05889256291344757+0j)
+2024-10-09 17:18:00,165 - Maximum error for run: 9 is 0.009292269373715425 with index 45
+2024-10-09 17:18:00,307 - ########################
+2024-10-09 17:18:00,307 - Eigenenergy and eigenvector computation for Run: 9 took 0.0010857582092285156 seconds
+2024-10-09 17:18:00,339 - New (unmixed) s-wave SC order parameter vector computed for run: 9 has the average value: (0.05890939312559942+0j)
+2024-10-09 17:18:00,340 - Maximum error for run: 10 is 0.007948130440743814 with index 90
+2024-10-09 17:18:00,482 - ########################
+2024-10-09 17:18:00,482 - Eigenenergy and eigenvector computation for Run: 10 took 0.0011053085327148438 seconds
+2024-10-09 17:18:00,513 - New (unmixed) s-wave SC order parameter vector computed for run: 10 has the average value: (0.058918707877368755+0j)
+2024-10-09 17:18:00,513 - Maximum error for run: 11 is 0.00643509284505113 with index 90
+2024-10-09 17:18:00,657 - ########################
+2024-10-09 17:18:00,657 - Eigenenergy and eigenvector computation for Run: 11 took 0.001087188720703125 seconds
+2024-10-09 17:18:00,688 - New (unmixed) s-wave SC order parameter vector computed for run: 11 has the average value: (0.05892410209438102+0j)
+2024-10-09 17:18:00,688 - Maximum error for run: 12 is 0.005023294374572884 with index 45
+2024-10-09 17:18:00,830 - ########################
+2024-10-09 17:18:00,830 - Eigenenergy and eigenvector computation for Run: 12 took 0.0010867118835449219 seconds
+2024-10-09 17:18:00,861 - New (unmixed) s-wave SC order parameter vector computed for run: 12 has the average value: (0.058927277130668296+0j)
+2024-10-09 17:18:00,862 - Maximum error for run: 13 is 0.003818330381083007 with index 90
+2024-10-09 17:18:01,010 - ########################
+2024-10-09 17:18:01,010 - Eigenenergy and eigenvector computation for Run: 13 took 0.0010709762573242188 seconds
+2024-10-09 17:18:01,041 - New (unmixed) s-wave SC order parameter vector computed for run: 13 has the average value: (0.05892915420731063+0j)
+2024-10-09 17:18:01,042 - Maximum error for run: 14 is 0.002844765203256168 with index 90
+2024-10-09 17:18:01,186 - ########################
+2024-10-09 17:18:01,186 - Eigenenergy and eigenvector computation for Run: 14 took 0.0011627674102783203 seconds
+2024-10-09 17:18:01,217 - New (unmixed) s-wave SC order parameter vector computed for run: 14 has the average value: (0.058930266281048096+0j)
+2024-10-09 17:18:01,217 - Maximum error for run: 15 is 0.0020875916443347034 with index 90
+2024-10-09 17:18:01,349 - ########################
+2024-10-09 17:18:01,349 - Eigenenergy and eigenvector computation for Run: 15 took 0.0011403560638427734 seconds
+2024-10-09 17:18:01,380 - New (unmixed) s-wave SC order parameter vector computed for run: 15 has the average value: (0.058930927911493215+0j)
+2024-10-09 17:18:01,381 - Maximum error for run: 16 is 0.0015147807160887025 with index 45
+2024-10-09 17:18:01,525 - ########################
+2024-10-09 17:18:01,525 - Eigenenergy and eigenvector computation for Run: 16 took 0.001107931137084961 seconds
+2024-10-09 17:18:01,556 - New (unmixed) s-wave SC order parameter vector computed for run: 16 has the average value: (0.0589313246243573+0j)
+2024-10-09 17:18:01,556 - Maximum error for run: 17 is 0.001090105341018957 with index 90
+2024-10-09 17:18:01,694 - ########################
+2024-10-09 17:18:01,694 - Eigenenergy and eigenvector computation for Run: 17 took 0.0011200904846191406 seconds
+2024-10-09 17:18:01,725 - New (unmixed) s-wave SC order parameter vector computed for run: 17 has the average value: (0.05893156517600898+0j)
+2024-10-09 17:18:01,725 - Maximum error for run: 18 is 0.0007798345259717385 with index 45
+2024-10-09 17:18:01,871 - ########################
+2024-10-09 17:18:01,871 - Eigenenergy and eigenvector computation for Run: 18 took 0.0010819435119628906 seconds
+2024-10-09 17:18:01,901 - New (unmixed) s-wave SC order parameter vector computed for run: 18 has the average value: (0.058931713049101345+0j)
+2024-10-09 17:18:01,902 - Maximum error for run: 19 is 0.0005555221508171115 with index 90
+2024-10-09 17:18:02,049 - ########################
+2024-10-09 17:18:02,049 - Eigenenergy and eigenvector computation for Run: 19 took 0.0011360645294189453 seconds
+2024-10-09 17:18:02,080 - New (unmixed) s-wave SC order parameter vector computed for run: 19 has the average value: (0.058931805315161595+0j)
+2024-10-09 17:18:02,081 - Maximum error for run: 20 is 0.0003945639300032555 with index 45
+2024-10-09 17:18:02,225 - ########################
+2024-10-09 17:18:02,225 - Eigenenergy and eigenvector computation for Run: 20 took 0.0010845661163330078 seconds
+2024-10-09 17:18:02,258 - New (unmixed) s-wave SC order parameter vector computed for run: 20 has the average value: (0.05893186374732199+0j)
+2024-10-09 17:18:02,259 - Maximum error for run: 21 is 0.0002796738117257086 with index 45
+2024-10-09 17:18:02,408 - ########################
+2024-10-09 17:18:02,408 - Eigenenergy and eigenvector computation for Run: 21 took 0.0011379718780517578 seconds
+2024-10-09 17:18:02,438 - New (unmixed) s-wave SC order parameter vector computed for run: 21 has the average value: (0.05893190126890399+0j)
+2024-10-09 17:18:02,439 - Maximum error for run: 22 is 0.0001979672531946114 with index 45
+2024-10-09 17:18:02,585 - ########################
+2024-10-09 17:18:02,585 - Eigenenergy and eigenvector computation for Run: 22 took 0.0011053085327148438 seconds
+2024-10-09 17:18:02,616 - New (unmixed) s-wave SC order parameter vector computed for run: 22 has the average value: (0.05893192565965441+0j)
+2024-10-09 17:18:02,616 - Maximum error for run: 23 is 0.0001400064397436701 with index 90
+2024-10-09 17:18:02,758 - ########################
+2024-10-09 17:18:02,758 - Eigenenergy and eigenvector computation for Run: 23 took 0.0010895729064941406 seconds
+2024-10-09 17:18:02,788 - New (unmixed) s-wave SC order parameter vector computed for run: 23 has the average value: (0.05893194167967973+0j)
+2024-10-09 17:18:02,789 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-09 17:21:43,616 - ----------------------------------------------------------------------------------------
+2024-10-09 17:28:23,390 - ----------------------------------------------------------------------------------------
+2024-10-09 17:38:28,854 - ----------------------------------------------------------------------------------------
+2024-10-09 17:40:57,781 - ########################
+2024-10-09 17:40:57,782 - Eigenenergy and eigenvector computation for Run: 0 took 97.64609289169312 seconds
+2024-10-09 17:40:58,266 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.16566725988938633+0j)
+2024-10-09 17:40:58,405 - Maximum error for run: 1 is 0.13433274011061386 with index 214
+2024-10-09 17:48:46,411 - ----------------------------------------------------------------------------------------
+2024-10-09 18:20:12,405 - ----------------------------------------------------------------------------------------
+2024-10-09 18:46:33,777 - ----------------------------------------------------------------------------------------
+2024-10-09 18:48:54,449 - ########################
+2024-10-09 18:48:54,449 - Eigenenergy and eigenvector computation for Run: 0 took 97.69636464118958 seconds
+2024-10-09 18:48:55,007 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.16566725988938633+0j)
+2024-10-09 18:48:55,215 - Maximum error for run: 1 is 0.13433274011061386 with index 214
+2024-10-09 18:50:21,024 - ########################
+2024-10-09 18:50:21,024 - Eigenenergy and eigenvector computation for Run: 1 took 45.07044959068298 seconds
+2024-10-09 18:51:14,181 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.1477500721095533+0j)
+2024-10-09 18:51:14,290 - Maximum error for run: 2 is 0.09851683184620139 with index 2476
+2024-10-09 18:52:40,116 - ########################
+2024-10-09 18:52:40,117 - Eigenenergy and eigenvector computation for Run: 2 took 45.05485725402832 seconds
+2024-10-09 18:53:33,273 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.13318395735829922+0j)
+2024-10-09 18:53:33,373 - Maximum error for run: 3 is 0.07367621385897499 with index 283
+2024-10-09 18:54:58,704 - ########################
+2024-10-09 18:54:58,704 - Eigenenergy and eigenvector computation for Run: 3 took 45.12035250663757 seconds
+2024-10-09 18:55:51,852 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.12131942048066084+0j)
+2024-10-09 18:55:51,953 - Maximum error for run: 4 is 0.056070265193023494 with index 999
+2024-10-09 18:57:17,632 - ########################
+2024-10-09 18:57:17,632 - Eigenenergy and eigenvector computation for Run: 4 took 45.08293008804321 seconds
+2024-10-09 18:58:10,740 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.1116277467970019+0j)
+2024-10-09 18:58:10,841 - Maximum error for run: 5 is 0.04333383279947309 with index 0
+2024-10-09 18:59:36,800 - ########################
+2024-10-09 18:59:36,800 - Eigenenergy and eigenvector computation for Run: 5 took 45.14976930618286 seconds
+2024-10-09 19:00:29,938 - New (unmixed) s-wave SC order parameter vector computed for run: 5 has the average value: (0.10368512570187878+0j)
+2024-10-09 19:00:30,038 - Maximum error for run: 6 is 0.03394292077480704 with index 270
+2024-10-09 19:01:55,830 - ########################
+2024-10-09 19:01:55,830 - Eigenenergy and eigenvector computation for Run: 6 took 45.10988783836365 seconds
+2024-10-09 19:02:48,978 - New (unmixed) s-wave SC order parameter vector computed for run: 6 has the average value: (0.09715392523470111+0j)
+2024-10-09 19:02:49,079 - Maximum error for run: 7 is 0.026896952932061943 with index 620
+2024-10-09 19:04:14,502 - ########################
+2024-10-09 19:04:14,502 - Eigenenergy and eigenvector computation for Run: 7 took 45.123082399368286 seconds
+2024-10-09 19:05:07,665 - New (unmixed) s-wave SC order parameter vector computed for run: 7 has the average value: (0.0917655686075949+0j)
+2024-10-09 19:05:07,766 - Maximum error for run: 8 is 0.021526528386343446 with index 39
+2024-10-09 19:06:33,490 - ########################
+2024-10-09 19:06:33,490 - Eigenenergy and eigenvector computation for Run: 8 took 45.129886865615845 seconds
+2024-10-09 19:07:26,644 - New (unmixed) s-wave SC order parameter vector computed for run: 8 has the average value: (0.08730616559897618+0j)
+2024-10-09 19:07:26,745 - Maximum error for run: 9 is 0.017375320040424844 with index 204
+2024-10-09 19:08:52,763 - ########################
+2024-10-09 19:08:52,763 - Eigenenergy and eigenvector computation for Run: 9 took 45.091590881347656 seconds
+2024-10-09 19:09:45,912 - New (unmixed) s-wave SC order parameter vector computed for run: 9 has the average value: (0.08360490324077481+0j)
+2024-10-09 19:09:46,013 - Maximum error for run: 10 is 0.014126454382456383 with index 1452
+2024-10-09 19:11:11,636 - ########################
+2024-10-09 19:11:11,636 - Eigenenergy and eigenvector computation for Run: 10 took 45.13729524612427 seconds
+2024-10-09 19:12:04,790 - New (unmixed) s-wave SC order parameter vector computed for run: 10 has the average value: (0.08052484964703072+0j)
+2024-10-09 19:12:04,891 - Maximum error for run: 11 is 0.011555926223218008 with index 695
+2024-10-09 19:13:30,247 - ########################
+2024-10-09 19:13:30,247 - Eigenenergy and eigenvector computation for Run: 11 took 45.11955404281616 seconds
+2024-10-09 19:14:23,420 - New (unmixed) s-wave SC order parameter vector computed for run: 11 has the average value: (0.077955749541501+0j)
+2024-10-09 19:14:23,521 - Maximum error for run: 12 is 0.009502655839460583 with index 19
+2024-10-09 19:15:49,261 - ########################
+2024-10-09 19:15:49,261 - Eigenenergy and eigenvector computation for Run: 12 took 45.12025809288025 seconds
+2024-10-09 19:16:42,419 - New (unmixed) s-wave SC order parameter vector computed for run: 12 has the average value: (0.07580841216107907+0j)
+2024-10-09 19:16:42,521 - Maximum error for run: 13 is 0.00784893088409834 with index 2503
+2024-10-09 19:18:08,558 - ########################
+2024-10-09 19:18:08,558 - Eigenenergy and eigenvector computation for Run: 13 took 45.09812068939209 seconds
+2024-10-09 19:19:01,709 - New (unmixed) s-wave SC order parameter vector computed for run: 13 has the average value: (0.07401034791940321+0j)
+2024-10-09 19:19:01,810 - Maximum error for run: 14 is 0.00650742277213491 with index 548
+2024-10-09 19:20:27,470 - ########################
+2024-10-09 19:20:27,470 - Eigenenergy and eigenvector computation for Run: 14 took 45.13131284713745 seconds
+2024-10-09 19:21:20,624 - New (unmixed) s-wave SC order parameter vector computed for run: 14 has the average value: (0.07250237308764323+0j)
+2024-10-09 19:21:20,725 - Maximum error for run: 15 is 0.005412428495041033 with index 97
+2024-10-09 19:22:46,066 - ########################
+2024-10-09 19:22:46,066 - Eigenenergy and eigenvector computation for Run: 15 took 45.1108124256134 seconds
+2024-10-09 19:23:39,233 - New (unmixed) s-wave SC order parameter vector computed for run: 15 has the average value: (0.07123596023809686+0j)
+2024-10-09 19:23:39,334 - Maximum error for run: 16 is 0.00451386994657102 with index 102
+2024-10-09 19:25:05,155 - ########################
+2024-10-09 19:25:05,155 - Eigenenergy and eigenvector computation for Run: 16 took 45.112478494644165 seconds
+2024-10-09 19:25:58,321 - New (unmixed) s-wave SC order parameter vector computed for run: 16 has the average value: (0.07017116192338511+0j)
+2024-10-09 19:25:58,422 - Maximum error for run: 17 is 0.0037731202826544186 with index 102
+2024-10-09 19:27:24,405 - ########################
+2024-10-09 19:27:24,405 - Eigenenergy and eigenvector computation for Run: 17 took 45.10646724700928 seconds
+2024-10-09 19:28:17,556 - New (unmixed) s-wave SC order parameter vector computed for run: 17 has the average value: (0.06927497523972415+0j)
+2024-10-09 19:28:17,658 - Maximum error for run: 18 is 0.003160058853253711 with index 383
+2024-10-09 19:29:43,415 - ########################
+2024-10-09 19:29:43,415 - Eigenenergy and eigenvector computation for Run: 18 took 45.12704133987427 seconds
+2024-10-09 19:30:36,574 - New (unmixed) s-wave SC order parameter vector computed for run: 18 has the average value: (0.0685200463891274+0j)
+2024-10-09 19:30:36,675 - Maximum error for run: 19 is 0.0026509641625490493 with index 187
+2024-10-09 19:32:02,159 - ########################
+2024-10-09 19:32:02,159 - Eigenenergy and eigenvector computation for Run: 19 took 45.117231130599976 seconds
+2024-10-09 19:32:55,326 - New (unmixed) s-wave SC order parameter vector computed for run: 19 has the average value: (0.0678836385321439+0j)
+2024-10-09 19:32:55,427 - Maximum error for run: 20 is 0.002226986354513044 with index 379
+2024-10-09 19:34:21,197 - ########################
+2024-10-09 19:34:21,197 - Eigenenergy and eigenvector computation for Run: 20 took 45.09202790260315 seconds
+2024-10-09 19:35:14,361 - New (unmixed) s-wave SC order parameter vector computed for run: 20 has the average value: (0.06734680458598041+0j)
+2024-10-09 19:35:14,461 - Maximum error for run: 21 is 0.0018730257588713412 with index 119
+2024-10-09 19:36:40,488 - ########################
+2024-10-09 19:36:40,488 - Eigenenergy and eigenvector computation for Run: 21 took 45.128338098526 seconds
+2024-10-09 19:37:33,642 - New (unmixed) s-wave SC order parameter vector computed for run: 21 has the average value: (0.06689372048309536+0j)
+2024-10-09 19:37:33,743 - Maximum error for run: 22 is 0.0015768995582079726 with index 27
+2024-10-09 19:38:59,484 - ########################
+2024-10-09 19:38:59,484 - Eigenenergy and eigenvector computation for Run: 22 took 45.12980914115906 seconds
+2024-10-09 19:39:52,628 - New (unmixed) s-wave SC order parameter vector computed for run: 22 has the average value: (0.06651114483969633+0j)
+2024-10-09 19:39:52,729 - Maximum error for run: 23 is 0.0013287153783238387 with index 0
+2024-10-09 19:41:18,203 - ########################
+2024-10-09 19:41:18,203 - Eigenenergy and eigenvector computation for Run: 23 took 45.12420129776001 seconds
+2024-10-09 19:42:11,365 - New (unmixed) s-wave SC order parameter vector computed for run: 23 has the average value: (0.06618797883947104+0j)
+2024-10-09 19:42:11,466 - Maximum error for run: 24 is 0.001120395227219656 with index 1141
+2024-10-09 19:43:37,338 - ########################
+2024-10-09 19:43:37,338 - Eigenenergy and eigenvector computation for Run: 24 took 45.22578525543213 seconds
+2024-10-09 19:44:30,496 - New (unmixed) s-wave SC order parameter vector computed for run: 24 has the average value: (0.06591490606471358+0j)
+2024-10-09 19:44:30,597 - Maximum error for run: 25 is 0.0009453099110893481 with index 1307
+2024-10-09 19:45:56,611 - ########################
+2024-10-09 19:45:56,611 - Eigenenergy and eigenvector computation for Run: 25 took 45.0978684425354 seconds
+2024-10-09 19:46:49,776 - New (unmixed) s-wave SC order parameter vector computed for run: 25 has the average value: (0.06568409649435977+0j)
+2024-10-09 19:46:49,877 - Maximum error for run: 26 is 0.0007979955170075159 with index 75
+2024-10-09 19:48:15,530 - ########################
+2024-10-09 19:48:15,530 - Eigenenergy and eigenvector computation for Run: 26 took 45.15143156051636 seconds
+2024-10-09 19:49:08,691 - New (unmixed) s-wave SC order parameter vector computed for run: 26 has the average value: (0.06548896230180742+0j)
+2024-10-09 19:49:08,792 - Maximum error for run: 27 is 0.0006739315027568804 with index 111
+2024-10-09 19:50:34,174 - ########################
+2024-10-09 19:50:34,174 - Eigenenergy and eigenvector computation for Run: 27 took 45.12813854217529 seconds
+2024-10-09 19:51:27,310 - New (unmixed) s-wave SC order parameter vector computed for run: 27 has the average value: (0.0653239556961096+0j)
+2024-10-09 19:51:27,412 - Maximum error for run: 28 is 0.0005693655073520376 with index 279
+2024-10-09 19:52:53,126 - ########################
+2024-10-09 19:52:53,126 - Eigenenergy and eigenvector computation for Run: 28 took 45.13106870651245 seconds
+2024-10-09 19:53:46,296 - New (unmixed) s-wave SC order parameter vector computed for run: 28 has the average value: (0.06518440105912938+0j)
+2024-10-09 19:53:46,398 - Maximum error for run: 29 is 0.0004811739413915078 with index 97
+2024-10-09 19:55:12,352 - ########################
+2024-10-09 19:55:12,352 - Eigenenergy and eigenvector computation for Run: 29 took 45.1496319770813 seconds
+2024-10-09 19:56:05,508 - New (unmixed) s-wave SC order parameter vector computed for run: 29 has the average value: (0.0650663551872808+0j)
+2024-10-09 19:56:05,607 - Maximum error for run: 30 is 0.0004067502366835729 with index 193
+2024-10-09 19:57:31,290 - ########################
+2024-10-09 19:57:31,290 - Eigenenergy and eigenvector computation for Run: 30 took 45.1540367603302 seconds
+2024-10-09 19:58:24,444 - New (unmixed) s-wave SC order parameter vector computed for run: 30 has the average value: (0.06496649065980993+0j)
+2024-10-09 19:58:24,545 - Maximum error for run: 31 is 0.0003439146694810685 with index 2799
+2024-10-09 19:59:49,961 - ########################
+2024-10-09 19:59:49,961 - Eigenenergy and eigenvector computation for Run: 31 took 45.13344049453735 seconds
+2024-10-09 20:00:43,127 - New (unmixed) s-wave SC order parameter vector computed for run: 31 has the average value: (0.06488199830813395+0j)
+2024-10-09 20:00:43,228 - Maximum error for run: 32 is 0.00029084115336470984 with index 619
+2024-10-09 20:02:08,983 - ########################
+2024-10-09 20:02:08,983 - Eigenenergy and eigenvector computation for Run: 32 took 45.12442469596863 seconds
+2024-10-09 20:03:02,137 - New (unmixed) s-wave SC order parameter vector computed for run: 32 has the average value: (0.06481050551366477+0j)
+2024-10-09 20:03:02,237 - Maximum error for run: 33 is 0.00024599748648808373 with index 2133
+2024-10-09 20:04:28,274 - ########################
+2024-10-09 20:04:28,274 - Eigenenergy and eigenvector computation for Run: 33 took 45.10436034202576 seconds
+2024-10-09 20:05:21,441 - New (unmixed) s-wave SC order parameter vector computed for run: 33 has the average value: (0.06475000766058495+0j)
+2024-10-09 20:05:21,543 - Maximum error for run: 34 is 0.00020809634497273577 with index 82
+2024-10-09 20:06:47,242 - ########################
+2024-10-09 20:06:47,242 - Eigenenergy and eigenvector computation for Run: 34 took 45.150431394577026 seconds
+2024-10-09 20:07:40,392 - New (unmixed) s-wave SC order parameter vector computed for run: 34 has the average value: (0.06469881054968984+0j)
+2024-10-09 20:07:40,493 - Maximum error for run: 35 is 0.00017605491787883731 with index 283
+2024-10-09 20:09:05,893 - ########################
+2024-10-09 20:09:05,893 - Eigenenergy and eigenvector computation for Run: 35 took 45.1496376991272 seconds
+2024-10-09 20:09:59,050 - New (unmixed) s-wave SC order parameter vector computed for run: 35 has the average value: (0.0646554819657736+0j)
+2024-10-09 20:09:59,151 - Maximum error for run: 36 is 0.0001489615346435963 with index 638
+2024-10-09 20:11:24,860 - ########################
+2024-10-09 20:11:24,860 - Eigenenergy and eigenvector computation for Run: 36 took 45.14783072471619 seconds
+2024-10-09 20:12:18,017 - New (unmixed) s-wave SC order parameter vector computed for run: 36 has the average value: (0.0646188109040127+0j)
+2024-10-09 20:12:18,118 - Maximum error for run: 37 is 0.00012604798254715888 with index 75
+2024-10-09 20:13:44,041 - ########################
+2024-10-09 20:13:44,041 - Eigenenergy and eigenvector computation for Run: 37 took 45.15746450424194 seconds
+2024-10-09 20:14:37,202 - New (unmixed) s-wave SC order parameter vector computed for run: 37 has the average value: (0.06458777321564933+0j)
+2024-10-09 20:14:37,304 - Maximum error for run: 38 is 0.00010666647789168981 with index 299
+2024-10-09 20:16:03,004 - ########################
+2024-10-09 20:16:03,004 - Eigenenergy and eigenvector computation for Run: 38 took 45.14598298072815 seconds
+2024-10-09 20:16:56,158 - New (unmixed) s-wave SC order parameter vector computed for run: 38 has the average value: (0.06456150264178451+0j)
+2024-10-09 20:16:56,260 - Self-Consistency achieved for set convergence limit: 0.0001
