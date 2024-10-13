@@ -13,6 +13,7 @@ from jax.lib import xla_bridge
 from functools import partial
 import logging
 from jaxlib.xla_extension import XlaRuntimeError
+import jax.lax as lax
 import time
 import gc
 from numpy import linalg as LA
@@ -96,7 +97,7 @@ def gpu_memory_stats(): #Memory stats for GPU 0
     bytes_peak = ms["peak_bytes_in_use"] / 1024**3
     bytes_usage = ms["bytes_in_use"] / 1024**3  
     print(f'Memory usage of gpu 0: {bytes_usage:.2f}/{bytes_limit:.2f} GB, Peak memory usage: {bytes_peak:.2f}/{bytes_limit:.2f} GB')
-def gpu_memory_stats_1(): #Memory stats for GPU 1
+def gpu_1_memory_stats(): #Memory stats for GPU 1
     ms = jax.devices()[1].memory_stats()
     bytes_limit = ms["bytes_limit"] / 1024**3
     bytes_peak = ms["peak_bytes_in_use"] / 1024**3
@@ -216,38 +217,53 @@ def self_consistent_s_wave(site_index, eigen_index_vec):
     return delta_s_new #Returns a single value for a single site after implementing the s-wave self-consistent condition summed over relevant eigenvectors
 self_consistent_s_wave_v = jax.vmap(self_consistent_s_wave, in_axes=(0,None)) #batching for all sites
 
+def construct_s_sc_mat(delta_s):
+    s_sc_mat = SC_mat*delta_s + hermitian_conjugate(SC_mat*delta_s) #Construct 4x4 site specific s-wave SC Hamiltonian
+    return s_sc_mat
+construct_s_sc_mat_v = jax.vmap(construct_s_sc_mat, in_axes=(0))
+
 @partial(jit, in_shardings=None, out_shardings=None)
+def update_H_on_s_sc(carry,x):
+    system_matrix,df = carry
+    s_sc_mat,site_index = x
+    start = df*site_index
+    system_matrix = lax.dynamic_update_slice(system_matrix, s_sc_mat, (start,start))
+    return (system_matrix,df),None
+
+#Cannot jit because the function returns H_comp on CPU which is then moved to GPU --> this operation fails (for huge lattices) as jax tries to move the entire jit compiled function to GPU
 def H_comp_s(delta_s_vec): 
     H_on_s_SC = jnp.zeros((df*n,df*n),dtype=jnp.complex128)
-    for i in range(n):
-        s_sc_mat = SC_mat*delta_s_vec[i] + hermitian_conjugate(SC_mat*delta_s_vec[i]) #Construct 4x4 site specific s-wave SC Hamiltonian
-        H_on_s_SC = H_on_s_SC.at[df*i:df*(i+1),df*(i):df*(i+1)].set(s_sc_mat) #Place the site specific s-wave SC Hamilton on the diagonal on-site part of main Hamiltonian
-    #print('Memory before moving H_on_s_SC to CPU:')
-    #gpu_memory_stats()
+    s_sc_mat_vec = construct_s_sc_mat_v(delta_s_vec) #Construct 4x4 site specific s-wave SC Hamiltonian for all sites
+    (H_on_s_SC, _), _ = lax.scan(update_H_on_s_sc, (H_on_s_SC, df), (s_sc_mat_vec, site_index_vec)) #lax.scan (instead of for loop) to update the H_on_s_SC matrix with the s-wave SC Hamiltonian for all sites 
     H_on_s_SC = jax.device_put(H_on_s_SC, jax.devices('cpu')[0]) #Move H_on_s_SC to CPU
     #print('Memory after moving H_on_s_SC to CPU:')
     #gpu_memory_stats()
     H_comp = H_comp_static + H_on_s_SC #Construct composite Hamiltonian on CPU
-    del s_sc_mat #Delete intermediate matrices to free up memory
-    gc.collect()
+    del s_sc_mat_vec #Delete intermediate matrices to free up memory
     #print('Memory after constructing H_comp with s-wave SC (moved to CPU) and deleting intermediate matrices on GPU:')
     #gpu_memory_stats()
     return H_comp
 
 def delta_s_selfconsistency(delta_s_vec): 
     global eigenenergies, eigenstates, run_count
+    logging.info('########################')
+    logging.info('Starting Self-Consistency Calculation for Run: %s',run_count)
     H = H_comp_s(delta_s_vec)
-    H = jax.device_put(H, jax.devices('gpu')[0]) #Move H_comp to GPU 0 for diagonalizing
+    H = jax.device_put(H, jax.devices('gpu')[0]) #Move H_comp to GPU 1 for diagonalizing
     print('Memory after after moving H_comp to GPU for diagonalizing:')
     gpu_memory_stats()
     t0 = time.time()
-    eigenenergies, eigenstates = eigh_jit(H)
-    t1 = time.time()
+    eigenenergies, eigenstates = eigh_jit(H) #jitting does not decrease the time taken for diagonalization significantly
+    #eigenenergies.block_until_ready() 
+    #eigenstates.block_until_ready()
+    t1 = time.time() #We need to apply block_until ready to capture true time taken for diagonalization, else async operations cause incorrect time calculations
     #print(f'Time taken to diagonalize Composite Hamiltonian for run: {run_count} with {n} sites is {t1 - t0:.4f} s')
     #print(eigenenergies.shape,eigenstates.shape)
-    logging.info('########################')
-    logging.info('Eigenenergy and eigenvector computation for Run: %s took %s seconds',run_count,t1 - t0)
+    logging.info('Eigenenergy and eigenvector computation for Hamiltonian with %s sites for Run: %s took %s seconds',n,run_count,t1 - t0)
+    t0 = time.time()
     delta_s_new_vec = self_consistent_s_wave_v(site_index_vec,eigen_index_vec) #Compute the new s-wave SC order parameter vector
+    t1 = time.time()
+    logging.info('Computing delta_s_new_vec for Run: %s took %s seconds',run_count,t1 - t0)
     average_delta_s = average_jit(delta_s_new_vec)
     logging.info('New (unmixed) s-wave SC order parameter vector computed for run: %s has the average value: %s',run_count, average_delta_s)
     error_vec = jnp.abs(subtract_jit(delta_s_vec,delta_s_new_vec))
@@ -255,15 +271,14 @@ def delta_s_selfconsistency(delta_s_vec):
     
     if max_error > convergence_limit:
         run_count += 1
-        logging.info('Maximum error for run: %s is %s with index %s',run_count,max_error, argmax_jit(error_vec))
+        logging.info('Maximum error for run: %s is %s',run_count,max_error)
         if run_count>max_runs:
             print('Run Count Exceeded %f - Self-Consistency not achieved for set convergence limit: %f'%(max_runs,convergence_limit))
             logging.info('Run Count Exceeded %s - Self-Consistency not achieved for set convergence limit: %s',max_runs,convergence_limit)
             return delta_s_new_vec
-        else:    
+        else:
             delta_s_new_vec = delta_s_vec * (1-alpha) + delta_s_new_vec * alpha
             del max_error, error_vec, average_delta_s, delta_s_vec, H, eigenenergies, eigenstates
-            gc.collect()
             return delta_s_selfconsistency(delta_s_new_vec)
     else:
         print('Self-Consistency achieved for set convergence limit:',convergence_limit)
@@ -274,7 +289,7 @@ def delta_s_selfconsistency(delta_s_vec):
 #Can vary N and N_repeat accordingly to GPU diagonalize just a slightly larger lattice 
 
 #Model Parameters
-N = 30 #number of lattice sites in x and y direction
+N = 58 #number of lattice sites in x and y direction
 N_diag = 0 #number of lattice sites in the isosceles right triangle hypotenuse edge
 N_repeat = N - N_diag #number of lattice sites in the repeating/extra horizontal and vertical chains besides the isosceles right triangle
 n = int((N_diag*(N_diag+1))/2) + N_repeat*N_diag + (N_diag+N_repeat)*N_repeat #Total number of lattice sites
@@ -284,9 +299,9 @@ t_N = 1+0j #neighbour (N) hopping
 t_NN = 0 #-0.25+0j #next-neighbour (NN) hopping
 mu = 0 #Chemical Potential
 V_sc = 2*t_N #s-wave SC coupling strength
-delta_s_init = 0.3+0j #s-wave superconducting order parameter
-delta_s_vec = np.ones(n,dtype=np.complex128)*delta_s_init #s-wave superconducting order parameter vector for each site in square lattice
-PBC = True #Periodic Boundary Conditions - True for PBC and False for OBC
+delta_s_init = 0.38+0j #s-wave superconducting order parameter
+delta_s_vec = jnp.ones(n,dtype=np.complex128)*delta_s_init #s-wave superconducting order parameter vector for each site in square lattice
+PBC = False #Periodic Boundary Conditions - True for PBC and False for OBC
 
 #Code Parameters
 eeta = 0.04 #Lorentzian broadening factor for DOS and LDOS calculations
@@ -372,4 +387,4 @@ print('Saving DOS and half the spectrum of eigenvalues around zero energy:',eige
 omega_axes = jnp.arange(-1,1+0.02,0.02) #Energy range, points, and spacing for DOS calculation
 DOS = lorentzian_DOS_v(eeta, omega_axes, eigenenergies) #--> Pass normalized 1D DOS array to a plotter function to plot the DOS for a given energy range
 DOS = DOS/jnp.max(DOS) #Normalize the DOS to 1 with the maximum value
-np.savez('/home/susva433/Test_Data/SC_s_square_lattice_N=30_PBC_delta_s_init=0.4_eeta=0.04_V=2.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_s=delta_s_new_vec)
+np.savez('/home/susva433/Test_Data/SC_s_square_lattice_N=58_delta_s_init=0.4_eeta=0.04_V=2.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_s=delta_s_new_vec)

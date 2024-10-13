@@ -8417,3 +8417,1045 @@
 2024-10-12 16:01:33,790 - Eigenenergy and eigenvector computation for Run: 30 took 1.1544458866119385 seconds
 2024-10-12 16:01:34,890 - New (unmixed) s-wave SC order parameter vector computed for run: 30 has the average value: (0.37628030403608825+0j)
 2024-10-12 16:01:34,890 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-12 23:00:13,293 - ----------------------------------------------------------------------------------------
+2024-10-12 23:08:50,895 - ----------------------------------------------------------------------------------------
+2024-10-12 23:11:11,163 - ########################
+2024-10-12 23:11:11,163 - Eigenenergy and eigenvector computation for Run: 0 took 97.59002113342285 seconds
+2024-10-12 23:11:11,542 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.33133451977877265+0j)
+2024-10-12 23:11:11,679 - Maximum error for run: 1 is 0.03133451977877305 with index 74
+2024-10-12 23:12:37,467 - ########################
+2024-10-12 23:12:37,467 - Eigenenergy and eigenvector computation for Run: 1 took 45.42003631591797 seconds
+2024-10-12 23:13:30,737 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.3391460727707852+0j)
+2024-10-12 23:13:30,764 - Maximum error for run: 2 is 0.026612264859276424 with index 1375
+2024-10-12 23:14:56,445 - ########################
+2024-10-12 23:14:56,446 - Eigenenergy and eigenvector computation for Run: 2 took 45.407554149627686 seconds
+2024-10-12 23:15:49,725 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.3456348501744205+0j)
+2024-10-12 23:15:49,743 - Maximum error for run: 3 is 0.02245613631920146 with index 968
+2024-10-12 23:17:15,490 - ########################
+2024-10-12 23:17:15,490 - Eigenenergy and eigenvector computation for Run: 3 took 45.41977858543396 seconds
+2024-10-12 23:18:08,771 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.35101061785650467+0j)
+2024-10-12 23:18:08,788 - Maximum error for run: 4 is 0.018849449473605118 with index 181
+2024-10-12 23:19:34,481 - ########################
+2024-10-12 23:19:34,481 - Eigenenergy and eigenvector computation for Run: 4 took 45.423145055770874 seconds
+2024-10-12 23:20:27,766 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.35545501435166166+0j)
+2024-10-12 23:20:27,784 - Maximum error for run: 5 is 0.015754066179320347 with index 316
+2024-10-12 23:22:17,222 - ----------------------------------------------------------------------------------------
+2024-10-12 23:24:38,328 - ########################
+2024-10-12 23:24:38,328 - Eigenenergy and eigenvector computation for Run: 0 took 98.37886476516724 seconds
+2024-10-12 23:43:54,672 - ----------------------------------------------------------------------------------------
+2024-10-12 23:57:18,204 - ----------------------------------------------------------------------------------------
+2024-10-13 00:08:34,270 - ----------------------------------------------------------------------------------------
+2024-10-13 00:08:37,709 - ########################
+2024-10-13 00:08:37,709 - Eigenenergy and eigenvector computation for Run: 0 took 2.3246512413024902 seconds
+2024-10-13 00:08:38,084 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.3317648547819062+0j)
+2024-10-13 00:08:38,220 - Maximum error for run: 1 is 0.03176485478190644 with index 11
+2024-10-13 00:08:39,576 - ########################
+2024-10-13 00:08:39,576 - Eigenenergy and eigenvector computation for Run: 1 took 1.1572444438934326 seconds
+2024-10-13 00:08:40,659 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.33960917786487915+0j)
+2024-10-13 00:08:40,667 - Maximum error for run: 2 is 0.026903235952117244 with index 0
+2024-10-13 00:08:41,942 - ########################
+2024-10-13 00:08:41,942 - Eigenenergy and eigenvector computation for Run: 2 took 1.1568307876586914 seconds
+2024-10-13 00:08:43,024 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.34611382452181827+0j)
+2024-10-13 00:08:43,025 - Maximum error for run: 3 is 0.022646588228209474 with index 59
+2024-10-13 00:08:44,297 - ########################
+2024-10-13 00:08:44,297 - Eigenenergy and eigenvector computation for Run: 3 took 1.1567792892456055 seconds
+2024-10-13 00:08:45,379 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.35149388138566373+0j)
+2024-10-13 00:08:45,380 - Maximum error for run: 4 is 0.01896800980077129 with index 0
+2024-10-13 00:08:46,645 - ########################
+2024-10-13 00:08:46,645 - Eigenenergy and eigenvector computation for Run: 4 took 1.1578032970428467 seconds
+2024-10-13 00:08:47,726 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.355934877740509+0j)
+2024-10-13 00:08:47,727 - Maximum error for run: 5 is 0.015821802235308158 with index 76
+2024-10-13 00:08:49,004 - ########################
+2024-10-13 00:08:49,004 - Eigenenergy and eigenvector computation for Run: 5 took 1.1659603118896484 seconds
+2024-10-13 00:08:50,092 - New (unmixed) s-wave SC order parameter vector computed for run: 5 has the average value: (0.35959492035887347+0j)
+2024-10-13 00:08:50,093 - Maximum error for run: 6 is 0.013153123959549595 with index 18
+2024-10-13 00:08:51,370 - ########################
+2024-10-13 00:08:51,370 - Eigenenergy and eigenvector computation for Run: 6 took 1.1622960567474365 seconds
+2024-10-13 00:08:52,458 - New (unmixed) s-wave SC order parameter vector computed for run: 6 has the average value: (0.36260754632790526+0j)
+2024-10-13 00:08:52,458 - Maximum error for run: 7 is 0.010904500344761592 with index 89
+2024-10-13 00:08:53,729 - ########################
+2024-10-13 00:08:53,730 - Eigenenergy and eigenvector computation for Run: 7 took 1.1610987186431885 seconds
+2024-10-13 00:08:54,817 - New (unmixed) s-wave SC order parameter vector computed for run: 7 has the average value: (0.3650847855154852+0j)
+2024-10-13 00:08:54,817 - Maximum error for run: 8 is 0.009019939394437071 with index 14
+2024-10-13 00:08:56,092 - ########################
+2024-10-13 00:08:56,092 - Eigenenergy and eigenvector computation for Run: 8 took 1.1654810905456543 seconds
+2024-10-13 00:08:57,180 - New (unmixed) s-wave SC order parameter vector computed for run: 8 has the average value: (0.36712014450218944+0j)
+2024-10-13 00:08:57,180 - Maximum error for run: 9 is 0.0074473226233665035 with index 0
+2024-10-13 00:08:58,450 - ########################
+2024-10-13 00:08:58,450 - Eigenenergy and eigenvector computation for Run: 9 took 1.1605949401855469 seconds
+2024-10-13 00:08:59,538 - New (unmixed) s-wave SC order parameter vector computed for run: 9 has the average value: (0.3687913619799501+0j)
+2024-10-13 00:08:59,539 - Maximum error for run: 10 is 0.006139611051780847 with index 22
+2024-10-13 00:09:00,811 - ########################
+2024-10-13 00:09:00,812 - Eigenenergy and eigenvector computation for Run: 10 took 1.1640794277191162 seconds
+2024-10-13 00:09:01,904 - New (unmixed) s-wave SC order parameter vector computed for run: 10 has the average value: (0.3701628695832451+0j)
+2024-10-13 00:09:01,904 - Maximum error for run: 11 is 0.005055274234363638 with index 0
+2024-10-13 00:09:03,180 - ########################
+2024-10-13 00:09:03,180 - Eigenenergy and eigenvector computation for Run: 11 took 1.163977861404419 seconds
+2024-10-13 00:09:04,271 - New (unmixed) s-wave SC order parameter vector computed for run: 11 has the average value: (0.3712879412856976+0j)
+2024-10-13 00:09:04,272 - Maximum error for run: 12 is 0.0041582362430707676 with index 113
+2024-10-13 00:09:05,545 - ########################
+2024-10-13 00:09:05,545 - Eigenenergy and eigenvector computation for Run: 12 took 1.1644423007965088 seconds
+2024-10-13 00:09:06,637 - New (unmixed) s-wave SC order parameter vector computed for run: 12 has the average value: (0.3722105418330379+0j)
+2024-10-13 00:09:06,637 - Maximum error for run: 13 is 0.0034175422931829735 with index 179
+2024-10-13 00:09:07,911 - ########################
+2024-10-13 00:09:07,911 - Eigenenergy and eigenvector computation for Run: 13 took 1.1657705307006836 seconds
+2024-10-13 00:09:09,003 - New (unmixed) s-wave SC order parameter vector computed for run: 13 has the average value: (0.37296689862137417+0j)
+2024-10-13 00:09:09,004 - Maximum error for run: 14 is 0.0028068821642461828 with index 0
+2024-10-13 00:09:10,281 - ########################
+2024-10-13 00:09:10,281 - Eigenenergy and eigenvector computation for Run: 14 took 1.1658039093017578 seconds
+2024-10-13 00:09:11,372 - New (unmixed) s-wave SC order parameter vector computed for run: 14 has the average value: (0.37358682734284976+0j)
+2024-10-13 00:09:11,372 - Maximum error for run: 15 is 0.002304058020023425 with index 2
+2024-10-13 00:09:12,645 - ########################
+2024-10-13 00:09:12,645 - Eigenenergy and eigenvector computation for Run: 15 took 1.164818286895752 seconds
+2024-10-13 00:09:13,737 - New (unmixed) s-wave SC order parameter vector computed for run: 15 has the average value: (0.3740948429855587+0j)
+2024-10-13 00:09:13,738 - Maximum error for run: 16 is 0.0018904504547230805 with index 62
+2024-10-13 00:09:15,016 - ########################
+2024-10-13 00:09:15,016 - Eigenenergy and eigenvector computation for Run: 16 took 1.1658527851104736 seconds
+2024-10-13 00:09:16,108 - New (unmixed) s-wave SC order parameter vector computed for run: 16 has the average value: (0.37451108648159626+0j)
+2024-10-13 00:09:16,108 - Maximum error for run: 17 is 0.0015505137688716641 with index 81
+2024-10-13 00:09:17,378 - ########################
+2024-10-13 00:09:17,378 - Eigenenergy and eigenvector computation for Run: 17 took 1.161409616470337 seconds
+2024-10-13 00:09:18,460 - New (unmixed) s-wave SC order parameter vector computed for run: 17 has the average value: (0.37485209471952113+0j)
+2024-10-13 00:09:18,461 - Maximum error for run: 18 is 0.001271316499247943 with index 238
+2024-10-13 00:09:19,730 - ########################
+2024-10-13 00:09:19,730 - Eigenenergy and eigenvector computation for Run: 18 took 1.1593589782714844 seconds
+2024-10-13 00:09:20,812 - New (unmixed) s-wave SC order parameter vector computed for run: 18 has the average value: (0.3751314385336207+0j)
+2024-10-13 00:09:20,813 - Maximum error for run: 19 is 0.0010421337136482522 with index 0
+2024-10-13 00:09:22,082 - ########################
+2024-10-13 00:09:22,082 - Eigenenergy and eigenvector computation for Run: 19 took 1.1581306457519531 seconds
+2024-10-13 00:09:23,165 - New (unmixed) s-wave SC order parameter vector computed for run: 19 has the average value: (0.37536025008952983+0j)
+2024-10-13 00:09:23,166 - Maximum error for run: 20 is 0.0008540917840983431 with index 46
+2024-10-13 00:09:24,435 - ########################
+2024-10-13 00:09:24,435 - Eigenenergy and eigenvector computation for Run: 20 took 1.1588103771209717 seconds
+2024-10-13 00:09:25,518 - New (unmixed) s-wave SC order parameter vector computed for run: 20 has the average value: (0.3755476580430899+0j)
+2024-10-13 00:09:25,519 - Maximum error for run: 21 is 0.0006998630240192538 with index 94
+2024-10-13 00:09:26,794 - ########################
+2024-10-13 00:09:26,794 - Eigenenergy and eigenvector computation for Run: 21 took 1.1599860191345215 seconds
+2024-10-13 00:09:27,877 - New (unmixed) s-wave SC order parameter vector computed for run: 21 has the average value: (0.3757011460755637+0j)
+2024-10-13 00:09:27,877 - Maximum error for run: 22 is 0.000573405846885422 with index 62
+2024-10-13 00:09:29,148 - ########################
+2024-10-13 00:09:29,148 - Eigenenergy and eigenvector computation for Run: 22 took 1.1590690612792969 seconds
+2024-10-13 00:09:30,231 - New (unmixed) s-wave SC order parameter vector computed for run: 22 has the average value: (0.3758268479505018+0j)
+2024-10-13 00:09:30,232 - Maximum error for run: 23 is 0.00046974538306948643 with index 22
+2024-10-13 00:09:31,499 - ########################
+2024-10-13 00:09:31,500 - Eigenenergy and eigenvector computation for Run: 23 took 1.1588025093078613 seconds
+2024-10-13 00:09:32,582 - New (unmixed) s-wave SC order parameter vector computed for run: 23 has the average value: (0.37592979010143945+0j)
+2024-10-13 00:09:32,583 - Maximum error for run: 24 is 0.0003847893807795155 with index 114
+2024-10-13 00:09:33,850 - ########################
+2024-10-13 00:09:33,850 - Eigenenergy and eigenvector computation for Run: 24 took 1.1593456268310547 seconds
+2024-10-13 00:09:34,933 - New (unmixed) s-wave SC order parameter vector computed for run: 24 has the average value: (0.37601409092849997+0j)
+2024-10-13 00:09:34,933 - Maximum error for run: 25 is 0.00031517445552853296 with index 0
+2024-10-13 00:09:36,204 - ########################
+2024-10-13 00:09:36,204 - Eigenenergy and eigenvector computation for Run: 25 took 1.1627373695373535 seconds
+2024-10-13 00:09:37,294 - New (unmixed) s-wave SC order parameter vector computed for run: 25 has the average value: (0.37608312442813197+0j)
+2024-10-13 00:09:37,294 - Maximum error for run: 26 is 0.00025813817294906283 with index 19
+2024-10-13 00:09:38,568 - ########################
+2024-10-13 00:09:38,568 - Eigenenergy and eigenvector computation for Run: 26 took 1.1646723747253418 seconds
+2024-10-13 00:09:39,657 - New (unmixed) s-wave SC order parameter vector computed for run: 26 has the average value: (0.3761396544716008+0j)
+2024-10-13 00:09:39,658 - Maximum error for run: 27 is 0.00021141294723847626 with index 225
+2024-10-13 00:09:40,934 - ########################
+2024-10-13 00:09:40,934 - Eigenenergy and eigenvector computation for Run: 27 took 1.1647236347198486 seconds
+2024-10-13 00:09:42,024 - New (unmixed) s-wave SC order parameter vector computed for run: 27 has the average value: (0.37618594495217733+0j)
+2024-10-13 00:09:42,025 - Maximum error for run: 28 is 0.00017313824891973528 with index 39
+2024-10-13 00:09:43,299 - ########################
+2024-10-13 00:09:43,299 - Eigenenergy and eigenvector computation for Run: 28 took 1.163431167602539 seconds
+2024-10-13 00:09:44,389 - New (unmixed) s-wave SC order parameter vector computed for run: 28 has the average value: (0.3762238501076691+0j)
+2024-10-13 00:09:44,390 - Maximum error for run: 29 is 0.00014178810484388737 with index 0
+2024-10-13 00:09:45,662 - ########################
+2024-10-13 00:09:45,662 - Eigenenergy and eigenvector computation for Run: 29 took 1.163944959640503 seconds
+2024-10-13 00:09:46,753 - New (unmixed) s-wave SC order parameter vector computed for run: 29 has the average value: (0.37625488856635975+0j)
+2024-10-13 00:09:46,753 - Maximum error for run: 30 is 0.00011611132159727866 with index 20
+2024-10-13 00:09:48,026 - ########################
+2024-10-13 00:09:48,026 - Eigenenergy and eigenvector computation for Run: 30 took 1.1649129390716553 seconds
+2024-10-13 00:09:49,116 - New (unmixed) s-wave SC order parameter vector computed for run: 30 has the average value: (0.37628030403608825+0j)
+2024-10-13 00:09:49,117 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-13 00:15:16,219 - ----------------------------------------------------------------------------------------
+2024-10-13 00:15:50,640 - ----------------------------------------------------------------------------------------
+2024-10-13 00:15:54,060 - ########################
+2024-10-13 00:15:54,060 - Eigenenergy and eigenvector computation for Run: 0 took 2.311100482940674 seconds
+2024-10-13 00:15:54,432 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.3317648547819062+0j)
+2024-10-13 00:15:54,565 - Maximum error for run: 1 is 0.03176485478190644 with index 11
+2024-10-13 00:15:55,919 - ########################
+2024-10-13 00:15:55,919 - Eigenenergy and eigenvector computation for Run: 1 took 1.1569397449493408 seconds
+2024-10-13 00:15:57,001 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.33960917786487915+0j)
+2024-10-13 00:15:57,009 - Maximum error for run: 2 is 0.026903235952117244 with index 0
+2024-10-13 00:15:58,283 - ########################
+2024-10-13 00:15:58,283 - Eigenenergy and eigenvector computation for Run: 2 took 1.1569745540618896 seconds
+2024-10-13 00:15:59,365 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.34611382452181827+0j)
+2024-10-13 00:15:59,366 - Maximum error for run: 3 is 0.022646588228209474 with index 59
+2024-10-13 00:16:00,642 - ########################
+2024-10-13 00:16:00,642 - Eigenenergy and eigenvector computation for Run: 3 took 1.159243106842041 seconds
+2024-10-13 00:16:01,730 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.35149388138566373+0j)
+2024-10-13 00:16:01,730 - Maximum error for run: 4 is 0.01896800980077129 with index 0
+2024-10-13 00:16:03,005 - ########################
+2024-10-13 00:16:03,005 - Eigenenergy and eigenvector computation for Run: 4 took 1.1635518074035645 seconds
+2024-10-13 00:16:04,093 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.355934877740509+0j)
+2024-10-13 00:16:04,093 - Maximum error for run: 5 is 0.015821802235308158 with index 76
+2024-10-13 00:16:05,371 - ########################
+2024-10-13 00:16:05,371 - Eigenenergy and eigenvector computation for Run: 5 took 1.1611039638519287 seconds
+2024-10-13 00:16:06,457 - New (unmixed) s-wave SC order parameter vector computed for run: 5 has the average value: (0.35959492035887347+0j)
+2024-10-13 00:16:06,458 - Maximum error for run: 6 is 0.013153123959549595 with index 18
+2024-10-13 00:16:07,731 - ########################
+2024-10-13 00:16:07,731 - Eigenenergy and eigenvector computation for Run: 6 took 1.1625113487243652 seconds
+2024-10-13 00:16:08,819 - New (unmixed) s-wave SC order parameter vector computed for run: 6 has the average value: (0.36260754632790526+0j)
+2024-10-13 00:16:08,820 - Maximum error for run: 7 is 0.010904500344761592 with index 89
+2024-10-13 00:16:10,090 - ########################
+2024-10-13 00:16:10,090 - Eigenenergy and eigenvector computation for Run: 7 took 1.1614024639129639 seconds
+2024-10-13 00:16:11,177 - New (unmixed) s-wave SC order parameter vector computed for run: 7 has the average value: (0.3650847855154852+0j)
+2024-10-13 00:16:11,178 - Maximum error for run: 8 is 0.009019939394437071 with index 14
+2024-10-13 00:16:12,455 - ########################
+2024-10-13 00:16:12,455 - Eigenenergy and eigenvector computation for Run: 8 took 1.1634886264801025 seconds
+2024-10-13 00:16:13,542 - New (unmixed) s-wave SC order parameter vector computed for run: 8 has the average value: (0.36712014450218944+0j)
+2024-10-13 00:16:13,543 - Maximum error for run: 9 is 0.0074473226233665035 with index 0
+2024-10-13 00:16:14,818 - ########################
+2024-10-13 00:16:14,818 - Eigenenergy and eigenvector computation for Run: 9 took 1.1627390384674072 seconds
+2024-10-13 00:16:15,910 - New (unmixed) s-wave SC order parameter vector computed for run: 9 has the average value: (0.3687913619799501+0j)
+2024-10-13 00:16:15,911 - Maximum error for run: 10 is 0.006139611051780847 with index 22
+2024-10-13 00:16:17,187 - ########################
+2024-10-13 00:16:17,187 - Eigenenergy and eigenvector computation for Run: 10 took 1.164665937423706 seconds
+2024-10-13 00:16:18,278 - New (unmixed) s-wave SC order parameter vector computed for run: 10 has the average value: (0.3701628695832451+0j)
+2024-10-13 00:16:18,279 - Maximum error for run: 11 is 0.005055274234363638 with index 0
+2024-10-13 00:16:19,565 - ########################
+2024-10-13 00:16:19,565 - Eigenenergy and eigenvector computation for Run: 11 took 1.165205955505371 seconds
+2024-10-13 00:16:20,658 - New (unmixed) s-wave SC order parameter vector computed for run: 11 has the average value: (0.3712879412856976+0j)
+2024-10-13 00:16:20,659 - Maximum error for run: 12 is 0.0041582362430707676 with index 113
+2024-10-13 00:16:21,943 - ########################
+2024-10-13 00:16:21,943 - Eigenenergy and eigenvector computation for Run: 12 took 1.1656279563903809 seconds
+2024-10-13 00:16:23,034 - New (unmixed) s-wave SC order parameter vector computed for run: 12 has the average value: (0.3722105418330379+0j)
+2024-10-13 00:16:23,035 - Maximum error for run: 13 is 0.0034175422931829735 with index 179
+2024-10-13 00:16:24,320 - ########################
+2024-10-13 00:16:24,321 - Eigenenergy and eigenvector computation for Run: 13 took 1.1670124530792236 seconds
+2024-10-13 00:16:25,412 - New (unmixed) s-wave SC order parameter vector computed for run: 13 has the average value: (0.37296689862137417+0j)
+2024-10-13 00:16:25,413 - Maximum error for run: 14 is 0.0028068821642461828 with index 0
+2024-10-13 00:16:26,701 - ########################
+2024-10-13 00:16:26,701 - Eigenenergy and eigenvector computation for Run: 14 took 1.165468692779541 seconds
+2024-10-13 00:16:27,793 - New (unmixed) s-wave SC order parameter vector computed for run: 14 has the average value: (0.37358682734284976+0j)
+2024-10-13 00:16:27,794 - Maximum error for run: 15 is 0.002304058020023425 with index 2
+2024-10-13 00:16:29,072 - ########################
+2024-10-13 00:16:29,072 - Eigenenergy and eigenvector computation for Run: 15 took 1.1610815525054932 seconds
+2024-10-13 00:16:30,155 - New (unmixed) s-wave SC order parameter vector computed for run: 15 has the average value: (0.3740948429855587+0j)
+2024-10-13 00:16:30,155 - Maximum error for run: 16 is 0.0018904504547230805 with index 62
+2024-10-13 00:16:31,436 - ########################
+2024-10-13 00:16:31,436 - Eigenenergy and eigenvector computation for Run: 16 took 1.1614961624145508 seconds
+2024-10-13 00:16:32,518 - New (unmixed) s-wave SC order parameter vector computed for run: 16 has the average value: (0.37451108648159626+0j)
+2024-10-13 00:16:32,519 - Maximum error for run: 17 is 0.0015505137688716641 with index 81
+2024-10-13 00:16:33,803 - ########################
+2024-10-13 00:16:33,803 - Eigenenergy and eigenvector computation for Run: 17 took 1.161729097366333 seconds
+2024-10-13 00:16:34,885 - New (unmixed) s-wave SC order parameter vector computed for run: 17 has the average value: (0.37485209471952113+0j)
+2024-10-13 00:16:34,886 - Maximum error for run: 18 is 0.001271316499247943 with index 238
+2024-10-13 00:16:36,164 - ########################
+2024-10-13 00:16:36,164 - Eigenenergy and eigenvector computation for Run: 18 took 1.1608026027679443 seconds
+2024-10-13 00:16:37,247 - New (unmixed) s-wave SC order parameter vector computed for run: 18 has the average value: (0.3751314385336207+0j)
+2024-10-13 00:16:37,247 - Maximum error for run: 19 is 0.0010421337136482522 with index 0
+2024-10-13 00:16:38,523 - ########################
+2024-10-13 00:16:38,524 - Eigenenergy and eigenvector computation for Run: 19 took 1.1590890884399414 seconds
+2024-10-13 00:16:39,606 - New (unmixed) s-wave SC order parameter vector computed for run: 19 has the average value: (0.37536025008952983+0j)
+2024-10-13 00:16:39,607 - Maximum error for run: 20 is 0.0008540917840983431 with index 46
+2024-10-13 00:16:40,884 - ########################
+2024-10-13 00:16:40,884 - Eigenenergy and eigenvector computation for Run: 20 took 1.1598470211029053 seconds
+2024-10-13 00:16:41,966 - New (unmixed) s-wave SC order parameter vector computed for run: 20 has the average value: (0.3755476580430899+0j)
+2024-10-13 00:16:41,967 - Maximum error for run: 21 is 0.0006998630240192538 with index 94
+2024-10-13 00:16:43,250 - ########################
+2024-10-13 00:16:43,250 - Eigenenergy and eigenvector computation for Run: 21 took 1.1610946655273438 seconds
+2024-10-13 00:16:44,332 - New (unmixed) s-wave SC order parameter vector computed for run: 21 has the average value: (0.3757011460755637+0j)
+2024-10-13 00:16:44,333 - Maximum error for run: 22 is 0.000573405846885422 with index 62
+2024-10-13 00:16:45,611 - ########################
+2024-10-13 00:16:45,611 - Eigenenergy and eigenvector computation for Run: 22 took 1.1598036289215088 seconds
+2024-10-13 00:16:46,693 - New (unmixed) s-wave SC order parameter vector computed for run: 22 has the average value: (0.3758268479505018+0j)
+2024-10-13 00:16:46,693 - Maximum error for run: 23 is 0.00046974538306948643 with index 22
+2024-10-13 00:16:47,970 - ########################
+2024-10-13 00:16:47,970 - Eigenenergy and eigenvector computation for Run: 23 took 1.1628122329711914 seconds
+2024-10-13 00:16:49,060 - New (unmixed) s-wave SC order parameter vector computed for run: 23 has the average value: (0.37592979010143945+0j)
+2024-10-13 00:16:49,060 - Maximum error for run: 24 is 0.0003847893807795155 with index 114
+2024-10-13 00:16:50,340 - ########################
+2024-10-13 00:16:50,340 - Eigenenergy and eigenvector computation for Run: 24 took 1.16432785987854 seconds
+2024-10-13 00:16:51,430 - New (unmixed) s-wave SC order parameter vector computed for run: 24 has the average value: (0.37601409092849997+0j)
+2024-10-13 00:16:51,431 - Maximum error for run: 25 is 0.00031517445552853296 with index 0
+2024-10-13 00:16:52,709 - ########################
+2024-10-13 00:16:52,709 - Eigenenergy and eigenvector computation for Run: 25 took 1.16424560546875 seconds
+2024-10-13 00:16:53,800 - New (unmixed) s-wave SC order parameter vector computed for run: 25 has the average value: (0.37608312442813197+0j)
+2024-10-13 00:16:53,800 - Maximum error for run: 26 is 0.00025813817294906283 with index 19
+2024-10-13 00:16:55,079 - ########################
+2024-10-13 00:16:55,079 - Eigenenergy and eigenvector computation for Run: 26 took 1.16483473777771 seconds
+2024-10-13 00:16:56,169 - New (unmixed) s-wave SC order parameter vector computed for run: 26 has the average value: (0.3761396544716008+0j)
+2024-10-13 00:16:56,169 - Maximum error for run: 27 is 0.00021141294723847626 with index 225
+2024-10-13 00:16:57,453 - ########################
+2024-10-13 00:16:57,453 - Eigenenergy and eigenvector computation for Run: 27 took 1.1652843952178955 seconds
+2024-10-13 00:16:58,543 - New (unmixed) s-wave SC order parameter vector computed for run: 27 has the average value: (0.37618594495217733+0j)
+2024-10-13 00:16:58,543 - Maximum error for run: 28 is 0.00017313824891973528 with index 39
+2024-10-13 00:16:59,824 - ########################
+2024-10-13 00:16:59,824 - Eigenenergy and eigenvector computation for Run: 28 took 1.1648445129394531 seconds
+2024-10-13 00:17:00,914 - New (unmixed) s-wave SC order parameter vector computed for run: 28 has the average value: (0.3762238501076691+0j)
+2024-10-13 00:17:00,915 - Maximum error for run: 29 is 0.00014178810484388737 with index 0
+2024-10-13 00:17:02,194 - ########################
+2024-10-13 00:17:02,194 - Eigenenergy and eigenvector computation for Run: 29 took 1.1652922630310059 seconds
+2024-10-13 00:17:03,284 - New (unmixed) s-wave SC order parameter vector computed for run: 29 has the average value: (0.37625488856635975+0j)
+2024-10-13 00:17:03,284 - Maximum error for run: 30 is 0.00011611132159727866 with index 20
+2024-10-13 00:17:04,562 - ########################
+2024-10-13 00:17:04,562 - Eigenenergy and eigenvector computation for Run: 30 took 1.1639060974121094 seconds
+2024-10-13 00:17:05,651 - New (unmixed) s-wave SC order parameter vector computed for run: 30 has the average value: (0.37628030403608825+0j)
+2024-10-13 00:17:05,652 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-13 00:18:09,665 - ----------------------------------------------------------------------------------------
+2024-10-13 00:18:14,212 - ########################
+2024-10-13 00:18:14,213 - Eigenenergy and eigenvector computation for Run: 0 took 2.3245575428009033 seconds
+2024-10-13 00:18:14,582 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.3317648547819062+0j)
+2024-10-13 00:18:14,717 - Maximum error for run: 1 is 0.03176485478190644 with index 11
+2024-10-13 00:18:15,920 - ########################
+2024-10-13 00:18:15,920 - Eigenenergy and eigenvector computation for Run: 1 took 1.1502463817596436 seconds
+2024-10-13 00:18:17,012 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.33960917786487915+0j)
+2024-10-13 00:18:17,013 - Maximum error for run: 2 is 0.026903235952117244 with index 0
+2024-10-13 00:18:18,182 - ########################
+2024-10-13 00:18:18,182 - Eigenenergy and eigenvector computation for Run: 2 took 1.1497864723205566 seconds
+2024-10-13 00:18:19,274 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.34611382452181827+0j)
+2024-10-13 00:18:19,274 - Maximum error for run: 3 is 0.022646588228209474 with index 59
+2024-10-13 00:18:20,434 - ########################
+2024-10-13 00:18:20,434 - Eigenenergy and eigenvector computation for Run: 3 took 1.145064115524292 seconds
+2024-10-13 00:18:21,517 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.35149388138566373+0j)
+2024-10-13 00:18:21,517 - Maximum error for run: 4 is 0.01896800980077129 with index 0
+2024-10-13 00:18:22,675 - ########################
+2024-10-13 00:18:22,675 - Eigenenergy and eigenvector computation for Run: 4 took 1.1440343856811523 seconds
+2024-10-13 00:18:23,758 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.355934877740509+0j)
+2024-10-13 00:18:23,759 - Maximum error for run: 5 is 0.015821802235308158 with index 76
+2024-10-13 00:18:24,923 - ########################
+2024-10-13 00:18:24,923 - Eigenenergy and eigenvector computation for Run: 5 took 1.144838809967041 seconds
+2024-10-13 00:18:26,006 - New (unmixed) s-wave SC order parameter vector computed for run: 5 has the average value: (0.35959492035887347+0j)
+2024-10-13 00:18:26,007 - Maximum error for run: 6 is 0.013153123959549595 with index 18
+2024-10-13 00:18:27,172 - ########################
+2024-10-13 00:18:27,172 - Eigenenergy and eigenvector computation for Run: 6 took 1.1462328433990479 seconds
+2024-10-13 00:18:28,254 - New (unmixed) s-wave SC order parameter vector computed for run: 6 has the average value: (0.36260754632790526+0j)
+2024-10-13 00:18:28,254 - Maximum error for run: 7 is 0.010904500344761592 with index 89
+2024-10-13 00:18:29,418 - ########################
+2024-10-13 00:18:29,418 - Eigenenergy and eigenvector computation for Run: 7 took 1.1448729038238525 seconds
+2024-10-13 00:18:30,500 - New (unmixed) s-wave SC order parameter vector computed for run: 7 has the average value: (0.3650847855154852+0j)
+2024-10-13 00:18:30,501 - Maximum error for run: 8 is 0.009019939394437071 with index 14
+2024-10-13 00:18:31,669 - ########################
+2024-10-13 00:18:31,669 - Eigenenergy and eigenvector computation for Run: 8 took 1.1487398147583008 seconds
+2024-10-13 00:18:32,750 - New (unmixed) s-wave SC order parameter vector computed for run: 8 has the average value: (0.36712014450218944+0j)
+2024-10-13 00:18:32,750 - Maximum error for run: 9 is 0.0074473226233665035 with index 0
+2024-10-13 00:18:33,911 - ########################
+2024-10-13 00:18:33,911 - Eigenenergy and eigenvector computation for Run: 9 took 1.1449470520019531 seconds
+2024-10-13 00:18:34,992 - New (unmixed) s-wave SC order parameter vector computed for run: 9 has the average value: (0.3687913619799501+0j)
+2024-10-13 00:18:34,993 - Maximum error for run: 10 is 0.006139611051780847 with index 22
+2024-10-13 00:18:36,161 - ########################
+2024-10-13 00:18:36,161 - Eigenenergy and eigenvector computation for Run: 10 took 1.1494219303131104 seconds
+2024-10-13 00:18:37,252 - New (unmixed) s-wave SC order parameter vector computed for run: 10 has the average value: (0.3701628695832451+0j)
+2024-10-13 00:18:37,252 - Maximum error for run: 11 is 0.005055274234363638 with index 0
+2024-10-13 00:18:38,419 - ########################
+2024-10-13 00:18:38,420 - Eigenenergy and eigenvector computation for Run: 11 took 1.149756669998169 seconds
+2024-10-13 00:18:39,509 - New (unmixed) s-wave SC order parameter vector computed for run: 11 has the average value: (0.3712879412856976+0j)
+2024-10-13 00:18:39,510 - Maximum error for run: 12 is 0.0041582362430707676 with index 113
+2024-10-13 00:18:40,672 - ########################
+2024-10-13 00:18:40,672 - Eigenenergy and eigenvector computation for Run: 12 took 1.148542881011963 seconds
+2024-10-13 00:18:41,762 - New (unmixed) s-wave SC order parameter vector computed for run: 12 has the average value: (0.3722105418330379+0j)
+2024-10-13 00:18:41,762 - Maximum error for run: 13 is 0.0034175422931829735 with index 179
+2024-10-13 00:18:42,928 - ########################
+2024-10-13 00:18:42,928 - Eigenenergy and eigenvector computation for Run: 13 took 1.1495060920715332 seconds
+2024-10-13 00:18:44,017 - New (unmixed) s-wave SC order parameter vector computed for run: 13 has the average value: (0.37296689862137417+0j)
+2024-10-13 00:18:44,018 - Maximum error for run: 14 is 0.0028068821642461828 with index 0
+2024-10-13 00:18:45,185 - ########################
+2024-10-13 00:18:45,185 - Eigenenergy and eigenvector computation for Run: 14 took 1.1499404907226562 seconds
+2024-10-13 00:18:46,275 - New (unmixed) s-wave SC order parameter vector computed for run: 14 has the average value: (0.37358682734284976+0j)
+2024-10-13 00:18:46,276 - Maximum error for run: 15 is 0.002304058020023425 with index 2
+2024-10-13 00:18:47,441 - ########################
+2024-10-13 00:18:47,441 - Eigenenergy and eigenvector computation for Run: 15 took 1.1496825218200684 seconds
+2024-10-13 00:18:48,531 - New (unmixed) s-wave SC order parameter vector computed for run: 15 has the average value: (0.3740948429855587+0j)
+2024-10-13 00:18:48,531 - Maximum error for run: 16 is 0.0018904504547230805 with index 62
+2024-10-13 00:18:49,700 - ########################
+2024-10-13 00:18:49,700 - Eigenenergy and eigenvector computation for Run: 16 took 1.1512248516082764 seconds
+2024-10-13 00:18:50,790 - New (unmixed) s-wave SC order parameter vector computed for run: 16 has the average value: (0.37451108648159626+0j)
+2024-10-13 00:18:50,790 - Maximum error for run: 17 is 0.0015505137688716641 with index 81
+2024-10-13 00:18:51,956 - ########################
+2024-10-13 00:18:51,956 - Eigenenergy and eigenvector computation for Run: 17 took 1.1501500606536865 seconds
+2024-10-13 00:18:53,046 - New (unmixed) s-wave SC order parameter vector computed for run: 17 has the average value: (0.37485209471952113+0j)
+2024-10-13 00:18:53,047 - Maximum error for run: 18 is 0.001271316499247943 with index 238
+2024-10-13 00:18:54,217 - ########################
+2024-10-13 00:18:54,217 - Eigenenergy and eigenvector computation for Run: 18 took 1.1524980068206787 seconds
+2024-10-13 00:18:55,312 - New (unmixed) s-wave SC order parameter vector computed for run: 18 has the average value: (0.3751314385336207+0j)
+2024-10-13 00:18:55,313 - Maximum error for run: 19 is 0.0010421337136482522 with index 0
+2024-10-13 00:18:56,481 - ########################
+2024-10-13 00:18:56,481 - Eigenenergy and eigenvector computation for Run: 19 took 1.1540586948394775 seconds
+2024-10-13 00:18:57,576 - New (unmixed) s-wave SC order parameter vector computed for run: 19 has the average value: (0.37536025008952983+0j)
+2024-10-13 00:18:57,577 - Maximum error for run: 20 is 0.0008540917840983431 with index 46
+2024-10-13 00:18:58,746 - ########################
+2024-10-13 00:18:58,746 - Eigenenergy and eigenvector computation for Run: 20 took 1.154076099395752 seconds
+2024-10-13 00:18:59,842 - New (unmixed) s-wave SC order parameter vector computed for run: 20 has the average value: (0.3755476580430899+0j)
+2024-10-13 00:18:59,842 - Maximum error for run: 21 is 0.0006998630240192538 with index 94
+2024-10-13 00:19:01,014 - ########################
+2024-10-13 00:19:01,014 - Eigenenergy and eigenvector computation for Run: 21 took 1.154653787612915 seconds
+2024-10-13 00:19:02,109 - New (unmixed) s-wave SC order parameter vector computed for run: 21 has the average value: (0.3757011460755637+0j)
+2024-10-13 00:19:02,110 - Maximum error for run: 22 is 0.000573405846885422 with index 62
+2024-10-13 00:19:03,279 - ########################
+2024-10-13 00:19:03,279 - Eigenenergy and eigenvector computation for Run: 22 took 1.1553587913513184 seconds
+2024-10-13 00:19:04,374 - New (unmixed) s-wave SC order parameter vector computed for run: 22 has the average value: (0.3758268479505018+0j)
+2024-10-13 00:19:04,375 - Maximum error for run: 23 is 0.00046974538306948643 with index 22
+2024-10-13 00:19:05,544 - ########################
+2024-10-13 00:19:05,544 - Eigenenergy and eigenvector computation for Run: 23 took 1.1533699035644531 seconds
+2024-10-13 00:19:06,639 - New (unmixed) s-wave SC order parameter vector computed for run: 23 has the average value: (0.37592979010143945+0j)
+2024-10-13 00:19:06,640 - Maximum error for run: 24 is 0.0003847893807795155 with index 114
+2024-10-13 00:19:07,811 - ########################
+2024-10-13 00:19:07,811 - Eigenenergy and eigenvector computation for Run: 24 took 1.1543731689453125 seconds
+2024-10-13 00:19:08,905 - New (unmixed) s-wave SC order parameter vector computed for run: 24 has the average value: (0.37601409092849997+0j)
+2024-10-13 00:19:08,906 - Maximum error for run: 25 is 0.00031517445552853296 with index 0
+2024-10-13 00:19:10,078 - ########################
+2024-10-13 00:19:10,078 - Eigenenergy and eigenvector computation for Run: 25 took 1.1541931629180908 seconds
+2024-10-13 00:19:11,172 - New (unmixed) s-wave SC order parameter vector computed for run: 25 has the average value: (0.37608312442813197+0j)
+2024-10-13 00:19:11,173 - Maximum error for run: 26 is 0.00025813817294906283 with index 19
+2024-10-13 00:19:12,342 - ########################
+2024-10-13 00:19:12,342 - Eigenenergy and eigenvector computation for Run: 26 took 1.1549880504608154 seconds
+2024-10-13 00:19:13,437 - New (unmixed) s-wave SC order parameter vector computed for run: 26 has the average value: (0.3761396544716008+0j)
+2024-10-13 00:19:13,438 - Maximum error for run: 27 is 0.00021141294723847626 with index 225
+2024-10-13 00:19:14,609 - ########################
+2024-10-13 00:19:14,609 - Eigenenergy and eigenvector computation for Run: 27 took 1.15556001663208 seconds
+2024-10-13 00:19:15,705 - New (unmixed) s-wave SC order parameter vector computed for run: 27 has the average value: (0.37618594495217733+0j)
+2024-10-13 00:19:15,705 - Maximum error for run: 28 is 0.00017313824891973528 with index 39
+2024-10-13 00:19:16,873 - ########################
+2024-10-13 00:19:16,873 - Eigenenergy and eigenvector computation for Run: 28 took 1.1538431644439697 seconds
+2024-10-13 00:19:17,968 - New (unmixed) s-wave SC order parameter vector computed for run: 28 has the average value: (0.3762238501076691+0j)
+2024-10-13 00:19:17,968 - Maximum error for run: 29 is 0.00014178810484388737 with index 0
+2024-10-13 00:19:19,141 - ########################
+2024-10-13 00:19:19,141 - Eigenenergy and eigenvector computation for Run: 29 took 1.1546659469604492 seconds
+2024-10-13 00:19:20,236 - New (unmixed) s-wave SC order parameter vector computed for run: 29 has the average value: (0.37625488856635975+0j)
+2024-10-13 00:19:20,236 - Maximum error for run: 30 is 0.00011611132159727866 with index 20
+2024-10-13 00:19:21,409 - ########################
+2024-10-13 00:19:21,409 - Eigenenergy and eigenvector computation for Run: 30 took 1.1584997177124023 seconds
+2024-10-13 00:19:22,509 - New (unmixed) s-wave SC order parameter vector computed for run: 30 has the average value: (0.37628030403608825+0j)
+2024-10-13 00:19:22,510 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-13 00:21:00,829 - ----------------------------------------------------------------------------------------
+2024-10-13 00:25:46,877 - ----------------------------------------------------------------------------------------
+2024-10-13 00:27:27,669 - ########################
+2024-10-13 00:27:27,669 - Eigenenergy and eigenvector computation for Run: 0 took 97.08469891548157 seconds
+2024-10-13 00:27:28,083 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.43788328206518773+0j)
+2024-10-13 00:27:28,221 - Maximum error for run: 1 is 0.062116717934812604 with index 766
+2024-10-13 00:28:14,815 - ########################
+2024-10-13 00:28:14,815 - Eigenenergy and eigenvector computation for Run: 1 took 45.17605996131897 seconds
+2024-10-13 00:29:07,982 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.4264015531523871+0j)
+2024-10-13 00:29:08,010 - Maximum error for run: 2 is 0.048751759673688444 with index 422
+2024-10-13 00:29:54,492 - ########################
+2024-10-13 00:29:54,493 - Eigenenergy and eigenvector computation for Run: 2 took 45.23323321342468 seconds
+2024-10-13 00:30:47,675 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.41709513168745643+0j)
+2024-10-13 00:30:47,693 - Maximum error for run: 3 is 0.038557477269143825 with index 1127
+2024-10-13 00:31:34,074 - ########################
+2024-10-13 00:31:34,074 - Eigenenergy and eigenvector computation for Run: 3 took 45.1920599937439 seconds
+2024-10-13 00:34:09,844 - ----------------------------------------------------------------------------------------
+2024-10-13 00:35:51,135 - ########################
+2024-10-13 00:35:51,135 - Eigenenergy and eigenvector computation for Run: 0 took 97.53269815444946 seconds
+2024-10-13 00:35:51,521 - Computing delta_s_new_vec for Run: 0 took 0.3854506015777588 seconds
+2024-10-13 00:35:51,567 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.43788328206518773+0j)
+2024-10-13 00:35:51,706 - Maximum error for run: 1 is 0.062116717934812604 with index 766
+2024-10-13 00:36:38,280 - ########################
+2024-10-13 00:36:38,280 - Eigenenergy and eigenvector computation for Run: 1 took 45.27335977554321 seconds
+2024-10-13 00:37:31,460 - Computing delta_s_new_vec for Run: 1 took 53.17950391769409 seconds
+2024-10-13 00:37:31,460 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.4264015531523871+0j)
+2024-10-13 00:37:31,487 - Maximum error for run: 2 is 0.048751759673688444 with index 422
+2024-10-13 00:38:17,988 - ########################
+2024-10-13 00:38:17,988 - Eigenenergy and eigenvector computation for Run: 2 took 45.23870134353638 seconds
+2024-10-13 00:39:11,171 - Computing delta_s_new_vec for Run: 2 took 53.18341040611267 seconds
+2024-10-13 00:39:11,171 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.41709513168745643+0j)
+2024-10-13 00:39:11,189 - Maximum error for run: 3 is 0.038557477269143825 with index 1127
+2024-10-13 00:39:52,099 - ----------------------------------------------------------------------------------------
+2024-10-13 00:41:33,822 - ########################
+2024-10-13 00:41:33,822 - Eigenenergy and eigenvector computation for Run: 0 took 98.20605564117432 seconds
+2024-10-13 00:41:34,382 - Computing delta_s_new_vec for Run: 0 took 0.5597121715545654 seconds
+2024-10-13 00:41:34,428 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.43788328206518773+0j)
+2024-10-13 00:41:34,620 - Maximum error for run: 1 is 0.062116717934812604 with index 766
+2024-10-13 00:42:21,140 - ########################
+2024-10-13 00:42:21,140 - Eigenenergy and eigenvector computation for Run: 1 took 45.264599323272705 seconds
+2024-10-13 00:43:14,416 - Computing delta_s_new_vec for Run: 1 took 53.27513074874878 seconds
+2024-10-13 00:43:14,416 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.4264015531523871+0j)
+2024-10-13 00:43:14,526 - Maximum error for run: 2 is 0.048751759673688444 with index 422
+2024-10-13 00:45:02,525 - ----------------------------------------------------------------------------------------
+2024-10-13 00:46:42,449 - ########################
+2024-10-13 00:46:42,449 - Eigenenergy and eigenvector computation for Run: 0 took 96.24504590034485 seconds
+2024-10-13 00:46:42,914 - Computing delta_s_new_vec for Run: 0 took 0.46446728706359863 seconds
+2024-10-13 00:46:42,961 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.43788328206518773+0j)
+2024-10-13 00:46:43,101 - Maximum error for run: 1 is 0.062116717934812604 with index 766
+2024-10-13 00:47:29,575 - ########################
+2024-10-13 00:47:29,575 - Eigenenergy and eigenvector computation for Run: 1 took 45.104026317596436 seconds
+2024-10-13 00:48:22,273 - Computing delta_s_new_vec for Run: 1 took 52.69781947135925 seconds
+2024-10-13 00:48:22,274 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.4264015531523871+0j)
+2024-10-13 00:48:22,301 - Maximum error for run: 2 is 0.048751759673688444 with index 422
+2024-10-13 00:49:08,777 - ########################
+2024-10-13 00:49:08,778 - Eigenenergy and eigenvector computation for Run: 2 took 45.26163363456726 seconds
+2024-10-13 00:50:01,539 - Computing delta_s_new_vec for Run: 2 took 52.761417865753174 seconds
+2024-10-13 00:50:01,539 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.41709513168745643+0j)
+2024-10-13 00:50:01,557 - Maximum error for run: 3 is 0.038557477269143825 with index 1127
+2024-10-13 00:50:47,972 - ########################
+2024-10-13 00:50:47,973 - Eigenenergy and eigenvector computation for Run: 3 took 45.247987270355225 seconds
+2024-10-13 00:52:43,197 - ----------------------------------------------------------------------------------------
+2024-10-13 00:54:23,689 - ########################
+2024-10-13 00:54:23,689 - Eigenenergy and eigenvector computation for Run: 0 took 96.8729190826416 seconds
+2024-10-13 00:54:24,160 - Computing delta_s_new_vec for Run: 0 took 0.4699828624725342 seconds
+2024-10-13 00:54:24,207 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.43788328206518773+0j)
+2024-10-13 00:54:24,402 - Maximum error for run: 1 is 0.062116717934812604 with index 766
+2024-10-13 00:55:11,091 - ########################
+2024-10-13 00:55:11,091 - Eigenenergy and eigenvector computation for Run: 1 took 45.282790422439575 seconds
+2024-10-13 00:55:12,105 - Computing delta_s_new_vec for Run: 1 took 1.014338731765747 seconds
+2024-10-13 00:55:12,107 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.4264015531523871+0j)
+2024-10-13 00:56:03,874 - Maximum error for run: 2 is 0.048751759673688444 with index 422
+2024-10-13 00:56:50,345 - ########################
+2024-10-13 00:56:50,346 - Eigenenergy and eigenvector computation for Run: 2 took 45.194520711898804 seconds
+2024-10-13 00:56:51,359 - Computing delta_s_new_vec for Run: 2 took 1.013685703277588 seconds
+2024-10-13 00:56:51,359 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.41709513168745643+0j)
+2024-10-13 00:57:43,120 - Maximum error for run: 3 is 0.038557477269143825 with index 1127
+2024-10-13 00:58:29,653 - ########################
+2024-10-13 00:58:29,653 - Eigenenergy and eigenvector computation for Run: 3 took 45.21797823905945 seconds
+2024-10-13 00:58:30,669 - Computing delta_s_new_vec for Run: 3 took 1.0160658359527588 seconds
+2024-10-13 00:58:30,670 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.40954039967078+0j)
+2024-10-13 00:59:22,428 - Maximum error for run: 4 is 0.030689218378162852 with index 156
+2024-10-13 01:00:09,005 - ########################
+2024-10-13 01:00:09,006 - Eigenenergy and eigenvector computation for Run: 4 took 45.29700207710266 seconds
+2024-10-13 01:00:10,018 - Computing delta_s_new_vec for Run: 4 took 1.0123493671417236 seconds
+2024-10-13 01:02:00,649 - ----------------------------------------------------------------------------------------
+2024-10-13 01:03:41,479 - ########################
+2024-10-13 01:03:41,480 - Eigenenergy and eigenvector computation for Run: 0 took 97.00667953491211 seconds
+2024-10-13 01:03:41,932 - Computing delta_s_new_vec for Run: 0 took 0.45273351669311523 seconds
+2024-10-13 01:03:41,979 - Computing average delta_s_new_vec for Run: 0 took 0.04639005661010742 seconds
+2024-10-13 01:03:41,979 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.3782286556546843+0j)
+2024-10-13 01:03:42,069 - Computing error_vec for Run: 0 took 0.03725123405456543 seconds
+2024-10-13 01:03:42,103 - Computing max_error for Run: 0 took 0.033736228942871094 seconds
+2024-10-13 01:03:42,173 - Maximum error for run: 1 is 0.0017713443453164501 with index 0
+2024-10-13 01:04:28,918 - ########################
+2024-10-13 01:04:28,918 - Eigenenergy and eigenvector computation for Run: 1 took 45.37354326248169 seconds
+2024-10-13 01:04:29,943 - Computing delta_s_new_vec for Run: 1 took 1.0248510837554932 seconds
+2024-10-13 01:04:29,945 - Computing average delta_s_new_vec for Run: 1 took 0.001589059829711914 seconds
+2024-10-13 01:04:29,945 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.37784174067147286+0j)
+2024-10-13 01:05:21,859 - Computing error_vec for Run: 1 took 0.010039091110229492 seconds
+2024-10-13 01:05:21,859 - Computing max_error for Run: 1 took 6.747245788574219e-05 seconds
+2024-10-13 01:05:21,859 - Maximum error for run: 2 is 0.0014497215904012983 with index 2044
+2024-10-13 01:06:08,443 - ########################
+2024-10-13 01:06:08,443 - Eigenenergy and eigenvector computation for Run: 2 took 45.283875703811646 seconds
+2024-10-13 01:06:09,458 - Computing delta_s_new_vec for Run: 2 took 1.014328956604004 seconds
+2024-10-13 01:06:09,459 - Computing average delta_s_new_vec for Run: 2 took 0.0015883445739746094 seconds
+2024-10-13 01:06:09,460 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.3775247345441407+0j)
+2024-10-13 01:07:01,238 - Computing error_vec for Run: 2 took 0.00040721893310546875 seconds
+2024-10-13 01:07:01,238 - Computing max_error for Run: 2 took 0.00014162063598632812 seconds
+2024-10-13 01:07:01,239 - Maximum error for run: 3 is 0.0011868390815730767 with index 591
+2024-10-13 01:07:47,870 - ########################
+2024-10-13 01:07:47,870 - Eigenenergy and eigenvector computation for Run: 3 took 45.32065010070801 seconds
+2024-10-13 01:07:48,887 - Computing delta_s_new_vec for Run: 3 took 1.0167312622070312 seconds
+2024-10-13 01:07:48,888 - Computing average delta_s_new_vec for Run: 3 took 0.0015370845794677734 seconds
+2024-10-13 01:07:48,888 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.3772649816485478+0j)
+2024-10-13 01:08:40,658 - Computing error_vec for Run: 3 took 0.0003986358642578125 seconds
+2024-10-13 01:08:40,659 - Computing max_error for Run: 3 took 0.00015425682067871094 seconds
+2024-10-13 01:08:40,659 - Maximum error for run: 4 is 0.0009718563445370032 with index 861
+2024-10-13 01:09:27,234 - ########################
+2024-10-13 01:09:27,234 - Eigenenergy and eigenvector computation for Run: 4 took 45.31356358528137 seconds
+2024-10-13 01:09:28,246 - Computing delta_s_new_vec for Run: 4 took 1.012207269668579 seconds
+2024-10-13 01:09:28,248 - Computing average delta_s_new_vec for Run: 4 took 0.0015385150909423828 seconds
+2024-10-13 01:09:28,248 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.3770521253371871+0j)
+2024-10-13 01:10:20,016 - Computing error_vec for Run: 4 took 0.000415802001953125 seconds
+2024-10-13 01:10:20,016 - Computing max_error for Run: 4 took 6.794929504394531e-05 seconds
+2024-10-13 01:10:20,016 - Maximum error for run: 5 is 0.000795970118083078 with index 1154
+2024-10-13 01:11:06,475 - ########################
+2024-10-13 01:11:06,475 - Eigenenergy and eigenvector computation for Run: 5 took 45.25378346443176 seconds
+2024-10-13 01:11:07,492 - Computing delta_s_new_vec for Run: 5 took 1.0166022777557373 seconds
+2024-10-13 01:11:07,493 - Computing average delta_s_new_vec for Run: 5 took 0.0015687942504882812 seconds
+2024-10-13 01:12:08,206 - ----------------------------------------------------------------------------------------
+2024-10-13 01:13:49,850 - ########################
+2024-10-13 01:13:49,850 - Eigenenergy and eigenvector computation for Run: 0 took 97.85542941093445 seconds
+2024-10-13 01:13:50,314 - Computing delta_s_new_vec for Run: 0 took 0.46382975578308105 seconds
+2024-10-13 01:13:50,361 - Computing average delta_s_new_vec for Run: 0 took 0.04694843292236328 seconds
+2024-10-13 01:13:50,398 - Computing error_vec for Run: 0 took 0.03732943534851074 seconds
+2024-10-13 01:13:50,433 - Computing max_error for Run: 0 took 0.034204721450805664 seconds
+2024-10-13 01:13:50,564 - Maximum error for run: 1 is 0.0004883795864669138 with index 912
+2024-10-13 01:14:37,229 - ########################
+2024-10-13 01:14:37,230 - Eigenenergy and eigenvector computation for Run: 1 took 45.33575391769409 seconds
+2024-10-13 01:14:38,254 - Computing delta_s_new_vec for Run: 1 took 1.0247581005096436 seconds
+2024-10-13 01:14:38,256 - Computing average delta_s_new_vec for Run: 1 took 0.0016252994537353516 seconds
+2024-10-13 01:15:30,205 - Computing error_vec for Run: 1 took 51.948795795440674 seconds
+2024-10-13 01:15:30,205 - Computing max_error for Run: 1 took 7.271766662597656e-05 seconds
+2024-10-13 01:15:30,206 - Maximum error for run: 2 is 0.0004005263898002598 with index 143
+2024-10-13 01:16:16,686 - ########################
+2024-10-13 01:16:16,686 - Eigenenergy and eigenvector computation for Run: 2 took 45.251460552215576 seconds
+2024-10-13 01:16:17,711 - Computing delta_s_new_vec for Run: 2 took 1.0247328281402588 seconds
+2024-10-13 01:16:17,713 - Computing average delta_s_new_vec for Run: 2 took 0.0015888214111328125 seconds
+2024-10-13 01:16:17,713 - Computing error_vec for Run: 2 took 0.0003039836883544922 seconds
+2024-10-13 01:16:17,869 - Computing max_error for Run: 2 took 0.15590810775756836 seconds
+2024-10-13 01:17:09,654 - Maximum error for run: 3 is 0.0003284503079704626 with index 1117
+2024-10-13 01:17:56,306 - ########################
+2024-10-13 01:17:56,306 - Eigenenergy and eigenvector computation for Run: 3 took 45.35629367828369 seconds
+2024-10-13 01:17:57,333 - Computing delta_s_new_vec for Run: 3 took 1.0264365673065186 seconds
+2024-10-13 01:17:57,333 - Computing average delta_s_new_vec for Run: 3 took 7.557868957519531e-05 seconds
+2024-10-13 01:17:57,489 - Computing error_vec for Run: 3 took 0.15603065490722656 seconds
+2024-10-13 01:17:57,645 - Computing max_error for Run: 3 took 0.15581989288330078 seconds
+2024-10-13 01:18:49,268 - Maximum error for run: 4 is 0.0002693267206455019 with index 1012
+2024-10-13 09:39:28,841 - ----------------------------------------------------------------------------------------
+2024-10-13 09:41:08,434 - ########################
+2024-10-13 09:41:08,434 - Eigenenergy and eigenvector computation for Run: 0 took 95.97073245048523 seconds
+2024-10-13 09:41:08,892 - Computing delta_s_new_vec for Run: 0 took 0.45810770988464355 seconds
+2024-10-13 09:41:08,939 - Computing average delta_s_new_vec for Run: 0 took 0.0463101863861084 seconds
+2024-10-13 09:41:08,975 - Computing error_vec for Run: 0 took 0.03581953048706055 seconds
+2024-10-13 09:41:09,008 - Computing max_error for Run: 0 took 0.03334498405456543 seconds
+2024-10-13 09:41:55,296 - ########################
+2024-10-13 09:41:55,296 - Eigenenergy and eigenvector computation for Run: 1 took 44.90532040596008 seconds
+2024-10-13 09:41:56,312 - Computing delta_s_new_vec for Run: 1 took 1.0160067081451416 seconds
+2024-10-13 09:41:56,313 - Computing average delta_s_new_vec for Run: 1 took 8.0108642578125e-05 seconds
+2024-10-13 09:42:48,081 - Computing error_vec for Run: 1 took 51.767916440963745 seconds
+2024-10-13 09:42:48,081 - Computing max_error for Run: 1 took 8.511543273925781e-05 seconds
+2024-10-13 09:43:34,529 - ########################
+2024-10-13 09:43:34,530 - Eigenenergy and eigenvector computation for Run: 2 took 45.19773554801941 seconds
+2024-10-13 09:43:35,544 - Computing delta_s_new_vec for Run: 2 took 1.0142121315002441 seconds
+2024-10-13 09:43:35,546 - Computing average delta_s_new_vec for Run: 2 took 0.0015513896942138672 seconds
+2024-10-13 09:43:35,546 - Computing error_vec for Run: 2 took 0.00030541419982910156 seconds
+2024-10-13 09:43:35,701 - Computing max_error for Run: 2 took 0.1546649932861328 seconds
+2024-10-13 09:45:13,715 - ########################
+2024-10-13 09:45:13,715 - Eigenenergy and eigenvector computation for Run: 3 took 45.20688986778259 seconds
+2024-10-13 09:45:14,727 - Computing delta_s_new_vec for Run: 3 took 1.01210618019104 seconds
+2024-10-13 09:45:14,729 - Computing average delta_s_new_vec for Run: 3 took 0.001537322998046875 seconds
+2024-10-13 09:45:14,732 - Computing error_vec for Run: 3 took 0.002773761749267578 seconds
+2024-10-13 09:45:14,884 - Computing max_error for Run: 3 took 0.1522841453552246 seconds
+2024-10-13 09:46:52,919 - ########################
+2024-10-13 09:46:52,919 - Eigenenergy and eigenvector computation for Run: 4 took 45.248363971710205 seconds
+2024-10-13 09:46:53,946 - Computing delta_s_new_vec for Run: 4 took 1.026484489440918 seconds
+2024-10-13 09:46:53,946 - Computing average delta_s_new_vec for Run: 4 took 7.772445678710938e-05 seconds
+2024-10-13 09:46:54,104 - Computing error_vec for Run: 4 took 0.158660888671875 seconds
+2024-10-13 09:46:54,260 - Computing max_error for Run: 4 took 0.1558089256286621 seconds
+2024-10-13 09:48:32,274 - ########################
+2024-10-13 09:48:32,274 - Eigenenergy and eigenvector computation for Run: 5 took 45.236053705215454 seconds
+2024-10-13 09:48:33,298 - Computing delta_s_new_vec for Run: 5 took 1.0240800380706787 seconds
+2024-10-13 09:48:33,298 - Computing average delta_s_new_vec for Run: 5 took 7.987022399902344e-05 seconds
+2024-10-13 09:48:33,452 - Computing error_vec for Run: 5 took 0.1535050868988037 seconds
+2024-10-13 09:48:33,608 - Computing max_error for Run: 5 took 0.1557908058166504 seconds
+2024-10-13 09:50:11,643 - ########################
+2024-10-13 09:50:11,644 - Eigenenergy and eigenvector computation for Run: 6 took 45.247304916381836 seconds
+2024-10-13 09:50:12,666 - Computing delta_s_new_vec for Run: 6 took 1.022517204284668 seconds
+2024-10-13 09:50:12,668 - Computing average delta_s_new_vec for Run: 6 took 0.0015735626220703125 seconds
+2024-10-13 09:50:12,671 - Computing error_vec for Run: 6 took 0.0027985572814941406 seconds
+2024-10-13 09:50:12,827 - Computing max_error for Run: 6 took 0.1559748649597168 seconds
+2024-10-13 09:51:51,089 - ########################
+2024-10-13 09:51:51,089 - Eigenenergy and eigenvector computation for Run: 7 took 45.26822304725647 seconds
+2024-10-13 09:51:52,113 - Computing delta_s_new_vec for Run: 7 took 1.0247137546539307 seconds
+2024-10-13 09:51:52,115 - Computing average delta_s_new_vec for Run: 7 took 0.0016138553619384766 seconds
+2024-10-13 09:51:52,116 - Computing error_vec for Run: 7 took 0.00030612945556640625 seconds
+2024-10-13 09:51:52,271 - Computing max_error for Run: 7 took 0.15590834617614746 seconds
+2024-10-13 09:53:30,603 - ########################
+2024-10-13 09:53:30,603 - Eigenenergy and eigenvector computation for Run: 8 took 45.26892399787903 seconds
+2024-10-13 09:53:31,628 - Computing delta_s_new_vec for Run: 8 took 1.0246191024780273 seconds
+2024-10-13 09:53:31,628 - Computing average delta_s_new_vec for Run: 8 took 4.506111145019531e-05 seconds
+2024-10-13 09:53:31,937 - Computing error_vec for Run: 8 took 0.3091733455657959 seconds
+2024-10-13 09:53:31,940 - Computing max_error for Run: 8 took 0.0028226375579833984 seconds
+2024-10-13 09:54:23,555 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-13 09:59:05,098 - ----------------------------------------------------------------------------------------
+2024-10-13 10:00:45,244 - ########################
+2024-10-13 10:00:45,244 - Eigenenergy and eigenvector computation for Run: 0 took 96.69892525672913 seconds
+2024-10-13 10:00:45,715 - Computing delta_s_new_vec for Run: 0 took 0.4702463150024414 seconds
+2024-10-13 10:00:45,762 - Computing average delta_s_new_vec for Run: 0 took 0.04751110076904297 seconds
+2024-10-13 10:00:45,799 - Computing error_vec for Run: 0 took 0.036913394927978516 seconds
+2024-10-13 10:00:45,833 - Computing max_error for Run: 0 took 0.033349037170410156 seconds
+2024-10-13 10:00:45,963 - Maximum error for run: 1 is 0.061506593490027295 with index 0
+2024-10-13 10:00:45,999 - Mixing the old and new delta_s vectors for Run: 1 took 0.03488922119140625 seconds
+2024-10-13 10:00:45,999 - Deleting variables for Run: 1 took 4.9114227294921875e-05 seconds
+2024-10-13 10:01:33,597 - ########################
+2024-10-13 10:01:33,597 - Eigenenergy and eigenvector computation for Run: 1 took 46.33466601371765 seconds
+2024-10-13 10:01:34,614 - Computing delta_s_new_vec for Run: 1 took 1.0165290832519531 seconds
+2024-10-13 10:01:34,615 - Computing average delta_s_new_vec for Run: 1 took 0.0015881061553955078 seconds
+2024-10-13 10:02:26,371 - Computing error_vec for Run: 1 took 51.75515007972717 seconds
+2024-10-13 10:02:26,371 - Computing max_error for Run: 1 took 7.987022399902344e-05 seconds
+2024-10-13 10:02:26,371 - Maximum error for run: 2 is 0.04555523527200922 with index 3363
+2024-10-13 10:02:26,382 - Mixing the old and new delta_s vectors for Run: 2 took 0.01041269302368164 seconds
+2024-10-13 10:02:26,382 - Deleting variables for Run: 2 took 4.220008850097656e-05 seconds
+2024-10-13 10:03:14,080 - ########################
+2024-10-13 10:03:14,080 - Eigenenergy and eigenvector computation for Run: 2 took 46.51338052749634 seconds
+2024-10-13 10:03:15,105 - Computing delta_s_new_vec for Run: 2 took 1.0246832370758057 seconds
+2024-10-13 10:03:15,107 - Computing average delta_s_new_vec for Run: 2 took 0.0016169548034667969 seconds
+2024-10-13 10:03:15,107 - Computing error_vec for Run: 2 took 0.00030803680419921875 seconds
+2024-10-13 10:03:15,263 - Computing max_error for Run: 2 took 0.1559150218963623 seconds
+2024-10-13 10:04:07,047 - Maximum error for run: 3 is 0.03389034268842683 with index 3306
+2024-10-13 10:04:07,048 - Mixing the old and new delta_s vectors for Run: 3 took 0.00025391578674316406 seconds
+2024-10-13 10:04:07,049 - Deleting variables for Run: 3 took 4.315376281738281e-05 seconds
+2024-10-13 10:04:54,775 - ########################
+2024-10-13 10:04:54,775 - Eigenenergy and eigenvector computation for Run: 3 took 46.50738310813904 seconds
+2024-10-13 10:04:55,800 - Computing delta_s_new_vec for Run: 3 took 1.0249462127685547 seconds
+2024-10-13 10:04:55,802 - Computing average delta_s_new_vec for Run: 3 took 0.0015308856964111328 seconds
+2024-10-13 10:04:55,804 - Computing error_vec for Run: 3 took 0.002794981002807617 seconds
+2024-10-13 10:04:55,958 - Computing max_error for Run: 3 took 0.15352082252502441 seconds
+2024-10-13 10:05:47,744 - Maximum error for run: 4 is 0.025329526661005852 with index 57
+2024-10-13 10:05:47,745 - Mixing the old and new delta_s vectors for Run: 4 took 0.0002644062042236328 seconds
+2024-10-13 10:05:47,745 - Deleting variables for Run: 4 took 3.0517578125e-05 seconds
+2024-10-13 10:06:35,505 - ########################
+2024-10-13 10:06:35,505 - Eigenenergy and eigenvector computation for Run: 4 took 46.524049282073975 seconds
+2024-10-13 10:06:36,530 - Computing delta_s_new_vec for Run: 4 took 1.024207592010498 seconds
+2024-10-13 10:06:36,530 - Computing average delta_s_new_vec for Run: 4 took 7.653236389160156e-05 seconds
+2024-10-13 10:06:36,686 - Computing error_vec for Run: 4 took 0.15600800514221191 seconds
+2024-10-13 10:06:36,842 - Computing max_error for Run: 4 took 0.15580296516418457 seconds
+2024-10-13 10:07:28,451 - Maximum error for run: 5 is 0.019021028839288634 with index 3363
+2024-10-13 10:07:28,452 - Mixing the old and new delta_s vectors for Run: 5 took 0.00029397010803222656 seconds
+2024-10-13 10:07:28,452 - Deleting variables for Run: 5 took 3.1948089599609375e-05 seconds
+2024-10-13 10:08:16,236 - ########################
+2024-10-13 10:08:16,236 - Eigenenergy and eigenvector computation for Run: 5 took 46.56632900238037 seconds
+2024-10-13 10:08:17,261 - Computing delta_s_new_vec for Run: 5 took 1.02467679977417 seconds
+2024-10-13 10:08:17,263 - Computing average delta_s_new_vec for Run: 5 took 0.001619100570678711 seconds
+2024-10-13 10:08:17,263 - Computing error_vec for Run: 5 took 0.0003058910369873047 seconds
+2024-10-13 10:08:17,419 - Computing max_error for Run: 5 took 0.15591692924499512 seconds
+2024-10-13 10:15:50,024 - ----------------------------------------------------------------------------------------
+2024-10-13 10:15:52,251 - ########################
+2024-10-13 10:15:52,251 - Starting Self-Consistency Calculation for Run: 0
+2024-10-13 10:17:30,264 - Eigenenergy and eigenvector computation for Run: 0 took 96.6397967338562 seconds
+2024-10-13 10:17:30,768 - Computing delta_s_new_vec for Run: 0 took 0.5039677619934082 seconds
+2024-10-13 10:17:30,814 - Computing average delta_s_new_vec for Run: 0 took 0.0459895133972168 seconds. Average order parameter value: (0.37631739730997593+0j)
+2024-10-13 10:17:30,911 - Computing error_vec for Run: 0 took 0.036100149154663086 seconds
+2024-10-13 10:17:30,944 - Computing max_error for Run: 0 took 0.03309273719787598 seconds
+2024-10-13 10:17:30,960 - Maximum error for run: 1 is 0.061506593490027295
+2024-10-13 10:17:30,993 - Mixing the old and new delta_s vectors for Run: 1 took 0.03296256065368652 seconds
+2024-10-13 10:17:30,993 - Deleting variables for Run: 1 took 3.790855407714844e-05 seconds
+2024-10-13 10:17:30,993 - ########################
+2024-10-13 10:17:30,993 - Starting Self-Consistency Calculation for Run: 1
+2024-10-13 10:18:18,539 - Eigenenergy and eigenvector computation for Run: 1 took 46.256770610809326 seconds
+2024-10-13 10:18:19,557 - Computing delta_s_new_vec for Run: 1 took 1.0183095932006836 seconds
+2024-10-13 10:18:19,557 - Computing average delta_s_new_vec for Run: 1 took 8.392333984375e-05 seconds. Average order parameter value: (0.376609601046788+0j)
+2024-10-13 10:19:11,338 - Computing error_vec for Run: 1 took 0.010100841522216797 seconds
+2024-10-13 10:19:11,338 - Computing max_error for Run: 1 took 6.67572021484375e-05 seconds
+2024-10-13 10:19:11,339 - Maximum error for run: 2 is 0.04555523527200922
+2024-10-13 10:19:11,346 - Mixing the old and new delta_s vectors for Run: 2 took 0.0067021846771240234 seconds
+2024-10-13 10:19:11,346 - Deleting variables for Run: 2 took 2.86102294921875e-05 seconds
+2024-10-13 10:19:11,346 - ########################
+2024-10-13 10:19:11,346 - Starting Self-Consistency Calculation for Run: 2
+2024-10-13 10:19:59,055 - Eigenenergy and eigenvector computation for Run: 2 took 46.47377681732178 seconds
+2024-10-13 10:20:00,074 - Computing delta_s_new_vec for Run: 2 took 1.0185246467590332 seconds
+2024-10-13 10:20:00,076 - Computing average delta_s_new_vec for Run: 2 took 0.0015854835510253906 seconds. Average order parameter value: (0.37684930333642536+0j)
+2024-10-13 10:20:51,864 - Computing error_vec for Run: 2 took 0.00043511390686035156 seconds
+2024-10-13 10:20:51,864 - Computing max_error for Run: 2 took 0.00014352798461914062 seconds
+2024-10-13 10:20:51,865 - Maximum error for run: 3 is 0.03389034268842683
+2024-10-13 10:20:51,865 - Mixing the old and new delta_s vectors for Run: 3 took 0.0001888275146484375 seconds
+2024-10-13 10:20:51,865 - Deleting variables for Run: 3 took 2.7894973754882812e-05 seconds
+2024-10-13 10:20:51,865 - ########################
+2024-10-13 10:20:51,865 - Starting Self-Consistency Calculation for Run: 3
+2024-10-13 10:21:39,566 - Eigenenergy and eigenvector computation for Run: 3 took 46.493624687194824 seconds
+2024-10-13 10:21:40,591 - Computing delta_s_new_vec for Run: 3 took 1.0241992473602295 seconds
+2024-10-13 10:21:40,591 - Computing average delta_s_new_vec for Run: 3 took 7.653236389160156e-05 seconds. Average order parameter value: (0.37704602890734046+0j)
+2024-10-13 10:22:32,532 - Computing error_vec for Run: 3 took 0.0004069805145263672 seconds
+2024-10-13 10:22:32,532 - Computing max_error for Run: 3 took 0.00016260147094726562 seconds
+2024-10-13 10:22:32,533 - Maximum error for run: 4 is 0.025329526661005852
+2024-10-13 10:22:32,533 - Mixing the old and new delta_s vectors for Run: 4 took 0.00019502639770507812 seconds
+2024-10-13 10:22:32,533 - Deleting variables for Run: 4 took 2.6702880859375e-05 seconds
+2024-10-13 10:22:32,533 - ########################
+2024-10-13 10:22:32,533 - Starting Self-Consistency Calculation for Run: 4
+2024-10-13 10:23:20,255 - Eigenenergy and eigenvector computation for Run: 4 took 46.51118564605713 seconds
+2024-10-13 10:23:21,279 - Computing delta_s_new_vec for Run: 4 took 1.0239923000335693 seconds
+2024-10-13 10:26:50,393 - ----------------------------------------------------------------------------------------
+2024-10-13 10:26:52,618 - ########################
+2024-10-13 10:26:52,618 - Starting Self-Consistency Calculation for Run: 0
+2024-10-13 10:28:31,009 - Eigenenergy and eigenvector computation for Run: 0 took 97.04098296165466 seconds
+2024-10-13 10:28:31,462 - Computing delta_s_new_vec for Run: 0 took 0.45314764976501465 seconds
+2024-10-13 10:28:31,507 - Computing average delta_s_new_vec for Run: 0 took 0.04538750648498535 seconds. Average order parameter value: (0.37631739730997593+0j)
+2024-10-13 10:28:31,597 - Computing error_vec for Run: 0 took 0.0361788272857666 seconds
+2024-10-13 10:28:31,629 - Computing max_error for Run: 0 took 0.032605886459350586 seconds
+2024-10-13 10:28:31,645 - Maximum error for run: 1 is 0.061506593490027295
+2024-10-13 10:28:31,679 - ########################
+2024-10-13 10:28:31,679 - Starting Self-Consistency Calculation for Run: 1
+2024-10-13 10:29:19,376 - Eigenenergy and eigenvector computation for Run: 1 took 46.45745396614075 seconds
+2024-10-13 10:29:20,395 - Computing delta_s_new_vec for Run: 1 took 1.0187103748321533 seconds
+2024-10-13 10:29:20,397 - Computing average delta_s_new_vec for Run: 1 took 0.0015172958374023438 seconds. Average order parameter value: (0.376609601046788+0j)
+2024-10-13 10:30:12,196 - Computing error_vec for Run: 1 took 0.009659767150878906 seconds
+2024-10-13 10:30:12,196 - Computing max_error for Run: 1 took 5.9604644775390625e-05 seconds
+2024-10-13 10:30:12,197 - Maximum error for run: 2 is 0.04555523527200922
+2024-10-13 10:30:12,203 - ########################
+2024-10-13 10:30:12,204 - Starting Self-Consistency Calculation for Run: 2
+2024-10-13 10:30:59,977 - Eigenenergy and eigenvector computation for Run: 2 took 46.540996074676514 seconds
+2024-10-13 10:31:00,996 - Computing delta_s_new_vec for Run: 2 took 1.0187551975250244 seconds
+2024-10-13 10:31:00,998 - Computing average delta_s_new_vec for Run: 2 took 0.001506805419921875 seconds. Average order parameter value: (0.37684930333642536+0j)
+2024-10-13 10:31:52,775 - Computing error_vec for Run: 2 took 0.00021910667419433594 seconds
+2024-10-13 10:31:52,775 - Computing max_error for Run: 2 took 4.935264587402344e-05 seconds
+2024-10-13 10:31:52,777 - Maximum error for run: 3 is 0.03389034268842683
+2024-10-13 10:31:52,777 - ########################
+2024-10-13 10:31:52,777 - Starting Self-Consistency Calculation for Run: 3
+2024-10-13 10:32:40,459 - Eigenenergy and eigenvector computation for Run: 3 took 46.48381733894348 seconds
+2024-10-13 10:32:41,480 - Computing delta_s_new_vec for Run: 3 took 1.0202281475067139 seconds
+2024-10-13 10:32:41,480 - Computing average delta_s_new_vec for Run: 3 took 4.839897155761719e-05 seconds. Average order parameter value: (0.37704602890734046+0j)
+2024-10-13 10:33:33,279 - Computing error_vec for Run: 3 took 0.00028824806213378906 seconds
+2024-10-13 10:33:33,280 - Computing max_error for Run: 3 took 7.891654968261719e-05 seconds
+2024-10-13 10:33:33,280 - Maximum error for run: 4 is 0.025329526661005852
+2024-10-13 10:33:33,280 - ########################
+2024-10-13 10:33:33,280 - Starting Self-Consistency Calculation for Run: 4
+2024-10-13 10:34:21,062 - Eigenenergy and eigenvector computation for Run: 4 took 46.55297541618347 seconds
+2024-10-13 10:34:22,083 - Computing delta_s_new_vec for Run: 4 took 1.020232915878296 seconds
+2024-10-13 10:38:39,261 - ----------------------------------------------------------------------------------------
+2024-10-13 10:38:41,411 - ########################
+2024-10-13 10:38:41,411 - Starting Self-Consistency Calculation for Run: 0
+2024-10-13 10:40:08,047 - ----------------------------------------------------------------------------------------
+2024-10-13 10:40:10,263 - ########################
+2024-10-13 10:40:10,263 - Starting Self-Consistency Calculation for Run: 0
+2024-10-13 10:41:48,488 - Eigenenergy and eigenvector computation for Run: 0 took 96.87004017829895 seconds
+2024-10-13 10:41:48,990 - Computing delta_s_new_vec for Run: 0 took 0.5017662048339844 seconds
+2024-10-13 10:41:49,035 - Computing average delta_s_new_vec for Run: 0 took 0.04478716850280762 seconds. Average order parameter value: (0.3898772250523121+0j)
+2024-10-13 10:41:49,124 - Computing error_vec for Run: 0 took 0.03670454025268555 seconds
+2024-10-13 10:41:49,158 - Computing max_error for Run: 0 took 0.03316545486450195 seconds
+2024-10-13 10:41:49,174 - Maximum error for run: 1 is 0.05251703844374506
+2024-10-13 10:41:49,216 - ########################
+2024-10-13 10:41:49,216 - Starting Self-Consistency Calculation for Run: 1
+2024-10-13 10:42:36,972 - Eigenenergy and eigenvector computation for Run: 1 took 46.45028495788574 seconds
+2024-10-13 10:42:37,991 - Computing delta_s_new_vec for Run: 1 took 1.0188093185424805 seconds
+2024-10-13 10:42:37,993 - Computing average delta_s_new_vec for Run: 1 took 0.0014202594757080078 seconds. Average order parameter value: (0.3877211175616441+0j)
+2024-10-13 10:43:29,807 - Computing error_vec for Run: 1 took 0.010348081588745117 seconds
+2024-10-13 10:43:29,807 - Computing max_error for Run: 1 took 7.82012939453125e-05 seconds
+2024-10-13 10:43:29,807 - Maximum error for run: 2 is 0.0373986824476068
+2024-10-13 10:43:29,814 - ########################
+2024-10-13 10:43:29,814 - Starting Self-Consistency Calculation for Run: 2
+2024-10-13 10:44:17,510 - Eigenenergy and eigenvector computation for Run: 2 took 46.484495878219604 seconds
+2024-10-13 10:44:18,528 - Computing delta_s_new_vec for Run: 2 took 1.0176873207092285 seconds
+2024-10-13 10:44:18,530 - Computing average delta_s_new_vec for Run: 2 took 0.0013928413391113281 seconds. Average order parameter value: (0.3859570749848791+0j)
+2024-10-13 10:45:10,324 - Computing error_vec for Run: 2 took 0.0005576610565185547 seconds
+2024-10-13 10:45:10,325 - Computing max_error for Run: 2 took 0.00021338462829589844 seconds
+2024-10-13 10:45:10,325 - Maximum error for run: 3 is 0.026708510637874272
+2024-10-13 10:45:10,326 - ########################
+2024-10-13 10:45:10,326 - Starting Self-Consistency Calculation for Run: 3
+2024-10-13 10:49:09,625 - ----------------------------------------------------------------------------------------
+2024-10-13 10:49:11,845 - ########################
+2024-10-13 10:49:11,846 - Starting Self-Consistency Calculation for Run: 0
+2024-10-13 10:50:50,050 - Eigenenergy and eigenvector computation for Run: 0 took 96.90169429779053 seconds
+2024-10-13 10:50:50,508 - Computing delta_s_new_vec for Run: 0 took 0.4575364589691162 seconds
+2024-10-13 10:50:50,653 - Computing error_vec for Run: 0 took 0.037990570068359375 seconds
+2024-10-13 10:50:50,688 - Computing max_error for Run: 0 took 0.034507036209106445 seconds
+2024-10-13 10:50:50,704 - Maximum error for run: 1 is 0.05976883294212054
+2024-10-13 10:50:50,748 - ########################
+2024-10-13 10:50:50,748 - Starting Self-Consistency Calculation for Run: 1
+2024-10-13 10:52:43,769 - ----------------------------------------------------------------------------------------
+2024-10-13 10:52:46,011 - ########################
+2024-10-13 10:52:46,011 - Starting Self-Consistency Calculation for Run: 0
+2024-10-13 10:54:25,201 - Eigenenergy and eigenvector computation for Run: 0 took 97.87516140937805 seconds
+2024-10-13 10:54:25,643 - Computing delta_s_new_vec for Run: 0 took 0.4411337375640869 seconds
+2024-10-13 10:54:25,688 - Computed average delta_s_new_vec: (0.37907485736413765+0j) for Run: 0 took 0.045238494873046875 seconds
+2024-10-13 10:54:25,778 - Computing error_vec for Run: 0 took 0.03590726852416992 seconds
+2024-10-13 10:54:25,811 - Computing max_error for Run: 0 took 0.03313565254211426 seconds
+2024-10-13 10:54:25,826 - Maximum error for run: 1 is 0.05976883294212054
+2024-10-13 10:54:25,867 - ########################
+2024-10-13 10:54:25,867 - Starting Self-Consistency Calculation for Run: 1
+2024-10-13 10:55:13,707 - Eigenenergy and eigenvector computation for Run: 1 took 46.59771656990051 seconds
+2024-10-13 10:56:06,513 - Computing delta_s_new_vec for Run: 1 took 52.80580544471741 seconds
+2024-10-13 10:56:06,514 - Computed average delta_s_new_vec: (0.3788724086021758+0j) for Run: 1 took 0.00042176246643066406 seconds
+2024-10-13 10:56:06,524 - Computing error_vec for Run: 1 took 0.009625673294067383 seconds
+2024-10-13 10:56:06,524 - Computing max_error for Run: 1 took 9.226799011230469e-05 seconds
+2024-10-13 10:56:06,524 - Maximum error for run: 2 is 0.04395459073816327
+2024-10-13 10:56:06,531 - ########################
+2024-10-13 10:56:06,531 - Starting Self-Consistency Calculation for Run: 2
+2024-10-13 10:56:54,219 - Eigenenergy and eigenvector computation for Run: 2 took 46.49229693412781 seconds
+2024-10-13 10:57:47,030 - Computing delta_s_new_vec for Run: 2 took 52.81054615974426 seconds
+2024-10-13 10:57:47,031 - Computed average delta_s_new_vec: (0.37870624285353244+0j) for Run: 2 took 0.0004286766052246094 seconds
+2024-10-13 10:57:47,031 - Computing error_vec for Run: 2 took 0.0001785755157470703 seconds
+2024-10-13 10:57:47,031 - Computing max_error for Run: 2 took 9.72747802734375e-05 seconds
+2024-10-13 10:57:47,032 - Maximum error for run: 3 is 0.03246606583578182
+2024-10-13 10:57:47,032 - ########################
+2024-10-13 10:57:47,032 - Starting Self-Consistency Calculation for Run: 3
+2024-10-13 10:58:34,757 - Eigenenergy and eigenvector computation for Run: 3 took 46.519230127334595 seconds
+2024-10-13 11:01:28,418 - ----------------------------------------------------------------------------------------
+2024-10-13 11:01:30,609 - ########################
+2024-10-13 11:01:30,610 - Starting Self-Consistency Calculation for Run: 0
+2024-10-13 11:03:09,343 - Eigenenergy and eigenvector computation for Run: 0 took 97.49166560173035 seconds
+2024-10-13 11:03:09,681 - Computing delta_s_new_vec for Run: 0 took 0.3366203308105469 seconds
+2024-10-13 11:03:09,747 - Computed average delta_s_new_vec: (0.37907485736413765+0j) for Run: 0 took 0.06676626205444336 seconds
+2024-10-13 11:03:09,784 - Computing error_vec for Run: 0 took 0.03586101531982422 seconds
+2024-10-13 11:03:09,817 - Computing max_error for Run: 0 took 0.033605098724365234 seconds
+2024-10-13 11:03:09,834 - Maximum error for run: 1 is 0.05976883294212054
+2024-10-13 11:03:09,877 - ########################
+2024-10-13 11:03:09,877 - Starting Self-Consistency Calculation for Run: 1
+2024-10-13 11:04:50,744 - Eigenenergy and eigenvector computation for Run: 1 took 99.64731073379517 seconds
+2024-10-13 11:04:50,786 - Computing delta_s_new_vec for Run: 1 took 0.04203987121582031 seconds
+2024-10-13 11:04:50,787 - Computed average delta_s_new_vec: (0.37887240860217586+0j) for Run: 1 took 0.0003886222839355469 seconds
+2024-10-13 11:04:50,797 - Computing error_vec for Run: 1 took 0.010274410247802734 seconds
+2024-10-13 11:04:50,798 - Computing max_error for Run: 1 took 0.00010228157043457031 seconds
+2024-10-13 11:04:50,798 - Maximum error for run: 2 is 0.04395459073816327
+2024-10-13 11:04:50,805 - ########################
+2024-10-13 11:04:50,805 - Starting Self-Consistency Calculation for Run: 2
+2024-10-13 11:06:31,596 - Eigenenergy and eigenvector computation for Run: 2 took 99.66854476928711 seconds
+2024-10-13 11:06:31,639 - Computing delta_s_new_vec for Run: 2 took 0.04221749305725098 seconds
+2024-10-13 11:06:31,639 - Computed average delta_s_new_vec: (0.3787062428535325+0j) for Run: 2 took 0.00034928321838378906 seconds
+2024-10-13 11:06:31,640 - Computing error_vec for Run: 2 took 0.00023508071899414062 seconds
+2024-10-13 11:06:31,640 - Computing max_error for Run: 2 took 8.153915405273438e-05 seconds
+2024-10-13 11:06:31,640 - Maximum error for run: 3 is 0.03246606583578182
+2024-10-13 11:06:31,640 - ########################
+2024-10-13 11:06:31,640 - Starting Self-Consistency Calculation for Run: 3
+2024-10-13 11:08:12,401 - Eigenenergy and eigenvector computation for Run: 3 took 99.64916706085205 seconds
+2024-10-13 11:08:12,443 - Computing delta_s_new_vec for Run: 3 took 0.04195666313171387 seconds
+2024-10-13 11:08:12,444 - Computed average delta_s_new_vec: (0.37856993947226264+0j) for Run: 3 took 0.0004425048828125 seconds
+2024-10-13 11:08:12,444 - Computing error_vec for Run: 3 took 0.00024890899658203125 seconds
+2024-10-13 11:08:12,444 - Computing max_error for Run: 3 took 9.34600830078125e-05 seconds
+2024-10-13 11:08:12,445 - Maximum error for run: 4 is 0.024089713645799926
+2024-10-13 11:08:12,445 - ########################
+2024-10-13 11:08:12,445 - Starting Self-Consistency Calculation for Run: 4
+2024-10-13 11:09:53,396 - Eigenenergy and eigenvector computation for Run: 4 took 99.7324481010437 seconds
+2024-10-13 11:09:53,445 - Computing delta_s_new_vec for Run: 4 took 0.04831838607788086 seconds
+2024-10-13 11:09:53,446 - Computed average delta_s_new_vec: (0.3784581824988863+0j) for Run: 4 took 0.0004379749298095703 seconds
+2024-10-13 11:09:53,446 - Computing error_vec for Run: 4 took 0.00018596649169921875 seconds
+2024-10-13 11:09:53,446 - Computing max_error for Run: 4 took 9.417533874511719e-05 seconds
+2024-10-13 11:09:53,447 - Maximum error for run: 5 is 0.017957480430339512
+2024-10-13 11:09:53,447 - ########################
+2024-10-13 11:09:53,447 - Starting Self-Consistency Calculation for Run: 5
+2024-10-13 11:20:53,960 - ----------------------------------------------------------------------------------------
+2024-10-13 11:21:53,201 - ----------------------------------------------------------------------------------------
+2024-10-13 11:21:55,434 - ########################
+2024-10-13 11:21:55,434 - Starting Self-Consistency Calculation for Run: 0
+2024-10-13 11:23:33,385 - Eigenenergy and eigenvector computation for Run: 0 took 96.62770009040833 seconds
+2024-10-13 11:23:33,828 - Computing delta_s_new_vec for Run: 0 took 0.4422593116760254 seconds
+2024-10-13 11:23:33,874 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.37687075850747004+0j)
+2024-10-13 11:23:34,019 - Maximum error for run: 1 is 0.06116150857898228
+2024-10-13 11:23:34,060 - ########################
+2024-10-13 11:23:34,060 - Starting Self-Consistency Calculation for Run: 1
+2024-10-13 11:25:14,350 - Eigenenergy and eigenvector computation for Run: 1 took 98.9958267211914 seconds
+2024-10-13 11:25:14,479 - Computing delta_s_new_vec for Run: 1 took 0.12867259979248047 seconds
+2024-10-13 11:25:14,479 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.3770638340378507+0j)
+2024-10-13 11:25:14,532 - Maximum error for run: 2 is 0.04523637641026179
+2024-10-13 11:25:14,539 - ########################
+2024-10-13 11:25:14,539 - Starting Self-Consistency Calculation for Run: 2
+2024-10-13 11:26:55,086 - Eigenenergy and eigenvector computation for Run: 2 took 99.33046770095825 seconds
+2024-10-13 11:26:55,215 - Computing delta_s_new_vec for Run: 2 took 0.12863540649414062 seconds
+2024-10-13 11:26:55,215 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.37722215565654876+0j)
+2024-10-13 11:26:55,259 - Maximum error for run: 3 is 0.033605996084076994
+2024-10-13 11:26:55,259 - ########################
+2024-10-13 11:26:55,259 - Starting Self-Consistency Calculation for Run: 3
+2024-10-13 11:28:56,997 - ----------------------------------------------------------------------------------------
+2024-10-13 11:28:59,175 - ########################
+2024-10-13 11:28:59,176 - Starting Self-Consistency Calculation for Run: 0
+2024-10-13 11:30:37,868 - Eigenenergy and eigenvector computation for Run: 0 took 97.45785975456238 seconds
+2024-10-13 11:30:38,196 - Computing delta_s_new_vec for Run: 0 took 0.32828497886657715 seconds
+2024-10-13 11:30:38,242 - New (unmixed) s-wave SC order parameter vector computed for run: 0 has the average value: (0.37907485736413765+0j)
+2024-10-13 11:30:38,330 - Maximum error for run: 1 is 0.05976883294212054
+2024-10-13 11:30:38,372 - ########################
+2024-10-13 11:30:38,372 - Starting Self-Consistency Calculation for Run: 1
+2024-10-13 11:32:19,200 - Eigenenergy and eigenvector computation for Run: 1 took 99.60659146308899 seconds
+2024-10-13 11:32:19,226 - Computing delta_s_new_vec for Run: 1 took 0.02587890625 seconds
+2024-10-13 11:32:19,227 - New (unmixed) s-wave SC order parameter vector computed for run: 1 has the average value: (0.3788724086021758+0j)
+2024-10-13 11:32:19,254 - Maximum error for run: 2 is 0.04395459073816327
+2024-10-13 11:32:19,261 - ########################
+2024-10-13 11:32:19,261 - Starting Self-Consistency Calculation for Run: 2
+2024-10-13 11:34:00,045 - Eigenenergy and eigenvector computation for Run: 2 took 99.66880297660828 seconds
+2024-10-13 11:34:00,071 - Computing delta_s_new_vec for Run: 2 took 0.025586366653442383 seconds
+2024-10-13 11:34:00,071 - New (unmixed) s-wave SC order parameter vector computed for run: 2 has the average value: (0.37870624285353244+0j)
+2024-10-13 11:34:00,089 - Maximum error for run: 3 is 0.03246606583578182
+2024-10-13 11:34:00,089 - ########################
+2024-10-13 11:34:00,089 - Starting Self-Consistency Calculation for Run: 3
+2024-10-13 11:35:41,058 - Eigenenergy and eigenvector computation for Run: 3 took 99.85419654846191 seconds
+2024-10-13 11:35:41,084 - Computing delta_s_new_vec for Run: 3 took 0.02507758140563965 seconds
+2024-10-13 11:35:41,084 - New (unmixed) s-wave SC order parameter vector computed for run: 3 has the average value: (0.3785699394722626+0j)
+2024-10-13 11:35:41,102 - Maximum error for run: 4 is 0.024089713645799926
+2024-10-13 11:35:41,102 - ########################
+2024-10-13 11:35:41,102 - Starting Self-Consistency Calculation for Run: 4
+2024-10-13 11:37:21,972 - Eigenenergy and eigenvector computation for Run: 4 took 99.73660326004028 seconds
+2024-10-13 11:37:22,004 - Computing delta_s_new_vec for Run: 4 took 0.031090259552001953 seconds
+2024-10-13 11:37:22,004 - New (unmixed) s-wave SC order parameter vector computed for run: 4 has the average value: (0.37845818249888624+0j)
+2024-10-13 11:37:22,022 - Maximum error for run: 5 is 0.017957480430339512
+2024-10-13 11:37:22,022 - ########################
+2024-10-13 11:37:22,023 - Starting Self-Consistency Calculation for Run: 5
+2024-10-13 11:39:03,025 - Eigenenergy and eigenvector computation for Run: 5 took 99.83725929260254 seconds
+2024-10-13 11:39:03,051 - Computing delta_s_new_vec for Run: 5 took 0.025071382522583008 seconds
+2024-10-13 11:39:03,051 - New (unmixed) s-wave SC order parameter vector computed for run: 5 has the average value: (0.3783665843954047+0j)
+2024-10-13 11:39:03,068 - Maximum error for run: 6 is 0.013448367597200528
+2024-10-13 11:39:03,069 - ########################
+2024-10-13 11:39:03,069 - Starting Self-Consistency Calculation for Run: 6
+2024-10-13 11:40:43,952 - Eigenenergy and eigenvector computation for Run: 6 took 99.6807610988617 seconds
+2024-10-13 11:40:43,977 - Computing delta_s_new_vec for Run: 6 took 0.024797916412353516 seconds
+2024-10-13 11:40:43,977 - New (unmixed) s-wave SC order parameter vector computed for run: 6 has the average value: (0.37829153109704705+0j)
+2024-10-13 11:40:43,995 - Maximum error for run: 7 is 0.010117520157001014
+2024-10-13 11:40:43,995 - ########################
+2024-10-13 11:40:43,995 - Starting Self-Consistency Calculation for Run: 7
+2024-10-13 11:42:24,879 - Eigenenergy and eigenvector computation for Run: 7 took 99.67442297935486 seconds
+2024-10-13 11:42:24,904 - Computing delta_s_new_vec for Run: 7 took 0.02505636215209961 seconds
+2024-10-13 11:42:24,905 - New (unmixed) s-wave SC order parameter vector computed for run: 7 has the average value: (0.3782300496299991+0j)
+2024-10-13 11:42:24,922 - Maximum error for run: 8 is 0.007645521907535646
+2024-10-13 11:42:24,923 - ########################
+2024-10-13 11:42:24,923 - Starting Self-Consistency Calculation for Run: 8
+2024-10-13 11:44:05,804 - Eigenenergy and eigenvector computation for Run: 8 took 99.66063356399536 seconds
+2024-10-13 11:44:05,828 - Computing delta_s_new_vec for Run: 8 took 0.024028539657592773 seconds
+2024-10-13 11:44:05,828 - New (unmixed) s-wave SC order parameter vector computed for run: 8 has the average value: (0.3781796967120716+0j)
+2024-10-13 11:44:05,846 - Maximum error for run: 9 is 0.005802313420698257
+2024-10-13 11:44:05,846 - ########################
+2024-10-13 11:44:05,846 - Starting Self-Consistency Calculation for Run: 9
+2024-10-13 11:45:46,726 - Eigenenergy and eigenvector computation for Run: 9 took 99.66153335571289 seconds
+2024-10-13 11:45:46,752 - Computing delta_s_new_vec for Run: 9 took 0.02498006820678711 seconds
+2024-10-13 11:45:46,752 - New (unmixed) s-wave SC order parameter vector computed for run: 9 has the average value: (0.3781384658127276+0j)
+2024-10-13 11:45:46,769 - Maximum error for run: 10 is 0.004421583399220497
+2024-10-13 11:45:46,770 - ########################
+2024-10-13 11:45:46,770 - Starting Self-Consistency Calculation for Run: 10
+2024-10-13 11:47:27,660 - Eigenenergy and eigenvector computation for Run: 10 took 99.6475338935852 seconds
+2024-10-13 11:47:27,684 - Computing delta_s_new_vec for Run: 10 took 0.024042844772338867 seconds
+2024-10-13 11:47:27,684 - New (unmixed) s-wave SC order parameter vector computed for run: 10 has the average value: (0.3781047100110352+0j)
+2024-10-13 11:47:27,702 - Maximum error for run: 11 is 0.0033826093257494083
+2024-10-13 11:47:27,702 - ########################
+2024-10-13 11:47:27,703 - Starting Self-Consistency Calculation for Run: 11
+2024-10-13 11:49:08,633 - Eigenenergy and eigenvector computation for Run: 11 took 99.66516900062561 seconds
+2024-10-13 11:49:08,658 - Computing delta_s_new_vec for Run: 11 took 0.02466869354248047 seconds
+2024-10-13 11:49:08,658 - New (unmixed) s-wave SC order parameter vector computed for run: 11 has the average value: (0.37807707817335306+0j)
+2024-10-13 11:49:08,675 - Maximum error for run: 12 is 0.002597373725323149
+2024-10-13 11:49:08,676 - ########################
+2024-10-13 11:49:08,676 - Starting Self-Consistency Calculation for Run: 12
+2024-10-13 11:50:49,732 - Eigenenergy and eigenvector computation for Run: 12 took 99.80989384651184 seconds
+2024-10-13 11:50:49,757 - Computing delta_s_new_vec for Run: 12 took 0.024213552474975586 seconds
+2024-10-13 11:50:49,757 - New (unmixed) s-wave SC order parameter vector computed for run: 12 has the average value: (0.37805446226486306+0j)
+2024-10-13 11:50:49,775 - Maximum error for run: 13 is 0.002001408406455407
+2024-10-13 11:50:49,775 - ########################
+2024-10-13 11:50:49,775 - Starting Self-Consistency Calculation for Run: 13
+2024-10-13 11:52:30,820 - Eigenenergy and eigenvector computation for Run: 13 took 99.79360771179199 seconds
+2024-10-13 11:52:30,845 - Computing delta_s_new_vec for Run: 13 took 0.024240732192993164 seconds
+2024-10-13 11:52:30,845 - New (unmixed) s-wave SC order parameter vector computed for run: 13 has the average value: (0.3780359539189413+0j)
+2024-10-13 11:52:30,862 - Maximum error for run: 14 is 0.0015472716127660213
+2024-10-13 11:52:30,863 - ########################
+2024-10-13 11:52:30,863 - Starting Self-Consistency Calculation for Run: 14
+2024-10-13 11:54:11,781 - Eigenenergy and eigenvector computation for Run: 14 took 99.680428981781 seconds
+2024-10-13 11:54:11,807 - Computing delta_s_new_vec for Run: 14 took 0.02485370635986328 seconds
+2024-10-13 11:54:11,807 - New (unmixed) s-wave SC order parameter vector computed for run: 14 has the average value: (0.3780208086783908+0j)
+2024-10-13 11:54:11,824 - Maximum error for run: 15 is 0.001199886097905556
+2024-10-13 11:54:11,825 - ########################
+2024-10-13 11:54:11,825 - Starting Self-Consistency Calculation for Run: 15
+2024-10-13 11:55:52,753 - Eigenenergy and eigenvector computation for Run: 15 took 99.66780996322632 seconds
+2024-10-13 11:55:52,778 - Computing delta_s_new_vec for Run: 15 took 0.024546384811401367 seconds
+2024-10-13 11:55:52,778 - New (unmixed) s-wave SC order parameter vector computed for run: 15 has the average value: (0.37800841657956674+0j)
+2024-10-13 11:55:52,795 - Maximum error for run: 16 is 0.0009331948425763681
+2024-10-13 11:55:52,795 - ########################
+2024-10-13 11:55:52,796 - Starting Self-Consistency Calculation for Run: 16
+2024-10-13 11:57:33,710 - Eigenenergy and eigenvector computation for Run: 16 took 99.67660403251648 seconds
+2024-10-13 11:57:33,735 - Computing delta_s_new_vec for Run: 16 took 0.024177074432373047 seconds
+2024-10-13 11:57:33,735 - New (unmixed) s-wave SC order parameter vector computed for run: 16 has the average value: (0.37799827797189833+0j)
+2024-10-13 11:57:33,752 - Maximum error for run: 17 is 0.0007277521637534812
+2024-10-13 11:57:33,753 - ########################
+2024-10-13 11:57:33,753 - Starting Self-Consistency Calculation for Run: 17
+2024-10-13 11:59:14,696 - Eigenenergy and eigenvector computation for Run: 17 took 99.66880750656128 seconds
+2024-10-13 11:59:14,720 - Computing delta_s_new_vec for Run: 17 took 0.024417638778686523 seconds
+2024-10-13 11:59:14,720 - New (unmixed) s-wave SC order parameter vector computed for run: 17 has the average value: (0.377989983653202+0j)
+2024-10-13 11:59:14,738 - Maximum error for run: 18 is 0.0005689810016250574
+2024-10-13 11:59:14,739 - ########################
+2024-10-13 11:59:14,739 - Starting Self-Consistency Calculation for Run: 18
+2024-10-13 12:00:55,652 - Eigenenergy and eigenvector computation for Run: 18 took 99.66558337211609 seconds
+2024-10-13 12:00:55,676 - Computing delta_s_new_vec for Run: 18 took 0.02409195899963379 seconds
+2024-10-13 12:00:55,676 - New (unmixed) s-wave SC order parameter vector computed for run: 18 has the average value: (0.3779831985591237+0j)
+2024-10-13 12:00:55,694 - Maximum error for run: 19 is 0.00044590641326358593
+2024-10-13 12:00:55,695 - ########################
+2024-10-13 12:00:55,695 - Starting Self-Consistency Calculation for Run: 19
+2024-10-13 12:02:36,618 - Eigenenergy and eigenvector computation for Run: 19 took 99.67517685890198 seconds
+2024-10-13 12:02:36,644 - Computing delta_s_new_vec for Run: 19 took 0.025083541870117188 seconds
+2024-10-13 12:02:36,644 - New (unmixed) s-wave SC order parameter vector computed for run: 19 has the average value: (0.3779776483770184+0j)
+2024-10-13 12:02:36,662 - Maximum error for run: 20 is 0.0003502308617440164
+2024-10-13 12:02:36,662 - ########################
+2024-10-13 12:02:36,662 - Starting Self-Consistency Calculation for Run: 20
+2024-10-13 12:04:17,576 - Eigenenergy and eigenvector computation for Run: 20 took 99.67217206954956 seconds
+2024-10-13 12:04:17,602 - Computing delta_s_new_vec for Run: 20 took 0.024915218353271484 seconds
+2024-10-13 12:04:17,602 - New (unmixed) s-wave SC order parameter vector computed for run: 20 has the average value: (0.3779731085644334+0j)
+2024-10-13 12:04:17,619 - Maximum error for run: 21 is 0.0002756558904191131
+2024-10-13 12:04:17,620 - ########################
+2024-10-13 12:04:17,620 - Starting Self-Consistency Calculation for Run: 21
+2024-10-13 12:05:58,557 - Eigenenergy and eigenvector computation for Run: 21 took 99.6721408367157 seconds
+2024-10-13 12:05:58,582 - Computing delta_s_new_vec for Run: 21 took 0.024258852005004883 seconds
+2024-10-13 12:05:58,582 - New (unmixed) s-wave SC order parameter vector computed for run: 21 has the average value: (0.37796939534354385+0j)
+2024-10-13 12:05:58,600 - Maximum error for run: 22 is 0.00021738220578049194
+2024-10-13 12:05:58,600 - ########################
+2024-10-13 12:05:58,600 - Starting Self-Consistency Calculation for Run: 22
+2024-10-13 12:07:39,535 - Eigenenergy and eigenvector computation for Run: 22 took 99.67005062103271 seconds
+2024-10-13 12:07:39,560 - Computing delta_s_new_vec for Run: 22 took 0.02464771270751953 seconds
+2024-10-13 12:07:39,560 - New (unmixed) s-wave SC order parameter vector computed for run: 22 has the average value: (0.37796635831841846+0j)
+2024-10-13 12:07:39,578 - Maximum error for run: 23 is 0.00017173954231908262
+2024-10-13 12:07:39,578 - ########################
+2024-10-13 12:07:39,578 - Starting Self-Consistency Calculation for Run: 23
+2024-10-13 12:09:20,524 - Eigenenergy and eigenvector computation for Run: 23 took 99.67436718940735 seconds
+2024-10-13 12:09:20,549 - Computing delta_s_new_vec for Run: 23 took 0.024743080139160156 seconds
+2024-10-13 12:09:20,549 - New (unmixed) s-wave SC order parameter vector computed for run: 23 has the average value: (0.3779638744244589+0j)
+2024-10-13 12:09:20,566 - Maximum error for run: 24 is 0.00013591137564233913
+2024-10-13 12:09:20,567 - ########################
+2024-10-13 12:09:20,567 - Starting Self-Consistency Calculation for Run: 24
+2024-10-13 12:11:01,495 - Eigenenergy and eigenvector computation for Run: 24 took 99.68409299850464 seconds
+2024-10-13 12:11:01,519 - Computing delta_s_new_vec for Run: 24 took 0.02400064468383789 seconds
+2024-10-13 12:11:01,519 - New (unmixed) s-wave SC order parameter vector computed for run: 24 has the average value: (0.37796184297093793+0j)
+2024-10-13 12:11:01,537 - Maximum error for run: 25 is 0.00010772927545077415
+2024-10-13 12:11:01,537 - ########################
+2024-10-13 12:11:01,537 - Starting Self-Consistency Calculation for Run: 25
+2024-10-13 12:12:42,475 - Eigenenergy and eigenvector computation for Run: 25 took 99.66395902633667 seconds
+2024-10-13 12:12:42,500 - Computing delta_s_new_vec for Run: 25 took 0.024664878845214844 seconds
+2024-10-13 12:12:42,500 - New (unmixed) s-wave SC order parameter vector computed for run: 25 has the average value: (0.37796018158012334+0j)
+2024-10-13 12:12:42,517 - Self-Consistency achieved for set convergence limit: 0.0001
