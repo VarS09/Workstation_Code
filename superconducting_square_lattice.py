@@ -127,8 +127,8 @@ def horizontal_10_N_interactions(): #Horizontal interactions between pairwise si
         horizontal_10 = [] #Cannot vmap for loop becuase we need/access the value "i" in the loop
         horizontal_10.extend([1]*bonds_in_triangle[i]) #Place 1's in at the interaction sites
         horizontal_10.extend([0]*(np.sum(bonds_in_triangle[i+1:]))) #As we proceed column-wise (each column has one lesser site), we pad zeroes (= number of bonds in the leftover/remaining columns of the triangle) at the right (non-interacting for this column)  
-        left_padding_length = np.abs(len(horizontal_10) - (n-bonds_in_triangle[i])) #As vector will be placed at k=bonds_in_triangle[i] pad zeroes (= len(vec) - (n-k)) for non-interacting sites accordingly to the left
-        left_padding = [0]*left_padding_length
+        left_padding_length = np.abs(len(horizontal_10) - (n-bonds_in_triangle[i])) #As vector will be placed at k=bonds_in_triangle[i], and a vector at k=n must have n-k elements, pad zeroes (= len(vec) - (n-k)) for non-interacting sites accordingly to the left
+        left_padding = [0]*left_padding_length #Pad zeroes to the left to make the vector of length 'n-k' to place at 'k'th diagonal of the matrix
         horizontal_10 = left_padding + horizontal_10
         horizontal_10_matrix = np.diag(np.array(horizontal_10,dtype=np.complex128),k=bonds_in_triangle[i]) + horizontal_10_matrix
     return horizontal_10_matrix
@@ -193,6 +193,11 @@ def lorentzian_LDOS(omega, eeta):
     #print(LDOS.shape) #LDOS is a 1D array with "n" elements corresponding to total sites "n"
     return LDOS #--> Pass this 1D LDOS array to a plotter function to plot the LDOS at each site "i" for a given [omega-"energy"] value
 
+def construct_sc_mat(delta): #Construct all the SC sub-matrices for all sites (at once) and returns a 1D array of 4x4 matrices to be updated in Hamiltonian
+    sc_mat = SC_mat*delta + hermitian_conjugate(SC_mat*delta) #Construct 4x4 site specific SC sub-matrix
+    return sc_mat
+construct_sc_mat_v = jax.vmap(construct_sc_mat, in_axes=(0))
+
 #s-wave superconductivity functions -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 @partial(jit, in_shardings=None, out_shardings=None)
 def s_wave_selfconsistent_condition(ui_up, ui_down, vi_up, vi_down, eigen_index):
@@ -217,28 +222,23 @@ def self_consistent_s_wave(site_index, eigen_index_vec):
     return delta_s_new #Returns a single value for a single site after implementing the s-wave self-consistent condition summed over relevant eigenvectors
 self_consistent_s_wave_v = jax.vmap(self_consistent_s_wave, in_axes=(0,None)) #batching for all sites
 
-def construct_s_sc_mat(delta_s): #Construct all the s-wave SC Hamiltonian matrices for all sites (at once) and returns a 1D array of 4x4 matrices
-    s_sc_mat = SC_mat*delta_s + hermitian_conjugate(SC_mat*delta_s) #Construct 4x4 site specific s-wave SC Hamiltonian
-    return s_sc_mat
-construct_s_sc_mat_v = jax.vmap(construct_s_sc_mat, in_axes=(0))
-
 @partial(jit, in_shardings=None, out_shardings=None)
-def update_H_on_s_sc(carry,x): #Update the H_on_s_SC matrix with the s-wave SC Hamiltonian for a specific site with this function and lax.scan
+def update_H_on_s_sc(carry,z): #Update the H_on_s_SC matrix with the s-wave SC Hamiltonian for a specific site with this function and lax.scan
     system_matrix,df = carry
-    s_sc_mat,site_index = x
-    start = df*site_index
-    system_matrix = lax.dynamic_update_slice(system_matrix, s_sc_mat, (start,start))
+    s_sc_mat,site_index = z
+    row,col = df*site_index, df*site_index
+    system_matrix = lax.dynamic_update_slice(system_matrix, s_sc_mat, (row,col)) #Place submatrix at the specific index of the system matrix
     return (system_matrix,df),None
 
 #Cannot jit because the function returns H_comp on CPU which is then moved to GPU --> this operation fails (for huge lattices) as jax tries to move the entire jit compiled function to GPU
-def H_comp_s(delta_s_vec): 
-    H_on_s_SC = jnp.zeros((df*n,df*n),dtype=jnp.complex128)
-    s_sc_mat_vec = construct_s_sc_mat_v(delta_s_vec) #Construct 4x4 site specific s-wave SC Hamiltonian for all sites
-    (H_on_s_SC, _), _ = lax.scan(update_H_on_s_sc, (H_on_s_SC, df), (s_sc_mat_vec, site_index_vec)) #lax.scan (instead of for loop) to update the H_on_s_SC matrix with the s-wave SC Hamiltonian for all sites 
-    H_on_s_SC = jax.device_put(H_on_s_SC, jax.devices('cpu')[0]) #Move H_on_s_SC to CPU
+def construct_H_comp_with_s_wave_sc(delta_s_vec): 
+    H_on_s_sc = jnp.zeros((df*n,df*n),dtype=jnp.complex128)
+    s_sc_mat_vec = construct_sc_mat_v(delta_s_vec) #Construct 4x4 site specific s-wave SC Hamiltonian for all sites
+    (H_on_s_sc, _), _ = lax.scan(update_H_on_s_sc, (H_on_s_sc, df), (s_sc_mat_vec, site_index_vec)) #lax.scan (instead of for loop) to update the H_on_s_SC matrix with the s-wave SC Hamiltonian for all sites 
+    H_on_s_sc = jax.device_put(H_on_s_sc, jax.devices('cpu')[0]) #Move H_on_s_SC to CPU
     #print('Memory after moving H_on_s_SC to CPU:')
     #gpu_memory_stats()
-    H_comp = H_comp_static + H_on_s_SC #Construct composite Hamiltonian on CPU
+    H_comp = H_comp_static + H_on_s_sc #Construct composite Hamiltonian on CPU
     del s_sc_mat_vec #Delete intermediate matrices to free up memory
     #print('Memory after constructing H_comp with s-wave SC (moved to CPU) and deleting intermediate matrices on GPU:')
     #gpu_memory_stats()
@@ -248,7 +248,7 @@ def delta_s_selfconsistency(delta_s_vec):
     global eigenenergies, eigenstates, run_count
     logging.info('########################')
     logging.info('Starting Self-Consistency Calculation for Run: %s',run_count)
-    H = H_comp_s(delta_s_vec)
+    H = construct_H_comp_with_s_wave_sc(delta_s_vec)
     H = jax.device_put(H, jax.devices('gpu')[0]) #Move H_comp to GPU 1 for diagonalizing
     print('Memory after after moving H_comp to GPU for diagonalizing:')
     gpu_memory_stats()
@@ -285,12 +285,51 @@ def delta_s_selfconsistency(delta_s_vec):
         logging.info('Self-Consistency achieved for set convergence limit: %s',convergence_limit)
         return delta_s_new_vec
 
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#d-wave superconductivity functions-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@partial(jit, in_shardings=None, out_shardings=None)
+def update_H_off_d_sc(carry,z): #Update the H_off_d_sc matrix with the d-wave SC Hamiltonian for a specific site with this function and lax.scan
+    H_off_d_sc,df = carry
+    d_sc_mat,link_index = z
+    row,col=df*link_index[0],df*link_index[1]
+    H_off_d_sc = lax.dynamic_update_slice(H_off_d_sc, d_sc_mat, (row,col)) #Place submatrix at the specific index of the system matrix
+    return (H_off_d_sc,df),None
+
+def construct_H_comp_with_d_wave_sc(delta_d_y_vec, delta_d_x_vec):
+    H_off_d_y_sc = jnp.zeros((df*n,df*n),dtype=jnp.complex128)
+    delta_d_y_mat_vec = construct_sc_mat_v(delta_d_y_vec) #Construct 4x4 site specific d-wave SC Hamiltonian for vertical interactions
+    (H_off_d_y_sc, _), _ = lax.scan(update_H_off_d_sc, (H_off_d_y_sc, df), (delta_d_y_mat_vec, delta_d_y_index_vec)) #lax.scan (instead of for loop) to update the H_off_d_SC matrix with the d-wave SC Hamiltonian for vertical interactions
+    H_off_d_y_sc = jax.device_put(H_off_d_y_sc, jax.devices('cpu')[0]) #Move H_off_d_SC to CPU
+    H_off_d_x_sc = jnp.zeros((df*n,df*n),dtype=jnp.complex128)
+    delta_d_x_mat_vec = construct_sc_mat_v(delta_d_x_vec) #Construct 4x4 site specific d-wave SC Hamiltonian for horizontal interactions
+    (H_off_d_x_sc, _), _ = lax.scan(update_H_off_d_sc, (H_off_d_x_sc, df), (delta_d_x_mat_vec, delta_d_x_index_vec)) #lax.scan (instead of for loop) to update the H_off_d_SC matrix with the d-wave SC Hamiltonian for horizontal interactions
+    H_off_d_x_sc = jax.device_put(H_off_d_x_sc, jax.devices('cpu')[0]) #Move H_off_d_SC to CPU
+    H_comp = H_comp_static + H_off_d_y_sc + H_off_d_x_sc #Construct composite Hamiltonian on CPU
+    del delta_d_y_mat_vec, delta_d_x_mat_vec #Delete intermediate matrices to free up memory
+    return H_comp
+
+def delta_d_selfconsistency(delta_d_y_vec,delta_d_x_vec):
+    global eigenenergies, eigenstates, run_count
+    logging.info('########################')
+    logging.info('Starting Self-Consistency Calculation for Run: %s',run_count)
+    H = construct_H_comp_with_d_wave_sc(delta_d_y_vec, delta_d_x_vec)
+    H = jax.device_put(H, jax.devices('gpu')[0]) #Move H_comp to GPU 1 for diagonalizing
+    print('Memory after after moving H_comp to GPU for diagonalizing:')
+    gpu_memory_stats()
+    t0 = time.time()
+    eigenenergies, eigenstates = eigh_jit(H) #jitting does not decrease the time taken for diagonalization significantly
+    #eigenenergies.block_until_ready()
+    #eigenstates.block_until_ready()
+    t1 = time.time() #We need to apply block_until ready to capture true time taken for diagonalization, else async operations cause incorrect time calculations
+    logging.info('Eigenenergy and eigenvector computation for Hamiltonian with %s sites for Run: %s took %s seconds',n,run_count,t1 - t0)
+    return delta_d_y_vec, delta_d_x_vec
+
+
+
 #(GPU diagonalization possible for N = 73, N_diag = 63, n = 3376 with N_repeat = 10 --> Peak memory usage: 16.36/18.18 GB, Time taken for first run with jit to diagonalize Composite Hamiltonian with 3376 sites is 100.6677 s)
 #Can vary N and N_repeat accordingly to GPU diagonalize just a slightly larger lattice 
 
 #Model Parameters
-N = 30 #number of lattice sites in x and y direction
+N = 58 #number of lattice sites in x and y direction
 N_diag = 0 #number of lattice sites in the isosceles right triangle hypotenuse edge
 N_repeat = N - N_diag #number of lattice sites in the repeating/extra horizontal and vertical chains besides the isosceles right triangle
 n = int((N_diag*(N_diag+1))/2) + N_repeat*N_diag + (N_diag+N_repeat)*N_repeat #Total number of lattice sites
@@ -300,10 +339,21 @@ t_N = 1+0j #neighbour (N) hopping
 t_NN = 0 #-0.25+0j #next-neighbour (NN) hopping
 mu = 0 #Chemical Potential
 V_sc = 2*t_N #s-wave SC coupling strength
+PBC = False #Periodic Boundary Conditions - Can be used only for s-wave SC square lattice
+s_wave_sc = False #s-wave SC
+d_wave_sc = True #d-wave SC
+normal_state = False #Normal state
+T = 0.0000001 #Temperature
+
 delta_s_init = 0.38+0j #s-wave superconducting order parameter
 delta_s_vec = jnp.ones(n,dtype=np.complex128)*delta_s_init #s-wave superconducting order parameter vector for each site in square lattice
-PBC = True #Periodic Boundary Conditions - True for PBC and False for OBC
-T = 0.0000001 #Temperature
+
+delta_d_init = 0.38+0j #d-wave superconducting order parameter
+total_y_interactions = jnp.real(jnp.sum(vertical_01_N_int_vec()))
+delta_d_y_vec = jnp.ones(int(total_y_interactions),dtype=np.complex128)*delta_d_init*(-1) #d-wave sc link order parameter vector for vertical interactions
+total_x_interactions = jnp.real(jnp.sum(horizontal_10_N_interactions()))
+delta_d_x_vec = jnp.ones(int(total_x_interactions),dtype=np.complex128)*delta_d_init #d-wave sc link order parameter vector for horizontal interactions
+
 
 #Code Parameters
 eeta = 0.04 #Lorentzian broadening factor for DOS and LDOS calculations
@@ -312,6 +362,10 @@ convergence_limit = 1e-4
 alpha = 0.4 #Mixing parameter for the new and old s-wave SC order parameter vectors
 site_index_vec = jnp.arange(n)
 eigen_index_vec = jnp.arange(int(n*df/2),int(n*df)) #Only consider the positive energy eigenvectors for the SC self-consistent condition
+vertical_interactions_pattern_matrix = jnp.diag(vertical_01_N_int_vec(),k=1)
+delta_d_y_index_vec = jnp.argwhere(vertical_interactions_pattern_matrix == 1)
+del vertical_interactions_pattern_matrix
+delta_d_x_index_vec = jnp.argwhere(horizontal_10_N_interactions() == 1) 
 
 logging.info('Model Parameters: N = %s, N_diag = %s, N_repeat = %s, n = %s, df = %s, t_N = %s, t_NN = %s, mu = %s, V_sc = %s, delta_s_init = %s, PBC = %s, T = %s',N,N_diag,N_repeat,n,df,t_N,t_NN,mu,V_sc,delta_s_init,PBC,T)
 logging.info('Code Parameters: eeta = %s, max_runs = %s, convergence_limit = %s, alpha = %s',eeta,max_runs,convergence_limit,alpha)
@@ -376,15 +430,19 @@ if False:
     print(f'Time taken to diagonalize Composite Hamiltonian with {n} sites is {t1 - t0:.4f} s')
 
 eigenenergies, eigenstates, run_count = None, None, 0
-if delta_s_init == 0+0j:
+if normal_state == True:
     print('Performing normal state calculations...')
     H = jax.device_put(H_comp_static, jax.devices('gpu')[0]) #Move H_comp to GPU for diagonalizing
     eigenenergies, eigenstates = eigh_jit(H)
     delta_s_new_vec = delta_s_vec
-else:
-    print('Entering self-consistent calculations...')
+elif s_wave_sc == True:
+    print('Entering self-consistent calculations for s-wave superconductivity...')
     delta_s_new_vec = delta_s_selfconsistency(delta_s_vec)
     print(delta_s_new_vec)
+elif d_wave_sc == True:
+    print('Entering self-consistent calculations for d-wave superconductivity...')
+    delta_d_y_new_vec, delta_d_x_new_vec = delta_d_selfconsistency(delta_d_y_vec,delta_d_x_vec)
+    #print(delta_d_y_new_vec,delta_d_x_new_vec)
 
 eigenenergies_window = eigenenergies[int((n*df)/2)-int((n*df)/4):int((n*df)/2)+int((n*df)/4)] #Window half the spectrum around zero energy
 #eigenstates_window = eigenstates[:,int((n*df)/2)-200:int((n*df/2))+200]
@@ -392,4 +450,7 @@ print('Saving DOS and half the spectrum of eigenvalues around zero energy:',eige
 omega_axes = jnp.arange(-1,1+0.02,0.02) #Energy range, points, and spacing for DOS calculation
 DOS = lorentzian_DOS_v(eeta, omega_axes, eigenenergies) #--> Pass normalized 1D DOS array to a plotter function to plot the DOS for a given energy range
 DOS = DOS/jnp.max(DOS) #Normalize the DOS to 1 with the maximum value
-np.savez('/home/susva433/Test_Data/SC_s_square_lattice_N=30_PBC_delta_s_init=0.4_eeta=0.04_V=2_T=0.01.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_s=delta_s_new_vec)
+if s_wave_sc == True:
+    np.savez('/home/susva433/Test_Data/SC_s_wave_lattice_N=58_delta_s_init=0.38_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_s=delta_s_new_vec)
+elif d_wave_sc == True:
+    np.savez('/home/susva433/Test_Data/SC_d_square_lattice_N=58_delta_d_init=0.38_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_d_y=delta_d_y_new_vec, delta_d_x=delta_d_x_new_vec)

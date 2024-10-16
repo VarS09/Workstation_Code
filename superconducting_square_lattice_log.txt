@@ -10168,3 +10168,10 @@
 2024-10-15 16:48:32,825 - Computing delta_s_new_vec for Run: 14 took 1.081350564956665 seconds
 2024-10-15 16:48:32,826 - New (unmixed) s-wave SC order parameter vector computed for run: 14 has the average value: (0.376514718617255+0j)
 2024-10-15 16:48:32,826 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-16 23:21:46,771 - ----------------------------------------------------------------------------------------
+2024-10-16 23:23:02,329 - ----------------------------------------------------------------------------------------
+2024-10-16 23:23:04,098 - Model Parameters: N = 58, N_diag = 0, N_repeat = 58, n = 3364, df = 4, t_N = (1+0j), t_NN = 0, mu = 0, V_sc = (2+0j), delta_s_init = (0.38+0j), PBC = False, T = 1e-07
+2024-10-16 23:23:04,099 - Code Parameters: eeta = 0.04, max_runs = 50, convergence_limit = 0.0001, alpha = 0.4
+2024-10-16 23:23:06,233 - ########################
+2024-10-16 23:23:06,234 - Starting Self-Consistency Calculation for Run: 0
+2024-10-16 23:24:48,811 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 0 took 98.1843569278717 seconds
