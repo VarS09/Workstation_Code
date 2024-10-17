@@ -10504,3 +10504,520 @@
 2024-10-17 07:21:08,778 - ########################
 2024-10-17 07:21:08,778 - Starting Self-Consistency Calculation for Run: 0
 2024-10-17 07:22:49,464 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 0 took 97.3247435092926 seconds
+2024-10-17 07:37:47,047 - ----------------------------------------------------------------------------------------
+2024-10-17 07:38:54,366 - ----------------------------------------------------------------------------------------
+2024-10-17 07:39:32,871 - ----------------------------------------------------------------------------------------
+2024-10-17 08:58:21,767 - ----------------------------------------------------------------------------------------
+2024-10-17 17:54:27,004 - ----------------------------------------------------------------------------------------
+2024-10-17 17:54:28,498 - Model Parameters: N = 30, N_diag = 0, N_repeat = 30, n = 900, df = 4, t_N = (1+0j), t_NN = 0, mu = 0, V_sc = (2+0j), delta_d_init = (0.38+0j), T = 1e-11
+2024-10-17 17:54:28,498 - Code Parameters: eeta = 0.04, max_runs = 50, convergence_limit = 0.0001, alpha = 0.4
+2024-10-17 17:54:28,498 - ########################
+2024-10-17 17:54:28,498 - Starting Self-Consistency Calculation for Run: 0
+2024-10-17 17:54:31,401 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 0 took 2.3286354541778564 seconds
+2024-10-17 17:54:31,812 - Computing delta_d_new_vec for Run: 0 took 2.739802360534668 seconds
+2024-10-17 17:54:31,857 - New (unmixed) d-wave SC order parameter vectors computed for run: 0 have the average "y" and "x" values: (2.240466403159485e-18+0j), (1.0923025335443042e-19+0j)
+2024-10-17 17:54:31,950 - Maximum error for run: 1 is 0.38000000000000017 with max d_y and d_x errors: 0.38000000000000017, 0.3800000000000001
+2024-10-17 17:54:31,989 - ########################
+2024-10-17 17:54:31,989 - Starting Self-Consistency Calculation for Run: 1
+2024-10-17 17:54:33,434 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 1 took 1.1604151725769043 seconds
+2024-10-17 17:54:34,560 - Computing delta_d_new_vec for Run: 1 took 2.286437511444092 seconds
+2024-10-17 17:54:34,560 - New (unmixed) d-wave SC order parameter vectors computed for run: 1 have the average "y" and "x" values: (6.733020112074348e-18+0j), (-8.91363730910324e-18+0j)
+2024-10-17 17:54:34,569 - Maximum error for run: 2 is 0.22800000000000017 with max d_y and d_x errors: 0.22800000000000015, 0.22800000000000017
+2024-10-17 17:54:34,575 - ########################
+2024-10-17 17:54:34,575 - Starting Self-Consistency Calculation for Run: 2
+2024-10-17 17:54:35,940 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 2 took 1.1621699333190918 seconds
+2024-10-17 17:54:37,066 - Computing delta_d_new_vec for Run: 2 took 2.2876110076904297 seconds
+2024-10-17 17:54:37,066 - New (unmixed) d-wave SC order parameter vectors computed for run: 2 have the average "y" and "x" values: (-1.6410708400431453e-18+0j), (-2.8170563343718194e-19+0j)
+2024-10-17 17:54:37,067 - Maximum error for run: 3 is 0.13680000000000025 with max d_y and d_x errors: 0.13680000000000025, 0.13680000000000014
+2024-10-17 17:54:37,067 - ########################
+2024-10-17 17:54:37,067 - Starting Self-Consistency Calculation for Run: 3
+2024-10-17 17:54:38,434 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 3 took 1.1635761260986328 seconds
+2024-10-17 17:54:39,560 - Computing delta_d_new_vec for Run: 3 took 2.289501905441284 seconds
+2024-10-17 17:54:39,560 - New (unmixed) d-wave SC order parameter vectors computed for run: 3 have the average "y" and "x" values: (-4.03553756902435e-19+0j), (-4.214711324598032e-18+0j)
+2024-10-17 17:54:39,562 - Maximum error for run: 4 is 0.0820800000000002 with max d_y and d_x errors: 0.0820800000000002, 0.0820800000000002
+2024-10-17 17:54:39,562 - ########################
+2024-10-17 17:54:39,562 - Starting Self-Consistency Calculation for Run: 4
+2024-10-17 17:54:40,940 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 4 took 1.1632027626037598 seconds
+2024-10-17 17:54:42,065 - Computing delta_d_new_vec for Run: 4 took 2.2886030673980713 seconds
+2024-10-17 17:54:42,065 - New (unmixed) d-wave SC order parameter vectors computed for run: 4 have the average "y" and "x" values: (6.298030723216802e-19+0j), (-4.2317220828215115e-18+0j)
+2024-10-17 17:54:42,066 - Maximum error for run: 5 is 0.04924800000000021 with max d_y and d_x errors: 0.04924800000000018, 0.04924800000000021
+2024-10-17 17:54:42,067 - ########################
+2024-10-17 17:54:42,067 - Starting Self-Consistency Calculation for Run: 5
+2024-10-17 17:54:43,437 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 5 took 1.165592908859253 seconds
+2024-10-17 17:54:44,571 - Computing delta_d_new_vec for Run: 5 took 2.299619436264038 seconds
+2024-10-17 17:54:44,571 - New (unmixed) d-wave SC order parameter vectors computed for run: 5 have the average "y" and "x" values: (4.341700061812139e-18+0j), (-5.380789454247097e-18+0j)
+2024-10-17 17:54:44,572 - Maximum error for run: 6 is 0.02954880000000019 with max d_y and d_x errors: 0.02954880000000019, 0.02954880000000017
+2024-10-17 17:54:44,573 - ########################
+2024-10-17 17:54:44,573 - Starting Self-Consistency Calculation for Run: 6
+2024-10-17 17:54:45,951 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 6 took 1.1685290336608887 seconds
+2024-10-17 17:54:47,085 - Computing delta_d_new_vec for Run: 6 took 2.3022091388702393 seconds
+2024-10-17 17:54:47,085 - New (unmixed) d-wave SC order parameter vectors computed for run: 6 have the average "y" and "x" values: (-1.711948999307643e-18+0j), (2.5370019283812388e-18+0j)
+2024-10-17 17:54:47,086 - Maximum error for run: 7 is 0.01772928000000022 with max d_y and d_x errors: 0.01772928000000022, 0.01772928000000017
+2024-10-17 17:54:47,086 - ########################
+2024-10-17 17:54:47,086 - Starting Self-Consistency Calculation for Run: 7
+2024-10-17 17:54:48,473 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 7 took 1.1684439182281494 seconds
+2024-10-17 17:54:49,607 - Computing delta_d_new_vec for Run: 7 took 2.302292585372925 seconds
+2024-10-17 17:54:49,607 - New (unmixed) d-wave SC order parameter vectors computed for run: 7 have the average "y" and "x" values: (4.111961360090642e-18+0j), (3.4139906339356774e-19+0j)
+2024-10-17 17:54:49,608 - Maximum error for run: 8 is 0.01063756800000021 with max d_y and d_x errors: 0.01063756800000021, 0.01063756800000021
+2024-10-17 17:54:49,608 - ########################
+2024-10-17 17:54:49,608 - Starting Self-Consistency Calculation for Run: 8
+2024-10-17 17:54:50,999 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 8 took 1.1692209243774414 seconds
+2024-10-17 17:54:52,133 - Computing delta_d_new_vec for Run: 8 took 2.3023946285247803 seconds
+2024-10-17 17:54:52,133 - New (unmixed) d-wave SC order parameter vectors computed for run: 8 have the average "y" and "x" values: (1.3829808746158488e-18+0j), (2.700535756064469e-18+0j)
+2024-10-17 17:54:52,134 - Maximum error for run: 9 is 0.006382540800000249 with max d_y and d_x errors: 0.006382540800000249, 0.006382540800000232
+2024-10-17 17:54:52,134 - ########################
+2024-10-17 17:54:52,134 - Starting Self-Consistency Calculation for Run: 9
+2024-10-17 17:54:53,525 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 9 took 1.1676878929138184 seconds
+2024-10-17 17:54:54,659 - Computing delta_d_new_vec for Run: 9 took 2.3014748096466064 seconds
+2024-10-17 17:54:54,659 - New (unmixed) d-wave SC order parameter vectors computed for run: 9 have the average "y" and "x" values: (5.482293209360826e-18+0j), (3.0598023466396584e-18+0j)
+2024-10-17 17:54:54,660 - Maximum error for run: 10 is 0.003829524480000514 with max d_y and d_x errors: 0.0038295244800004816, 0.003829524480000514
+2024-10-17 17:54:54,660 - ########################
+2024-10-17 17:54:54,661 - Starting Self-Consistency Calculation for Run: 10
+2024-10-17 17:54:56,049 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 10 took 1.1683411598205566 seconds
+2024-10-17 17:54:57,182 - Computing delta_d_new_vec for Run: 10 took 2.3015806674957275 seconds
+2024-10-17 17:54:57,183 - New (unmixed) d-wave SC order parameter vectors computed for run: 10 have the average "y" and "x" values: (4.519596452757318e-18+0j), (-4.0375315040542084e-18+0j)
+2024-10-17 17:54:57,184 - Maximum error for run: 11 is 0.0022977146880003656 with max d_y and d_x errors: 0.0022977146880003656, 0.002297714688000365
+2024-10-17 17:54:57,184 - ########################
+2024-10-17 17:54:57,184 - Starting Self-Consistency Calculation for Run: 11
+2024-10-17 17:54:58,577 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 11 took 1.1720430850982666 seconds
+2024-10-17 17:54:59,716 - Computing delta_d_new_vec for Run: 11 took 2.3110227584838867 seconds
+2024-10-17 17:54:59,716 - New (unmixed) d-wave SC order parameter vectors computed for run: 11 have the average "y" and "x" values: (-5.237942702498648e-18+0j), (3.519918432396905e-18+0j)
+2024-10-17 17:54:59,717 - Maximum error for run: 12 is 0.0013786288128009403 with max d_y and d_x errors: 0.0013786288128009403, 0.0013786288128008596
+2024-10-17 17:54:59,717 - ########################
+2024-10-17 17:54:59,717 - Starting Self-Consistency Calculation for Run: 12
+2024-10-17 17:55:01,109 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 12 took 1.172072410583496 seconds
+2024-10-17 17:55:02,248 - Computing delta_d_new_vec for Run: 12 took 2.311736822128296 seconds
+2024-10-17 17:55:02,248 - New (unmixed) d-wave SC order parameter vectors computed for run: 12 have the average "y" and "x" values: (-1.0776408800278767e-17+0j), (-2.573578174085204e-18+0j)
+2024-10-17 17:55:02,249 - Maximum error for run: 13 is 0.000827177287682067 with max d_y and d_x errors: 0.0008271772876820405, 0.000827177287682067
+2024-10-17 17:55:02,250 - ########################
+2024-10-17 17:55:02,250 - Starting Self-Consistency Calculation for Run: 13
+2024-10-17 17:55:03,645 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 13 took 1.1739997863769531 seconds
+2024-10-17 17:55:04,784 - Computing delta_d_new_vec for Run: 13 took 2.3130130767822266 seconds
+2024-10-17 17:55:04,784 - New (unmixed) d-wave SC order parameter vectors computed for run: 13 have the average "y" and "x" values: (-3.658559227441747e-18+0j), (2.2559817101105706e-18+0j)
+2024-10-17 17:55:04,785 - Maximum error for run: 14 is 0.0004963063726107603 with max d_y and d_x errors: 0.0004963063726107603, 0.000496306372610745
+2024-10-17 17:55:04,786 - ########################
+2024-10-17 17:55:04,786 - Starting Self-Consistency Calculation for Run: 14
+2024-10-17 17:55:06,181 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 14 took 1.172511100769043 seconds
+2024-10-17 17:55:07,320 - Computing delta_d_new_vec for Run: 14 took 2.312408447265625 seconds
+2024-10-17 17:55:07,321 - New (unmixed) d-wave SC order parameter vectors computed for run: 14 have the average "y" and "x" values: (8.756833012145782e-18+0j), (-1.0504267823937936e-17+0j)
+2024-10-17 17:55:07,322 - Maximum error for run: 15 is 0.00029778382356919367 with max d_y and d_x errors: 0.00029778382356919367, 0.00029778382356906524
+2024-10-17 17:55:07,322 - ########################
+2024-10-17 17:55:07,322 - Starting Self-Consistency Calculation for Run: 15
+2024-10-17 17:55:08,717 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 15 took 1.173158884048462 seconds
+2024-10-17 17:55:09,857 - Computing delta_d_new_vec for Run: 15 took 2.312803030014038 seconds
+2024-10-17 17:55:09,857 - New (unmixed) d-wave SC order parameter vectors computed for run: 15 have the average "y" and "x" values: (-9.369936878592399e-19+0j), (4.466227535473764e-18+0j)
+2024-10-17 17:55:09,858 - Maximum error for run: 16 is 0.000178670294156866 with max d_y and d_x errors: 0.0001786702941568511, 0.000178670294156866
+2024-10-17 17:55:09,858 - ########################
+2024-10-17 17:55:09,858 - Starting Self-Consistency Calculation for Run: 16
+2024-10-17 17:55:11,255 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 16 took 1.175595998764038 seconds
+2024-10-17 17:55:12,395 - Computing delta_d_new_vec for Run: 16 took 2.3151683807373047 seconds
+2024-10-17 17:55:12,395 - New (unmixed) d-wave SC order parameter vectors computed for run: 16 have the average "y" and "x" values: (1.0874111616741828e-18+0j), (4.398371433988896e-18+0j)
+2024-10-17 17:55:12,396 - Maximum error for run: 17 is 0.00010720217649681052 with max d_y and d_x errors: 0.00010720217649681052, 0.00010720217649679432
+2024-10-17 17:55:12,397 - ########################
+2024-10-17 17:55:12,397 - Starting Self-Consistency Calculation for Run: 17
+2024-10-17 17:55:13,794 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 17 took 1.1756536960601807 seconds
+2024-10-17 17:55:14,933 - Computing delta_d_new_vec for Run: 17 took 2.3146777153015137 seconds
+2024-10-17 17:55:14,933 - New (unmixed) d-wave SC order parameter vectors computed for run: 17 have the average "y" and "x" values: (3.799879372682961e-18+0j), (-7.423015098109879e-18+0j)
+2024-10-17 17:55:14,934 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-17 17:59:31,351 - ----------------------------------------------------------------------------------------
+2024-10-17 17:59:32,822 - Model Parameters: N = 30, N_diag = 0, N_repeat = 30, n = 900, df = 4, t_N = (1+0j), t_NN = 0, mu = 0, V_sc = (2+0j), delta_d_init = (0.38+0j), T = 1e-11
+2024-10-17 17:59:32,822 - Code Parameters: eeta = 0.04, max_runs = 50, convergence_limit = 0.0001, alpha = 0.4
+2024-10-17 17:59:32,822 - ########################
+2024-10-17 17:59:32,822 - Starting Self-Consistency Calculation for Run: 0
+2024-10-17 17:59:35,716 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 0 took 2.340247869491577 seconds
+2024-10-17 17:59:36,119 - Computing delta_d_new_vec for Run: 0 took 2.743518590927124 seconds
+2024-10-17 17:59:36,165 - New (unmixed) d-wave SC order parameter vectors computed for run: 0 have the average "y" and "x" values: (-0.27925139905931673+0j), (0.27925139905931673+0j)
+2024-10-17 17:59:36,257 - Maximum error for run: 1 is 0.1451351486703955 with max d_y and d_x errors: 0.14513514867039545, 0.1451351486703955
+2024-10-17 17:59:36,297 - ########################
+2024-10-17 17:59:36,297 - Starting Self-Consistency Calculation for Run: 1
+2024-10-17 17:59:37,754 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 1 took 1.1762104034423828 seconds
+2024-10-17 17:59:38,886 - Computing delta_d_new_vec for Run: 1 took 2.3081390857696533 seconds
+2024-10-17 17:59:38,886 - New (unmixed) d-wave SC order parameter vectors computed for run: 1 have the average "y" and "x" values: (-0.27065410486236513+0j), (0.27065410486236513+0j)
+2024-10-17 17:59:38,894 - Maximum error for run: 2 is 0.10593627594294877 with max d_y and d_x errors: 0.10593627594294866, 0.10593627594294877
+2024-10-17 17:59:38,901 - ########################
+2024-10-17 17:59:38,901 - Starting Self-Consistency Calculation for Run: 2
+2024-10-17 17:59:40,274 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 2 took 1.175809383392334 seconds
+2024-10-17 17:59:41,406 - Computing delta_d_new_vec for Run: 2 took 2.307669162750244 seconds
+2024-10-17 17:59:41,406 - New (unmixed) d-wave SC order parameter vectors computed for run: 2 have the average "y" and "x" values: (-0.26405385192756964+0j), (0.26405385192756964+0j)
+2024-10-17 17:59:41,407 - Maximum error for run: 3 is 0.07801328541266361 with max d_y and d_x errors: 0.07801328541266339, 0.07801328541266361
+2024-10-17 17:59:41,408 - ########################
+2024-10-17 17:59:41,408 - Starting Self-Consistency Calculation for Run: 3
+2024-10-17 17:59:42,782 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 3 took 1.1772561073303223 seconds
+2024-10-17 17:59:43,914 - Computing delta_d_new_vec for Run: 3 took 2.309345245361328 seconds
+2024-10-17 17:59:43,915 - New (unmixed) d-wave SC order parameter vectors computed for run: 3 have the average "y" and "x" values: (-0.25906046040863234+0j), (0.2590604604086323+0j)
+2024-10-17 17:59:43,916 - Maximum error for run: 4 is 0.05786602058717574 with max d_y and d_x errors: 0.05786602058717574, 0.05786602058717563
+2024-10-17 17:59:43,916 - ########################
+2024-10-17 17:59:43,916 - Starting Self-Consistency Calculation for Run: 4
+2024-10-17 17:59:45,296 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 4 took 1.179570198059082 seconds
+2024-10-17 17:59:46,436 - Computing delta_d_new_vec for Run: 4 took 2.3197414875030518 seconds
+2024-10-17 17:59:46,436 - New (unmixed) d-wave SC order parameter vectors computed for run: 4 have the average "y" and "x" values: (-0.25531965773240817+0j), (0.2553196577324082+0j)
+2024-10-17 17:59:46,437 - Maximum error for run: 5 is 0.043175124974008494 with max d_y and d_x errors: 0.043175124974008355, 0.043175124974008494
+2024-10-17 17:59:46,437 - ########################
+2024-10-17 17:59:46,437 - Starting Self-Consistency Calculation for Run: 5
+2024-10-17 17:59:47,819 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 5 took 1.1841187477111816 seconds
+2024-10-17 17:59:48,960 - Computing delta_d_new_vec for Run: 5 took 2.324784517288208 seconds
+2024-10-17 17:59:48,960 - New (unmixed) d-wave SC order parameter vectors computed for run: 5 have the average "y" and "x" values: (-0.2525355274397242+0j), (0.2525355274397242+0j)
+2024-10-17 17:59:48,961 - Maximum error for run: 6 is 0.03237011711473475 with max d_y and d_x errors: 0.03237011711473475, 0.032370117114734615
+2024-10-17 17:59:48,961 - ########################
+2024-10-17 17:59:48,961 - Starting Self-Consistency Calculation for Run: 6
+2024-10-17 17:59:50,342 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 6 took 1.1836626529693604 seconds
+2024-10-17 17:59:51,482 - Computing delta_d_new_vec for Run: 6 took 2.323317050933838 seconds
+2024-10-17 17:59:51,482 - New (unmixed) d-wave SC order parameter vectors computed for run: 6 have the average "y" and "x" values: (-0.2504723659920681+0j), (0.2504723659920681+0j)
+2024-10-17 17:59:51,483 - Maximum error for run: 7 is 0.024366828761426568 with max d_y and d_x errors: 0.024366828761426568, 0.024366828761426512
+2024-10-17 17:59:51,483 - ########################
+2024-10-17 17:59:51,484 - Starting Self-Consistency Calculation for Run: 7
+2024-10-17 17:59:52,867 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 7 took 1.183149814605713 seconds
+2024-10-17 17:59:54,006 - Computing delta_d_new_vec for Run: 7 took 2.322017192840576 seconds
+2024-10-17 17:59:54,006 - New (unmixed) d-wave SC order parameter vectors computed for run: 7 have the average "y" and "x" values: (-0.24894777708984347+0j), (0.24894777708984347+0j)
+2024-10-17 17:59:54,007 - Maximum error for run: 8 is 0.01840419103740565 with max d_y and d_x errors: 0.01840419103740565, 0.018404191037405565
+2024-10-17 17:59:54,007 - ########################
+2024-10-17 17:59:54,007 - Starting Self-Consistency Calculation for Run: 8
+2024-10-17 17:59:55,390 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 8 took 1.1826298236846924 seconds
+2024-10-17 17:59:56,533 - Computing delta_d_new_vec for Run: 8 took 2.325573444366455 seconds
+2024-10-17 17:59:56,533 - New (unmixed) d-wave SC order parameter vectors computed for run: 8 have the average "y" and "x" values: (-0.24782317084518346+0j), (0.2478231708451835+0j)
+2024-10-17 17:59:56,534 - Maximum error for run: 9 is 0.013940351205255164 with max d_y and d_x errors: 0.013940351205255164, 0.013940351205255136
+2024-10-17 17:59:56,535 - ########################
+2024-10-17 17:59:56,535 - Starting Self-Consistency Calculation for Run: 9
+2024-10-17 17:59:57,918 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 9 took 1.1849689483642578 seconds
+2024-10-17 17:59:59,066 - Computing delta_d_new_vec for Run: 9 took 2.333123207092285 seconds
+2024-10-17 17:59:59,067 - New (unmixed) d-wave SC order parameter vectors computed for run: 9 have the average "y" and "x" values: (-0.24699448250580422+0j), (0.2469944825058042+0j)
+2024-10-17 17:59:59,067 - Maximum error for run: 10 is 0.010584969553579349 with max d_y and d_x errors: 0.010584969553579349, 0.010584969553579265
+2024-10-17 17:59:59,068 - ########################
+2024-10-17 17:59:59,068 - Starting Self-Consistency Calculation for Run: 10
+2024-10-17 18:00:00,457 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 10 took 1.187692403793335 seconds
+2024-10-17 18:00:01,606 - Computing delta_d_new_vec for Run: 10 took 2.337570905685425 seconds
+2024-10-17 18:00:01,607 - New (unmixed) d-wave SC order parameter vectors computed for run: 10 have the average "y" and "x" values: (-0.24638417803812304+0j), (0.24638417803812307+0j)
+2024-10-17 18:00:01,608 - Maximum error for run: 11 is 0.008054099929884734 with max d_y and d_x errors: 0.008054099929884734, 0.00805409992988465
+2024-10-17 18:00:01,608 - ########################
+2024-10-17 18:00:01,608 - Starting Self-Consistency Calculation for Run: 11
+2024-10-17 18:00:02,997 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 11 took 1.1886634826660156 seconds
+2024-10-17 18:00:04,146 - Computing delta_d_new_vec for Run: 11 took 2.338064670562744 seconds
+2024-10-17 18:00:04,146 - New (unmixed) d-wave SC order parameter vectors computed for run: 11 have the average "y" and "x" values: (-0.24593478720784637+0j), (0.24593478720784637+0j)
+2024-10-17 18:00:04,147 - Maximum error for run: 12 is 0.006139511010086585 with max d_y and d_x errors: 0.006139511010086474, 0.006139511010086585
+2024-10-17 18:00:04,148 - ########################
+2024-10-17 18:00:04,148 - Starting Self-Consistency Calculation for Run: 12
+2024-10-17 18:00:05,536 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 12 took 1.1881582736968994 seconds
+2024-10-17 18:00:06,686 - Computing delta_d_new_vec for Run: 12 took 2.337925434112549 seconds
+2024-10-17 18:00:06,686 - New (unmixed) d-wave SC order parameter vectors computed for run: 12 have the average "y" and "x" values: (-0.24560385593293146+0j), (0.24560385593293146+0j)
+2024-10-17 18:00:06,687 - Maximum error for run: 13 is 0.004687458927473659 with max d_y and d_x errors: 0.004687458927473631, 0.004687458927473659
+2024-10-17 18:00:06,687 - ########################
+2024-10-17 18:00:06,687 - Starting Self-Consistency Calculation for Run: 13
+2024-10-17 18:00:08,075 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 13 took 1.188185453414917 seconds
+2024-10-17 18:00:09,223 - Computing delta_d_new_vec for Run: 13 took 2.3361518383026123 seconds
+2024-10-17 18:00:09,223 - New (unmixed) d-wave SC order parameter vectors computed for run: 13 have the average "y" and "x" values: (-0.24536009158817487+0j), (0.24536009158817487+0j)
+2024-10-17 18:00:09,224 - Maximum error for run: 14 is 0.003626330645548098 with max d_y and d_x errors: 0.0036263306455480426, 0.003626330645548098
+2024-10-17 18:00:09,224 - ########################
+2024-10-17 18:00:09,224 - Starting Self-Consistency Calculation for Run: 14
+2024-10-17 18:00:10,613 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 14 took 1.1879005432128906 seconds
+2024-10-17 18:00:11,762 - Computing delta_d_new_vec for Run: 14 took 2.337308645248413 seconds
+2024-10-17 18:00:11,762 - New (unmixed) d-wave SC order parameter vectors computed for run: 14 have the average "y" and "x" values: (-0.2451804601002322+0j), (0.2451804601002322+0j)
+2024-10-17 18:00:11,763 - Maximum error for run: 15 is 0.0028137157460141893 with max d_y and d_x errors: 0.0028137157460141338, 0.0028137157460141893
+2024-10-17 18:00:11,763 - ########################
+2024-10-17 18:00:11,763 - Starting Self-Consistency Calculation for Run: 15
+2024-10-17 18:00:13,151 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 15 took 1.1883025169372559 seconds
+2024-10-17 18:00:14,300 - Computing delta_d_new_vec for Run: 15 took 2.3372299671173096 seconds
+2024-10-17 18:00:14,300 - New (unmixed) d-wave SC order parameter vectors computed for run: 15 have the average "y" and "x" values: (-0.24504801970399145+0j), (0.24504801970399148+0j)
+2024-10-17 18:00:14,301 - Maximum error for run: 16 is 0.0021834595790539146 with max d_y and d_x errors: 0.002183459579053887, 0.0021834595790539146
+2024-10-17 18:00:14,301 - ########################
+2024-10-17 18:00:14,301 - Starting Self-Consistency Calculation for Run: 16
+2024-10-17 18:00:15,684 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 16 took 1.1835017204284668 seconds
+2024-10-17 18:00:16,819 - Computing delta_d_new_vec for Run: 16 took 2.318544387817383 seconds
+2024-10-17 18:00:16,819 - New (unmixed) d-wave SC order parameter vectors computed for run: 16 have the average "y" and "x" values: (-0.24495031419643687+0j), (0.24495031419643687+0j)
+2024-10-17 18:00:16,820 - Maximum error for run: 17 is 0.0016944855091437505 with max d_y and d_x errors: 0.0016944855091437505, 0.0016944855091436672
+2024-10-17 18:00:16,820 - ########################
+2024-10-17 18:00:16,820 - Starting Self-Consistency Calculation for Run: 17
+2024-10-17 18:00:18,200 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 17 took 1.181089162826538 seconds
+2024-10-17 18:00:19,337 - Computing delta_d_new_vec for Run: 17 took 2.317620277404785 seconds
+2024-10-17 18:00:19,337 - New (unmixed) d-wave SC order parameter vectors computed for run: 17 have the average "y" and "x" values: (-0.244878185984354+0j), (0.244878185984354+0j)
+2024-10-17 18:00:19,338 - Maximum error for run: 18 is 0.0013150455438811492 with max d_y and d_x errors: 0.0013150455438811492, 0.0013150455438811215
+2024-10-17 18:00:19,339 - ########################
+2024-10-17 18:00:19,339 - Starting Self-Consistency Calculation for Run: 18
+2024-10-17 18:00:20,719 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 18 took 1.1802797317504883 seconds
+2024-10-17 18:00:21,855 - Computing delta_d_new_vec for Run: 18 took 2.3168182373046875 seconds
+2024-10-17 18:00:21,855 - New (unmixed) d-wave SC order parameter vectors computed for run: 18 have the average "y" and "x" values: (-0.24482490158072823+0j), (0.24482490158072823+0j)
+2024-10-17 18:00:21,856 - Maximum error for run: 19 is 0.0010205669069374146 with max d_y and d_x errors: 0.0010205669069374146, 0.0010205669069373313
+2024-10-17 18:00:21,857 - ########################
+2024-10-17 18:00:21,857 - Starting Self-Consistency Calculation for Run: 19
+2024-10-17 18:00:23,246 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 19 took 1.1855151653289795 seconds
+2024-10-17 18:00:24,382 - Computing delta_d_new_vec for Run: 19 took 2.322021484375 seconds
+2024-10-17 18:00:24,382 - New (unmixed) d-wave SC order parameter vectors computed for run: 19 have the average "y" and "x" values: (-0.24478550840763222+0j), (0.24478550840763222+0j)
+2024-10-17 18:00:24,383 - Maximum error for run: 20 is 0.0007920109531916464 with max d_y and d_x errors: 0.0007920109531916464, 0.0007920109531915909
+2024-10-17 18:00:24,383 - ########################
+2024-10-17 18:00:24,383 - Starting Self-Consistency Calculation for Run: 20
+2024-10-17 18:00:25,765 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 20 took 1.1811630725860596 seconds
+2024-10-17 18:00:26,901 - Computing delta_d_new_vec for Run: 20 took 2.3172004222869873 seconds
+2024-10-17 18:00:26,901 - New (unmixed) d-wave SC order parameter vectors computed for run: 20 have the average "y" and "x" values: (-0.24475636222248534+0j), (0.24475636222248529+0j)
+2024-10-17 18:00:26,902 - Maximum error for run: 21 is 0.0006146161112706161 with max d_y and d_x errors: 0.0006146161112706161, 0.0006146161112706161
+2024-10-17 18:00:26,902 - ########################
+2024-10-17 18:00:26,902 - Starting Self-Consistency Calculation for Run: 21
+2024-10-17 18:00:28,283 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 21 took 1.1805360317230225 seconds
+2024-10-17 18:00:29,420 - Computing delta_d_new_vec for Run: 21 took 2.317150592803955 seconds
+2024-10-17 18:00:29,420 - New (unmixed) d-wave SC order parameter vectors computed for run: 21 have the average "y" and "x" values: (-0.2447347801069271+0j), (0.2447347801069271+0j)
+2024-10-17 18:00:29,420 - Maximum error for run: 22 is 0.0004777207286153218 with max d_y and d_x errors: 0.00047772072861521075, 0.0004777207286153218
+2024-10-17 18:00:29,421 - ########################
+2024-10-17 18:00:29,421 - Starting Self-Consistency Calculation for Run: 22
+2024-10-17 18:00:30,802 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 22 took 1.1813571453094482 seconds
+2024-10-17 18:00:31,939 - Computing delta_d_new_vec for Run: 22 took 2.3179566860198975 seconds
+2024-10-17 18:00:31,939 - New (unmixed) d-wave SC order parameter vectors computed for run: 22 have the average "y" and "x" values: (-0.24471878571742436+0j), (0.24471878571742436+0j)
+2024-10-17 18:00:31,940 - Maximum error for run: 23 is 0.00037326609463733673 with max d_y and d_x errors: 0.00037326609463733673, 0.0003732660946372812
+2024-10-17 18:00:31,940 - ########################
+2024-10-17 18:00:31,940 - Starting Self-Consistency Calculation for Run: 23
+2024-10-17 18:00:33,321 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 23 took 1.1806905269622803 seconds
+2024-10-17 18:00:34,456 - Computing delta_d_new_vec for Run: 23 took 2.3163933753967285 seconds
+2024-10-17 18:00:34,457 - New (unmixed) d-wave SC order parameter vectors computed for run: 23 have the average "y" and "x" values: (-0.24470692226606364+0j), (0.2447069222660636+0j)
+2024-10-17 18:00:34,457 - Maximum error for run: 24 is 0.00029161363609281343 with max d_y and d_x errors: 0.00029161363609281343, 0.00029161363609281343
+2024-10-17 18:00:34,458 - ########################
+2024-10-17 18:00:34,458 - Starting Self-Consistency Calculation for Run: 24
+2024-10-17 18:00:35,842 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 24 took 1.183960199356079 seconds
+2024-10-17 18:00:36,987 - Computing delta_d_new_vec for Run: 24 took 2.328808546066284 seconds
+2024-10-17 18:00:36,987 - New (unmixed) d-wave SC order parameter vectors computed for run: 24 have the average "y" and "x" values: (-0.2446981151980928+0j), (0.2446981151980928+0j)
+2024-10-17 18:00:36,988 - Maximum error for run: 25 is 0.00022779712545512032 with max d_y and d_x errors: 0.00022779712545509256, 0.00022779712545512032
+2024-10-17 18:00:36,988 - ########################
+2024-10-17 18:00:36,988 - Starting Self-Consistency Calculation for Run: 25
+2024-10-17 18:00:38,374 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 25 took 1.184983491897583 seconds
+2024-10-17 18:00:39,519 - Computing delta_d_new_vec for Run: 25 took 2.3300654888153076 seconds
+2024-10-17 18:00:39,519 - New (unmixed) d-wave SC order parameter vectors computed for run: 25 have the average "y" and "x" values: (-0.24469157132747255+0j), (0.24469157132747252+0j)
+2024-10-17 18:00:39,520 - Maximum error for run: 26 is 0.00017792872384103653 with max d_y and d_x errors: 0.00017792872384098102, 0.00017792872384103653
+2024-10-17 18:00:39,521 - ########################
+2024-10-17 18:00:39,521 - Starting Self-Consistency Calculation for Run: 26
+2024-10-17 18:00:40,907 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 26 took 1.1857712268829346 seconds
+2024-10-17 18:00:42,052 - Computing delta_d_new_vec for Run: 26 took 2.330721855163574 seconds
+2024-10-17 18:00:42,052 - New (unmixed) d-wave SC order parameter vectors computed for run: 26 have the average "y" and "x" values: (-0.24468670471943038+0j), (0.2446867047194304+0j)
+2024-10-17 18:00:42,053 - Maximum error for run: 27 is 0.00013896564449117355 with max d_y and d_x errors: 0.00013896564449109028, 0.00013896564449117355
+2024-10-17 18:00:42,054 - ########################
+2024-10-17 18:00:42,054 - Starting Self-Consistency Calculation for Run: 27
+2024-10-17 18:00:43,442 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 27 took 1.186913013458252 seconds
+2024-10-17 18:00:44,587 - Computing delta_d_new_vec for Run: 27 took 2.331287145614624 seconds
+2024-10-17 18:00:44,587 - New (unmixed) d-wave SC order parameter vectors computed for run: 27 have the average "y" and "x" values: (-0.24468308219970394+0j), (0.24468308219970392+0j)
+2024-10-17 18:00:44,588 - Maximum error for run: 28 is 0.00010852712569214829 with max d_y and d_x errors: 0.00010852712569214829, 0.00010852712569198175
+2024-10-17 18:00:44,589 - ########################
+2024-10-17 18:00:44,589 - Starting Self-Consistency Calculation for Run: 28
+2024-10-17 18:00:45,972 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 28 took 1.1847422122955322 seconds
+2024-10-17 18:00:47,116 - Computing delta_d_new_vec for Run: 28 took 2.328446865081787 seconds
+2024-10-17 18:00:47,116 - New (unmixed) d-wave SC order parameter vectors computed for run: 28 have the average "y" and "x" values: (-0.2446803832704278+0j), (0.2446803832704278+0j)
+2024-10-17 18:00:47,117 - Self-Consistency achieved for set convergence limit: 0.0001
+2024-10-17 18:02:35,648 - ----------------------------------------------------------------------------------------
+2024-10-17 18:02:37,132 - Model Parameters: N = 30, N_diag = 0, N_repeat = 30, n = 900, df = 4, t_N = (1+0j), t_NN = 0, mu = 0, V_sc = (2+0j), delta_d_init = (0.25+0j), T = 1e-11
+2024-10-17 18:02:37,132 - Code Parameters: eeta = 0.04, max_runs = 50, convergence_limit = 0.0001, alpha = 0.4
+2024-10-17 18:02:37,132 - ########################
+2024-10-17 18:02:37,132 - Starting Self-Consistency Calculation for Run: 0
+2024-10-17 18:02:40,021 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 0 took 2.336956262588501 seconds
+2024-10-17 18:02:40,427 - Computing delta_d_new_vec for Run: 0 took 2.7428438663482666 seconds
+2024-10-17 18:02:40,473 - New (unmixed) d-wave SC order parameter vectors computed for run: 0 have the average "y" and "x" values: (-0.24622251234025225+0j), (0.24622251234025225+0j)
+2024-10-17 18:02:40,566 - Maximum error for run: 1 is 0.06705360305185232 with max d_y and d_x errors: 0.06705360305185232, 0.06705360305185226
+2024-10-17 18:02:40,609 - ########################
+2024-10-17 18:02:40,609 - Starting Self-Consistency Calculation for Run: 1
+2024-10-17 18:02:42,069 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 1 took 1.1799347400665283 seconds
+2024-10-17 18:02:43,205 - Computing delta_d_new_vec for Run: 1 took 2.316160202026367 seconds
+2024-10-17 18:02:43,206 - New (unmixed) d-wave SC order parameter vectors computed for run: 1 have the average "y" and "x" values: (-0.24580396360309897+0j), (0.24580396360309903+0j)
+2024-10-17 18:02:43,214 - Maximum error for run: 2 is 0.04889245239488532 with max d_y and d_x errors: 0.0488924523948851, 0.04889245239488532
+2024-10-17 18:02:43,221 - ########################
+2024-10-17 18:02:43,221 - Starting Self-Consistency Calculation for Run: 2
+2024-10-17 18:02:44,600 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 2 took 1.1807847023010254 seconds
+2024-10-17 18:02:45,736 - Computing delta_d_new_vec for Run: 2 took 2.317068099975586 seconds
+2024-10-17 18:02:45,736 - New (unmixed) d-wave SC order parameter vectors computed for run: 2 have the average "y" and "x" values: (-0.24549684583212253+0j), (0.24549684583212253+0j)
+2024-10-17 18:02:45,737 - Maximum error for run: 3 is 0.03561422366991335 with max d_y and d_x errors: 0.03561422366991335, 0.03561422366991329
+2024-10-17 18:02:45,738 - ########################
+2024-10-17 18:02:45,738 - Starting Self-Consistency Calculation for Run: 3
+2024-10-17 18:02:47,128 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 3 took 1.1877927780151367 seconds
+2024-10-17 18:02:48,274 - Computing delta_d_new_vec for Run: 3 took 2.3335492610931396 seconds
+2024-10-17 18:02:48,274 - New (unmixed) d-wave SC order parameter vectors computed for run: 3 have the average "y" and "x" values: (-0.24527218529784772+0j), (0.24527218529784772+0j)
+2024-10-17 18:02:48,275 - Maximum error for run: 4 is 0.025955242477655904 with max d_y and d_x errors: 0.025955242477655904, 0.025955242477655793
+2024-10-17 18:02:48,276 - ########################
+2024-10-17 18:02:48,276 - Starting Self-Consistency Calculation for Run: 4
+2024-10-17 18:02:49,663 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 4 took 1.1878700256347656 seconds
+2024-10-17 18:02:50,805 - Computing delta_d_new_vec for Run: 4 took 2.330796957015991 seconds
+2024-10-17 18:02:50,806 - New (unmixed) d-wave SC order parameter vectors computed for run: 4 have the average "y" and "x" values: (-0.2451082207685337+0j), (0.24510822076853372+0j)
+2024-10-17 18:02:50,807 - Maximum error for run: 5 is 0.01920789943866702 with max d_y and d_x errors: 0.019207899438666937, 0.01920789943866702
+2024-10-17 18:02:50,807 - ########################
+2024-10-17 18:02:50,807 - Starting Self-Consistency Calculation for Run: 5
+2024-10-17 18:02:52,202 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 5 took 1.1878879070281982 seconds
+2024-10-17 18:02:53,347 - Computing delta_d_new_vec for Run: 5 took 2.333087921142578 seconds
+2024-10-17 18:02:53,347 - New (unmixed) d-wave SC order parameter vectors computed for run: 5 have the average "y" and "x" values: (-0.24498876170577094+0j), (0.24498876170577094+0j)
+2024-10-17 18:02:53,348 - Maximum error for run: 6 is 0.014549235567382968 with max d_y and d_x errors: 0.01454923556738294, 0.014549235567382968
+2024-10-17 18:02:53,349 - ########################
+2024-10-17 18:02:53,349 - Starting Self-Consistency Calculation for Run: 6
+2024-10-17 18:02:54,743 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 6 took 1.188368320465088 seconds
+2024-10-17 18:02:55,887 - Computing delta_d_new_vec for Run: 6 took 2.3329355716705322 seconds
+2024-10-17 18:02:55,888 - New (unmixed) d-wave SC order parameter vectors computed for run: 6 have the average "y" and "x" values: (-0.2449018441270434+0j), (0.2449018441270434+0j)
+2024-10-17 18:02:55,888 - Maximum error for run: 7 is 0.011013071280521508 with max d_y and d_x errors: 0.011013071280521453, 0.011013071280521508
+2024-10-17 18:02:55,889 - ########################
+2024-10-17 18:02:55,889 - Starting Self-Consistency Calculation for Run: 7
+2024-10-17 18:02:57,276 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 7 took 1.1879360675811768 seconds
+2024-10-17 18:02:58,422 - Computing delta_d_new_vec for Run: 7 took 2.3342537879943848 seconds
+2024-10-17 18:02:58,422 - New (unmixed) d-wave SC order parameter vectors computed for run: 7 have the average "y" and "x" values: (-0.24483867057505285+0j), (0.24483867057505287+0j)
+2024-10-17 18:02:58,423 - Maximum error for run: 8 is 0.008332309451656361 with max d_y and d_x errors: 0.008332309451656361, 0.008332309451656306
+2024-10-17 18:02:58,423 - ########################
+2024-10-17 18:02:58,424 - Starting Self-Consistency Calculation for Run: 8
+2024-10-17 18:02:59,809 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 8 took 1.1873013973236084 seconds
+2024-10-17 18:03:00,954 - Computing delta_d_new_vec for Run: 8 took 2.3321897983551025 seconds
+2024-10-17 18:03:00,954 - New (unmixed) d-wave SC order parameter vectors computed for run: 8 have the average "y" and "x" values: (-0.24479279490285155+0j), (0.24479279490285155+0j)
+2024-10-17 18:03:00,955 - Maximum error for run: 9 is 0.00658877740612851 with max d_y and d_x errors: 0.006588777406128288, 0.00658877740612851
+2024-10-17 18:03:00,955 - ########################
+2024-10-17 18:03:00,955 - Starting Self-Consistency Calculation for Run: 9
+2024-10-17 18:03:02,337 - Eigenenergy and eigenvector computation for Hamiltonian with 900 sites for Run: 9 took 1.1824917793273926 seconds
+2024-10-17 18:07:47,673 - ----------------------------------------------------------------------------------------
+2024-10-17 18:07:50,912 - Model Parameters: N = 58, N_diag = 0, N_repeat = 58, n = 3364, df = 4, t_N = (1+0j), t_NN = 0, mu = 0, V_sc = (2+0j), delta_d_init = (0.245+0j), T = 1e-16
+2024-10-17 18:07:50,912 - Code Parameters: eeta = 0.04, max_runs = 50, convergence_limit = 0.0001, alpha = 0.4
+2024-10-17 18:07:50,912 - ########################
+2024-10-17 18:07:50,912 - Starting Self-Consistency Calculation for Run: 0
+2024-10-17 18:09:32,389 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 0 took 97.47994208335876 seconds
+2024-10-17 18:09:32,829 - Computing delta_d_new_vec for Run: 0 took 97.92023634910583 seconds
+2024-10-17 18:09:32,875 - New (unmixed) d-wave SC order parameter vectors computed for run: 0 have the average "y" and "x" values: (-0.24336777681609298+0j), (0.24336777681609298+0j)
+2024-10-17 18:09:32,967 - Maximum error for run: 1 is 0.07031057349989189 with max d_y and d_x errors: 0.07031057349989156, 0.07031057349989189
+2024-10-17 18:09:33,008 - ########################
+2024-10-17 18:09:33,008 - Starting Self-Consistency Calculation for Run: 1
+2024-10-17 18:10:22,936 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 1 took 46.11848306655884 seconds
+2024-10-17 18:11:16,144 - Computing delta_d_new_vec for Run: 1 took 99.32730484008789 seconds
+2024-10-17 18:11:16,145 - New (unmixed) d-wave SC order parameter vectors computed for run: 1 have the average "y" and "x" values: (-0.24319145376739665+0j), (0.24319145376739665+0j)
+2024-10-17 18:11:16,177 - Maximum error for run: 2 is 0.05134757607280721 with max d_y and d_x errors: 0.05134757607280721, 0.05134757607280721
+2024-10-17 18:11:16,185 - ########################
+2024-10-17 18:11:16,185 - Starting Self-Consistency Calculation for Run: 2
+2024-10-17 18:12:05,998 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 2 took 46.23851203918457 seconds
+2024-10-17 18:12:59,272 - Computing delta_d_new_vec for Run: 2 took 99.51240968704224 seconds
+2024-10-17 18:12:59,272 - New (unmixed) d-wave SC order parameter vectors computed for run: 2 have the average "y" and "x" values: (-0.24306253084488477+0j), (0.24306253084488477+0j)
+2024-10-17 18:12:59,295 - Maximum error for run: 3 is 0.03743225231261699 with max d_y and d_x errors: 0.03743225231261699, 0.03743225231261682
+2024-10-17 18:12:59,296 - ########################
+2024-10-17 18:12:59,296 - Starting Self-Consistency Calculation for Run: 3
+2024-10-17 18:13:48,592 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 3 took 46.268052101135254 seconds
+2024-10-17 18:14:41,877 - Computing delta_d_new_vec for Run: 3 took 99.55316972732544 seconds
+2024-10-17 18:14:41,877 - New (unmixed) d-wave SC order parameter vectors computed for run: 3 have the average "y" and "x" values: (-0.24296860616385602+0j), (0.24296860616385602+0j)
+2024-10-17 18:14:41,899 - Maximum error for run: 4 is 0.027286198913691107 with max d_y and d_x errors: 0.027286198913691107, 0.02728619891369105
+2024-10-17 18:14:41,900 - ########################
+2024-10-17 18:14:41,900 - Starting Self-Consistency Calculation for Run: 4
+2024-10-17 18:15:31,704 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 4 took 46.260228395462036 seconds
+2024-10-17 18:16:24,983 - Computing delta_d_new_vec for Run: 4 took 99.53961133956909 seconds
+2024-10-17 18:16:24,983 - New (unmixed) d-wave SC order parameter vectors computed for run: 4 have the average "y" and "x" values: (-0.24290038379724876+0j), (0.24290038379724876+0j)
+2024-10-17 18:16:25,006 - Maximum error for run: 5 is 0.01991392283883553 with max d_y and d_x errors: 0.01991392283883553, 0.01991392283883553
+2024-10-17 18:16:25,007 - ########################
+2024-10-17 18:16:25,007 - Starting Self-Consistency Calculation for Run: 5
+2024-10-17 18:17:14,725 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 5 took 46.2693190574646 seconds
+2024-10-17 18:18:07,997 - Computing delta_d_new_vec for Run: 5 took 99.54195785522461 seconds
+2024-10-17 18:18:07,998 - New (unmixed) d-wave SC order parameter vectors computed for run: 5 have the average "y" and "x" values: (-0.2428509566451373+0j), (0.2428509566451373+0j)
+2024-10-17 18:18:08,020 - Maximum error for run: 6 is 0.01456389393487284 with max d_y and d_x errors: 0.01456389393487284, 0.01456389393487284
+2024-10-17 18:18:08,020 - ########################
+2024-10-17 18:18:08,021 - Starting Self-Consistency Calculation for Run: 6
+2024-10-17 18:18:57,392 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 6 took 46.27140522003174 seconds
+2024-10-17 18:19:50,683 - Computing delta_d_new_vec for Run: 6 took 99.56283044815063 seconds
+2024-10-17 18:19:50,683 - New (unmixed) d-wave SC order parameter vectors computed for run: 6 have the average "y" and "x" values: (-0.24281522712592685+0j), (0.24281522712592685+0j)
+2024-10-17 18:19:50,706 - Maximum error for run: 7 is 0.011002330914960223 with max d_y and d_x errors: 0.011002330914960168, 0.011002330914960223
+2024-10-17 18:19:50,706 - ########################
+2024-10-17 18:19:50,706 - Starting Self-Consistency Calculation for Run: 7
+2024-10-17 18:20:39,803 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 7 took 46.2846360206604 seconds
+2024-10-17 18:21:33,089 - Computing delta_d_new_vec for Run: 7 took 99.57145142555237 seconds
+2024-10-17 18:21:33,090 - New (unmixed) d-wave SC order parameter vectors computed for run: 7 have the average "y" and "x" values: (-0.24278945256613835+0j), (0.24278945256613835+0j)
+2024-10-17 18:21:33,112 - Maximum error for run: 8 is 0.00875843870949472 with max d_y and d_x errors: 0.00875843870949472, 0.008758438709494554
+2024-10-17 18:21:33,113 - ########################
+2024-10-17 18:21:33,113 - Starting Self-Consistency Calculation for Run: 8
+2024-10-17 18:22:22,257 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 8 took 46.282116413116455 seconds
+2024-10-17 18:23:15,544 - Computing delta_d_new_vec for Run: 8 took 99.56894445419312 seconds
+2024-10-17 18:23:15,544 - New (unmixed) d-wave SC order parameter vectors computed for run: 8 have the average "y" and "x" values: (-0.24277089605685492+0j), (0.24277089605685492+0j)
+2024-10-17 18:23:15,567 - Maximum error for run: 9 is 0.0069440625986697535 with max d_y and d_x errors: 0.0069440625986697535, 0.0069440625986697535
+2024-10-17 18:23:15,567 - ########################
+2024-10-17 18:23:15,567 - Starting Self-Consistency Calculation for Run: 9
+2024-10-17 18:24:04,635 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 9 took 46.28230810165405 seconds
+2024-10-17 18:24:57,912 - Computing delta_d_new_vec for Run: 9 took 99.55977249145508 seconds
+2024-10-17 18:24:57,912 - New (unmixed) d-wave SC order parameter vectors computed for run: 9 have the average "y" and "x" values: (-0.24275756247275176+0j), (0.24275756247275176+0j)
+2024-10-17 18:24:57,935 - Maximum error for run: 10 is 0.0054878606427903875 with max d_y and d_x errors: 0.005487860642790332, 0.0054878606427903875
+2024-10-17 18:24:57,935 - ########################
+2024-10-17 18:24:57,935 - Starting Self-Consistency Calculation for Run: 10
+2024-10-17 18:25:47,026 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 10 took 46.29381012916565 seconds
+2024-10-17 18:26:40,312 - Computing delta_d_new_vec for Run: 10 took 99.57962799072266 seconds
+2024-10-17 18:26:40,312 - New (unmixed) d-wave SC order parameter vectors computed for run: 10 have the average "y" and "x" values: (-0.24274800112611433+0j), (0.2427480011261144+0j)
+2024-10-17 18:26:40,335 - Maximum error for run: 11 is 0.00432589730876487 with max d_y and d_x errors: 0.0043258973087648145, 0.00432589730876487
+2024-10-17 18:26:40,335 - ########################
+2024-10-17 18:26:40,335 - Starting Self-Consistency Calculation for Run: 11
+2024-10-17 18:27:29,505 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 11 took 46.28807282447815 seconds
+2024-10-17 18:28:22,779 - Computing delta_d_new_vec for Run: 11 took 99.56245446205139 seconds
+2024-10-17 18:28:22,779 - New (unmixed) d-wave SC order parameter vectors computed for run: 11 have the average "y" and "x" values: (-0.24274115944315047+0j), (0.24274115944315044+0j)
+2024-10-17 18:28:22,802 - Maximum error for run: 12 is 0.0034029574964126175 with max d_y and d_x errors: 0.0034029574964126175, 0.003402957496412451
+2024-10-17 18:28:22,802 - ########################
+2024-10-17 18:28:22,803 - Starting Self-Consistency Calculation for Run: 12
+2024-10-17 18:29:11,885 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 12 took 46.295923709869385 seconds
+2024-10-17 18:30:05,161 - Computing delta_d_new_vec for Run: 12 took 99.57109189033508 seconds
+2024-10-17 18:30:05,161 - New (unmixed) d-wave SC order parameter vectors computed for run: 12 have the average "y" and "x" values: (-0.24273627512368165+0j), (0.24273627512368165+0j)
+2024-10-17 18:30:05,183 - Maximum error for run: 13 is 0.002672534656447123 with max d_y and d_x errors: 0.002672534656447123, 0.0026725346564470676
+2024-10-17 18:30:05,184 - ########################
+2024-10-17 18:30:05,184 - Starting Self-Consistency Calculation for Run: 13
+2024-10-17 18:30:54,183 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 13 took 46.21410918235779 seconds
+2024-10-17 18:31:47,466 - Computing delta_d_new_vec for Run: 13 took 99.49647331237793 seconds
+2024-10-17 18:31:47,466 - New (unmixed) d-wave SC order parameter vectors computed for run: 13 have the average "y" and "x" values: (-0.24273279701933942+0j), (0.24273279701933942+0j)
+2024-10-17 18:31:47,488 - Maximum error for run: 14 is 0.0020961466699696008 with max d_y and d_x errors: 0.0020961466699696008, 0.0020961466699696008
+2024-10-17 18:31:47,488 - ########################
+2024-10-17 18:31:47,488 - Starting Self-Consistency Calculation for Run: 14
+2024-10-17 18:32:36,538 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 14 took 46.19213891029358 seconds
+2024-10-17 18:33:29,831 - Computing delta_d_new_vec for Run: 14 took 99.48576068878174 seconds
+2024-10-17 18:33:29,831 - New (unmixed) d-wave SC order parameter vectors computed for run: 14 have the average "y" and "x" values: (-0.24273032728014365+0j), (0.24273032728014365+0j)
+2024-10-17 18:33:29,854 - Maximum error for run: 15 is 0.0016423644397969839 with max d_y and d_x errors: 0.0016423644397969839, 0.0016423644397969284
+2024-10-17 18:33:29,855 - ########################
+2024-10-17 18:33:29,855 - Starting Self-Consistency Calculation for Run: 15
+2024-10-17 18:34:18,859 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 15 took 46.20540642738342 seconds
+2024-10-17 18:35:12,140 - Computing delta_d_new_vec for Run: 15 took 99.48629903793335 seconds
+2024-10-17 18:35:12,140 - New (unmixed) d-wave SC order parameter vectors computed for run: 15 have the average "y" and "x" values: (-0.24272857916468366+0j), (0.24272857916468366+0j)
+2024-10-17 18:35:12,163 - Maximum error for run: 16 is 0.0012857709091589897 with max d_y and d_x errors: 0.0012857709091589897, 0.0012857709091589897
+2024-10-17 18:35:12,163 - ########################
+2024-10-17 18:35:12,163 - Starting Self-Consistency Calculation for Run: 16
+2024-10-17 18:36:01,174 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 16 took 46.20605659484863 seconds
+2024-10-17 18:36:54,449 - Computing delta_d_new_vec for Run: 16 took 99.48064494132996 seconds
+2024-10-17 18:36:54,449 - New (unmixed) d-wave SC order parameter vectors computed for run: 16 have the average "y" and "x" values: (-0.2427273463386398+0j), (0.2427273463386398+0j)
+2024-10-17 18:36:54,472 - Maximum error for run: 17 is 0.0010059661819893373 with max d_y and d_x errors: 0.0010059661819893373, 0.0010059661819892818
+2024-10-17 18:36:54,472 - ########################
+2024-10-17 18:36:54,472 - Starting Self-Consistency Calculation for Run: 17
+2024-10-17 18:37:44,532 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 17 took 46.17641472816467 seconds
+2024-10-17 18:38:37,810 - Computing delta_d_new_vec for Run: 17 took 99.4553439617157 seconds
+2024-10-17 18:38:37,811 - New (unmixed) d-wave SC order parameter vectors computed for run: 17 have the average "y" and "x" values: (-0.24272648057302684+0j), (0.24272648057302684+0j)
+2024-10-17 18:38:37,833 - Maximum error for run: 18 is 0.0007866736351223036 with max d_y and d_x errors: 0.0007866736351223036, 0.0007866736351221926
+2024-10-17 18:38:37,834 - ########################
+2024-10-17 18:38:37,834 - Starting Self-Consistency Calculation for Run: 18
+2024-10-17 18:39:27,593 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 18 took 46.20027494430542 seconds
+2024-10-17 18:40:20,887 - Computing delta_d_new_vec for Run: 18 took 99.49397373199463 seconds
+2024-10-17 18:40:20,887 - New (unmixed) d-wave SC order parameter vectors computed for run: 18 have the average "y" and "x" values: (-0.24272587556898317+0j), (0.24272587556898317+0j)
+2024-10-17 18:40:20,910 - Maximum error for run: 19 is 0.0006149668571273637 with max d_y and d_x errors: 0.0006149668571273081, 0.0006149668571273637
+2024-10-17 18:40:20,911 - ########################
+2024-10-17 18:40:20,911 - Starting Self-Consistency Calculation for Run: 19
+2024-10-17 18:41:10,673 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 19 took 46.19468975067139 seconds
+2024-10-17 18:42:03,951 - Computing delta_d_new_vec for Run: 19 took 99.47289109230042 seconds
+2024-10-17 18:42:03,951 - New (unmixed) d-wave SC order parameter vectors computed for run: 19 have the average "y" and "x" values: (-0.24272545524238073+0j), (0.2427254552423808+0j)
+2024-10-17 18:42:03,974 - Maximum error for run: 20 is 0.00048061797857679167 with max d_y and d_x errors: 0.00048061797857679167, 0.00048061797857673616
+2024-10-17 18:42:03,974 - ########################
+2024-10-17 18:42:03,974 - Starting Self-Consistency Calculation for Run: 20
+2024-10-17 18:42:53,751 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 20 took 46.216817140579224 seconds
+2024-10-17 18:43:47,033 - Computing delta_d_new_vec for Run: 20 took 99.49924731254578 seconds
+2024-10-17 18:43:47,033 - New (unmixed) d-wave SC order parameter vectors computed for run: 20 have the average "y" and "x" values: (-0.24272516524968368+0j), (0.24272516524968368+0j)
+2024-10-17 18:43:47,056 - Maximum error for run: 21 is 0.0003755581836168975 with max d_y and d_x errors: 0.000375558183616842, 0.0003755581836168975
+2024-10-17 18:43:47,056 - ########################
+2024-10-17 18:43:47,056 - Starting Self-Consistency Calculation for Run: 21
+2024-10-17 18:44:36,481 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 21 took 46.21992325782776 seconds
+2024-10-17 18:45:29,760 - Computing delta_d_new_vec for Run: 21 took 99.49875521659851 seconds
+2024-10-17 18:45:29,760 - New (unmixed) d-wave SC order parameter vectors computed for run: 21 have the average "y" and "x" values: (-0.24272496686611558+0j), (0.24272496686611558+0j)
+2024-10-17 18:45:29,783 - Maximum error for run: 22 is 0.0002934369806573689 with max d_y and d_x errors: 0.0002934369806573689, 0.0002934369806573134
+2024-10-17 18:45:29,784 - ########################
+2024-10-17 18:45:29,784 - Starting Self-Consistency Calculation for Run: 22
+2024-10-17 18:46:19,320 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 22 took 46.21639275550842 seconds
+2024-10-17 18:47:12,595 - Computing delta_d_new_vec for Run: 22 took 99.49080038070679 seconds
+2024-10-17 18:47:12,595 - New (unmixed) d-wave SC order parameter vectors computed for run: 22 have the average "y" and "x" values: (-0.2427248325688262+0j), (0.2427248325688262+0j)
+2024-10-17 18:47:12,617 - Maximum error for run: 23 is 0.00022926573594184152 with max d_y and d_x errors: 0.00022926573594184152, 0.00022926573594184152
+2024-10-17 18:47:12,618 - ########################
+2024-10-17 18:47:12,618 - Starting Self-Consistency Calculation for Run: 23
+2024-10-17 18:48:01,956 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 23 took 46.2050883769989 seconds
+2024-10-17 18:48:55,241 - Computing delta_d_new_vec for Run: 23 took 99.49008893966675 seconds
+2024-10-17 18:48:55,241 - New (unmixed) d-wave SC order parameter vectors computed for run: 23 have the average "y" and "x" values: (-0.24272474285439866+0j), (0.24272474285439866+0j)
+2024-10-17 18:48:55,264 - Maximum error for run: 24 is 0.0001791315669824045 with max d_y and d_x errors: 0.0001791315669824045, 0.000179131566982349
+2024-10-17 18:48:55,264 - ########################
+2024-10-17 18:48:55,264 - Starting Self-Consistency Calculation for Run: 24
+2024-10-17 18:49:44,654 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 24 took 46.21456861495972 seconds
+2024-10-17 18:50:37,934 - Computing delta_d_new_vec for Run: 24 took 99.49474453926086 seconds
+2024-10-17 18:50:37,934 - New (unmixed) d-wave SC order parameter vectors computed for run: 24 have the average "y" and "x" values: (-0.2427246839489286+0j), (0.24272468394892857+0j)
+2024-10-17 18:50:37,957 - Maximum error for run: 25 is 0.0001399690804138043 with max d_y and d_x errors: 0.00013996908041369327, 0.0001399690804138043
+2024-10-17 18:50:37,958 - ########################
+2024-10-17 18:50:37,958 - Starting Self-Consistency Calculation for Run: 25
+2024-10-17 18:51:27,339 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 25 took 46.21750521659851 seconds
+2024-10-17 18:52:20,596 - Computing delta_d_new_vec for Run: 25 took 99.47397422790527 seconds
+2024-10-17 18:52:20,596 - New (unmixed) d-wave SC order parameter vectors computed for run: 25 have the average "y" and "x" values: (-0.24272464616278674+0j), (0.24272464616278674+0j)
+2024-10-17 18:52:20,618 - Maximum error for run: 26 is 0.00010937911824354662 with max d_y and d_x errors: 0.00010937911824354662, 0.00010937911824338009
+2024-10-17 18:52:20,619 - ########################
+2024-10-17 18:52:20,619 - Starting Self-Consistency Calculation for Run: 26
+2024-10-17 18:53:09,686 - Eigenenergy and eigenvector computation for Hamiltonian with 3364 sites for Run: 26 took 46.22288417816162 seconds
+2024-10-17 18:54:02,979 - Computing delta_d_new_vec for Run: 26 took 99.51600575447083 seconds
+2024-10-17 18:54:02,979 - New (unmixed) d-wave SC order parameter vectors computed for run: 26 have the average "y" and "x" values: (-0.2427246227104689+0j), (0.24272462271046896+0j)
+2024-10-17 18:54:03,002 - Self-Consistency achieved for set convergence limit: 0.0001

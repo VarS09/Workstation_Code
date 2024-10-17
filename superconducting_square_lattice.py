@@ -292,6 +292,32 @@ def delta_s_selfconsistency(delta_s_vec):
 
 #d-wave superconductivity functions-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 @partial(jit, in_shardings=None, out_shardings=None)
+def d_wave_selfconsistent_condition(ui_up, ui_down, vi_up, vi_down, uj_up, uj_down, vj_up, vj_down, eigen_index):
+    #return (ui_up * conjugate_jit(vj_down) + ui_down * conjugate_jit(vj_up) + uj_up * conjugate_jit(vi_down) + uj_down * conjugate_jit(vi_up))*tanh_jit(eigenenergies[eigen_index]/(2*T)) #Finite-temperature formula
+    return (ui_up * conjugate_jit(vj_down) + uj_up * conjugate_jit(vi_down))*tanh_jit(eigenenergies[eigen_index]/(2*T))
+    #Cannot use the true self-consistent condition formula because of the same reason as s-wave SC --> Therefore, using the composite formula with two spin contributions results in zero
+
+def d_wave_data_collect_and_compute(link_index, eigen_index): #Collects the relevant u,v amplitudes for d-wave self-consistent condition
+    ui_up = dynamic_slice(eigenstates, (df*(link_index[0]),eigen_index), (1,1))[0,0] #Picks an eigenvector as eigenstate[eigen_index] and extracts the u_i_up amplitude for a specific site "i"
+    ui_down = dynamic_slice(eigenstates, (df*(link_index[0])+1,eigen_index), (1,1))[0,0] #4*(site_index)+"something" as we have 4 degrees of freedom at each site
+    vi_up = dynamic_slice(eigenstates, (df*(link_index[0])+2,eigen_index), (1,1))[0,0] #Order of u,v amplitudes depend on the basis fermionic vector [c_up_i, c_down_i, c_up_dagger_i, c_down_dagger_i]
+    vi_down = dynamic_slice(eigenstates, (df*(link_index[0])+3,eigen_index), (1,1))[0,0]
+
+    uj_up = dynamic_slice(eigenstates, (df*(link_index[1]),eigen_index), (1,1))[0,0] #Picks an eigenvector as eigenstate[eigen_index] and extracts the u_j_up amplitude for a specific site "j"
+    uj_down = dynamic_slice(eigenstates, (df*(link_index[1])+1,eigen_index), (1,1))[0,0] #4*(site_index)+"something" as we have 4 degrees of freedom at each site
+    vj_up = dynamic_slice(eigenstates, (df*(link_index[1])+2,eigen_index), (1,1))[0,0] #Order of u,v amplitudes depend on the basis fermionic vector [c_up_i, c_down_i, c_up_dagger_i, c_down_dagger_i]
+    vj_down = dynamic_slice(eigenstates, (df*(link_index[1])+3,eigen_index), (1,1))[0,0]
+
+    delta_ij_for_one_eigenvector = d_wave_selfconsistent_condition(ui_up, ui_down, vi_up, vi_down, uj_up, uj_down, vj_up, vj_down, eigen_index) #Compute the d-wave self-consistent condition for a specific site and eigenvector
+    return delta_ij_for_one_eigenvector 
+d_wave_data_collect_and_compute_v = jax.vmap(d_wave_data_collect_and_compute, in_axes=(None, 0)) #batching for all eigenvectors
+
+def self_consistent_d_wave(link_index, eigen_index_vec):
+    delta_d_new = sum_jit(d_wave_data_collect_and_compute_v(link_index,eigen_index_vec))*(V_sc/2) #Sum d-wave self-consistent condition over relevant eigenvectors for a specific site
+    return delta_d_new #Returns a single value for a single site after implementing the d-wave self-consistent condition summed over relevant eigenvectors
+self_consistent_d_wave_v = jax.vmap(self_consistent_d_wave, in_axes=(0,None)) #batching for all links between sites
+
+@partial(jit, in_shardings=None, out_shardings=None)
 def update_H_off_d_sc(carry,z): #Update the H_off_d_sc matrix with the d-wave SC Hamiltonian for a specific site with this function and lax.scan
     H_off_d_sc,df = carry
     d_sc_mat,link_index = z
@@ -329,10 +355,32 @@ def delta_d_selfconsistency(delta_d_y_vec,delta_d_x_vec):
     #eigenstates.block_until_ready()
     t1 = time.time() #We need to apply block_until ready to capture true time taken for diagonalization, else async operations cause incorrect time calculations
     logging.info('Eigenenergy and eigenvector computation for Hamiltonian with %s sites for Run: %s took %s seconds',n,run_count,t1 - t0)
-    return delta_d_y_vec, delta_d_x_vec
+    delta_d_y_new_vec, delta_d_x_new_vec =  self_consistent_d_wave_v(delta_d_y_index_vec,eigen_index_vec), self_consistent_d_wave_v(delta_d_x_index_vec,eigen_index_vec) #Compute the new d-wave SC order parameter vectors
+    t1 = time.time()
+    logging.info('Computing delta_d_new_vec for Run: %s took %s seconds',run_count,t1 - t0)
+    average_delta_d_y, average_delta_d_x = average_jit(delta_d_y_new_vec), average_jit(delta_d_x_new_vec)
+    logging.info('New (unmixed) d-wave SC order parameter vectors computed for run: %s have the average "y" and "x" values: %s, %s',run_count, average_delta_d_y, average_delta_d_x)
+    error_vec_y, error_vec_x = jnp.abs(subtract_jit(delta_d_y_vec,delta_d_y_new_vec)), jnp.abs(subtract_jit(delta_d_x_vec,delta_d_x_new_vec))
+    max_error_y, max_error_x = max_jit(error_vec_y), max_jit(error_vec_x)
+    max_error = max(max_error_y,max_error_x)
 
-
-
+    if max_error > convergence_limit:
+        run_count += 1
+        logging.info('Maximum error for run: %s is %s with max d_y and d_x errors: %s, %s',run_count,max_error,max_error_y,max_error_x)
+        if run_count>max_runs:
+            print('Run Count Exceeded %f - Self-Consistency not achieved for set convergence limit: %f'%(max_runs,convergence_limit))
+            logging.info('Run Count Exceeded %s - Self-Consistency not achieved for set convergence limit: %s',max_runs,convergence_limit)
+            return delta_d_y_new_vec, delta_d_x_new_vec
+        else:
+            delta_d_y_new_vec = delta_d_y_vec * (1-alpha) + delta_d_y_new_vec * alpha
+            delta_d_x_new_vec = delta_d_x_vec * (1-alpha) + delta_d_x_new_vec * alpha
+            del max_error, max_error_y, max_error_x, error_vec_y, error_vec_x, average_delta_d_y, average_delta_d_x, delta_d_y_vec, delta_d_x_vec, H, eigenenergies, eigenstates
+            return delta_d_selfconsistency(delta_d_y_new_vec, delta_d_x_new_vec)
+    else:
+        print('Self-Consistency achieved for set convergence limit:',convergence_limit)
+        logging.info('Self-Consistency achieved for set convergence limit: %s',convergence_limit)
+        return delta_d_y_new_vec, delta_d_x_new_vec
+        
 #(GPU diagonalization possible for N = 73, N_diag = 63, n = 3376 with N_repeat = 10 --> Peak memory usage: 16.36/18.18 GB, Time taken for first run with jit to diagonalize Composite Hamiltonian with 3376 sites is 100.6677 s)
 #Can vary N and N_repeat accordingly to GPU diagonalize just a slightly larger lattice 
 
@@ -351,17 +399,17 @@ PBC = False #Periodic Boundary Conditions - Can be used only for s-wave SC squar
 s_wave_sc = False #s-wave SC
 d_wave_sc = True #d-wave SC
 normal_state = False #Normal state
-T = 0.00000000001 #Temperature
+T = 1e-16 #Temperature
 
 delta_s_init = 0.38+0j #s-wave superconducting order parameter
 delta_s_vec = jnp.ones(n,dtype=np.complex128)*delta_s_init #s-wave superconducting order parameter vector for each site in square lattice
 
-delta_d_init = 0.3+0j #d-wave superconducting order parameter
+delta_d_init = 0.245+0j #d-wave superconducting order parameter
 total_y_interactions = jnp.real(jnp.sum(vertical_01_N_int_vec()))
 delta_d_y_vec = jnp.ones(int(total_y_interactions),dtype=np.complex128)*delta_d_init*(-1) #d-wave sc link order parameter vector for vertical interactions
 total_x_interactions = jnp.real(jnp.sum(horizontal_10_N_interactions()))
 delta_d_x_vec = jnp.ones(int(total_x_interactions),dtype=np.complex128)*delta_d_init #d-wave sc link order parameter vector for horizontal interactions
-
+print(total_y_interactions,total_x_interactions) #vertical interactions = horizontal interactions --> if the pattern matrices is correct
 
 #Code Parameters
 eeta = 0.04 #Lorentzian broadening factor for DOS and LDOS calculations
@@ -374,9 +422,6 @@ vertical_interactions_pattern_matrix = jnp.diag(vertical_01_N_int_vec(),k=1)
 delta_d_y_index_vec = jnp.argwhere(vertical_interactions_pattern_matrix == 1)
 del vertical_interactions_pattern_matrix
 delta_d_x_index_vec = jnp.argwhere(horizontal_10_N_interactions() == 1) 
-
-logging.info('Model Parameters: N = %s, N_diag = %s, N_repeat = %s, n = %s, df = %s, t_N = %s, t_NN = %s, mu = %s, V_sc = %s, delta_s_init = %s, PBC = %s, T = %s',N,N_diag,N_repeat,n,df,t_N,t_NN,mu,V_sc,delta_s_init,PBC,T)
-logging.info('Code Parameters: eeta = %s, max_runs = %s, convergence_limit = %s, alpha = %s',eeta,max_runs,convergence_limit,alpha)
 
 #Pauli Matrices and other base matrices
 X=np.array([[0,1],[1,0]])
@@ -445,10 +490,14 @@ if normal_state == True:
     delta_s_new_vec = delta_s_vec
 elif s_wave_sc == True:
     print('Entering self-consistent calculations for s-wave superconductivity...')
+    logging.info('Model Parameters: N = %s, N_diag = %s, N_repeat = %s, n = %s, df = %s, t_N = %s, t_NN = %s, mu = %s, V_sc = %s, delta_s_init = %s, PBC = %s, T = %s',N,N_diag,N_repeat,n,df,t_N,t_NN,mu,V_sc,delta_s_init,PBC,T)
+    logging.info('Code Parameters: eeta = %s, max_runs = %s, convergence_limit = %s, alpha = %s',eeta,max_runs,convergence_limit,alpha)
     delta_s_new_vec = delta_s_selfconsistency(delta_s_vec)
     print(delta_s_new_vec)
 elif d_wave_sc == True:
     print('Entering self-consistent calculations for d-wave superconductivity...')
+    logging.info('Model Parameters: N = %s, N_diag = %s, N_repeat = %s, n = %s, df = %s, t_N = %s, t_NN = %s, mu = %s, V_sc = %s, delta_d_init = %s, T = %s',N,N_diag,N_repeat,n,df,t_N,t_NN,mu,V_sc,delta_d_init,T)
+    logging.info('Code Parameters: eeta = %s, max_runs = %s, convergence_limit = %s, alpha = %s',eeta,max_runs,convergence_limit,alpha)
     delta_d_y_new_vec, delta_d_x_new_vec = delta_d_selfconsistency(delta_d_y_vec,delta_d_x_vec)
     #print(delta_d_y_new_vec,delta_d_x_new_vec)
 
@@ -461,4 +510,4 @@ DOS = DOS/jnp.max(DOS) #Normalize the DOS to 1 with the maximum value
 if s_wave_sc == True:
     np.savez('/home/susva433/Test_Data/SC_s_wave_lattice_N=58_delta_s_init=0.38_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_s=delta_s_new_vec)
 elif d_wave_sc == True:
-    np.savez('/home/susva433/Test_Data/SC_d_square_lattice_N=58_delta_d_init=0.3_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_d_y=delta_d_y_new_vec, delta_d_x=delta_d_x_new_vec)
+    np.savez('/home/susva433/Test_Data/SC_d_square_lattice_N=58_delta_d_init=0.3_eeta=0.04_V=2.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_d_y=delta_d_y_new_vec, delta_d_x=delta_d_x_new_vec)
