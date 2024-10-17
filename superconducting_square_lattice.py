@@ -193,6 +193,10 @@ def lorentzian_LDOS(omega, eeta):
     #print(LDOS.shape) #LDOS is a 1D array with "n" elements corresponding to total sites "n"
     return LDOS #--> Pass this 1D LDOS array to a plotter function to plot the LDOS at each site "i" for a given [omega-"energy"] value
 
+#General functions related to the Hamiltonian matrix construction/updation/verification
+@partial(jit, in_shardings=None, out_shardings=None)
+def is_hermitian(H):
+    return jnp.allclose(H, herm_conj_jit(H))
 def construct_sc_mat(delta): #Construct all the SC sub-matrices for all sites (at once) and returns a 1D array of 4x4 matrices to be updated in Hamiltonian
     sc_mat = SC_mat*delta + hermitian_conjugate(SC_mat*delta) #Construct 4x4 site specific SC sub-matrix
     return sc_mat
@@ -202,8 +206,8 @@ construct_sc_mat_v = jax.vmap(construct_sc_mat, in_axes=(0))
 @partial(jit, in_shardings=None, out_shardings=None)
 def s_wave_selfconsistent_condition(ui_up, ui_down, vi_up, vi_down, eigen_index):
     #return (ui_up * conjugate_jit(vi_down))  #Zero-temperature formula (Only use single spin contribution formula for the below reason)
-    return (ui_up * conjugate_jit(vi_down))*tanh_jit(eigenenergies[eigen_index]/(2*T)) 
-    #The true self-consistent condition is --> ui_up * conjugate_jit(vi_down) + ui_down * conjugate_jit(vi_up) --> However, JAX is auto-block diagonalizing and adding a -1 phase to the eigenvectors of the other TRS pair/spin block of Hamiltonian and then reorganizing
+    return (ui_up * conjugate_jit(vi_down))*tanh_jit(eigenenergies[eigen_index]/(2*T)) #Finite-temperature formula
+    #The true self-consistent condition is --> (ui_up * conjugate_jit(vi_down) + ui_down * conjugate_jit(vi_up))*tanh_jit(eigenenergies[eigen_index]/(2*T)) --> However, JAX is auto-block diagonalizing and adding a -1 phase to the eigenvectors of the other TRS pair/spin block of Hamiltonian and then reorganizing
     #This is causing the two terms to be equal in magnitude but with opposite signs (sign change of the terms is at random) --> Therefore, using the composite formula with two spin contributions results in zero
     #Therefore, the easiest/only way out of this problem keeping this numerical issue with JAX in mind is to just use 2*(ui_up * conjugate_jit(vi_down)) --> This 2x factor changes V/2 to V in the self-consistent condition which is reflected in the self_consistent_s_wave() function of the code
     #Using the other spin contibution instead ui_down * conjugate_jit(vi_up) results in a negative sign delta_s (initial calculation matches magnitude) which causes convergence issues with the self-consistent condition
@@ -250,6 +254,7 @@ def delta_s_selfconsistency(delta_s_vec):
     logging.info('Starting Self-Consistency Calculation for Run: %s',run_count)
     H = construct_H_comp_with_s_wave_sc(delta_s_vec)
     H = jax.device_put(H, jax.devices('gpu')[0]) #Move H_comp to GPU 1 for diagonalizing
+    print('Hamiltonian is Hermition:',is_hermitian(H))
     print('Memory after after moving H_comp to GPU for diagonalizing:')
     gpu_memory_stats()
     t0 = time.time()
@@ -298,10 +303,12 @@ def construct_H_comp_with_d_wave_sc(delta_d_y_vec, delta_d_x_vec):
     H_off_d_y_sc = jnp.zeros((df*n,df*n),dtype=jnp.complex128)
     delta_d_y_mat_vec = construct_sc_mat_v(delta_d_y_vec) #Construct 4x4 site specific d-wave SC Hamiltonian for vertical interactions
     (H_off_d_y_sc, _), _ = lax.scan(update_H_off_d_sc, (H_off_d_y_sc, df), (delta_d_y_mat_vec, delta_d_y_index_vec)) #lax.scan (instead of for loop) to update the H_off_d_SC matrix with the d-wave SC Hamiltonian for vertical interactions
+    H_off_d_y_sc = H_off_d_y_sc + herm_conj_jit(H_off_d_y_sc) 
     H_off_d_y_sc = jax.device_put(H_off_d_y_sc, jax.devices('cpu')[0]) #Move H_off_d_SC to CPU
     H_off_d_x_sc = jnp.zeros((df*n,df*n),dtype=jnp.complex128)
     delta_d_x_mat_vec = construct_sc_mat_v(delta_d_x_vec) #Construct 4x4 site specific d-wave SC Hamiltonian for horizontal interactions
     (H_off_d_x_sc, _), _ = lax.scan(update_H_off_d_sc, (H_off_d_x_sc, df), (delta_d_x_mat_vec, delta_d_x_index_vec)) #lax.scan (instead of for loop) to update the H_off_d_SC matrix with the d-wave SC Hamiltonian for horizontal interactions
+    H_off_d_x_sc = H_off_d_x_sc + herm_conj_jit(H_off_d_x_sc)
     H_off_d_x_sc = jax.device_put(H_off_d_x_sc, jax.devices('cpu')[0]) #Move H_off_d_SC to CPU
     H_comp = H_comp_static + H_off_d_y_sc + H_off_d_x_sc #Construct composite Hamiltonian on CPU
     del delta_d_y_mat_vec, delta_d_x_mat_vec #Delete intermediate matrices to free up memory
@@ -313,6 +320,7 @@ def delta_d_selfconsistency(delta_d_y_vec,delta_d_x_vec):
     logging.info('Starting Self-Consistency Calculation for Run: %s',run_count)
     H = construct_H_comp_with_d_wave_sc(delta_d_y_vec, delta_d_x_vec)
     H = jax.device_put(H, jax.devices('gpu')[0]) #Move H_comp to GPU 1 for diagonalizing
+    print('Hamiltonian is Hermition:',is_hermitian(H))
     print('Memory after after moving H_comp to GPU for diagonalizing:')
     gpu_memory_stats()
     t0 = time.time()
@@ -343,12 +351,12 @@ PBC = False #Periodic Boundary Conditions - Can be used only for s-wave SC squar
 s_wave_sc = False #s-wave SC
 d_wave_sc = True #d-wave SC
 normal_state = False #Normal state
-T = 0.0000001 #Temperature
+T = 0.00000000001 #Temperature
 
 delta_s_init = 0.38+0j #s-wave superconducting order parameter
 delta_s_vec = jnp.ones(n,dtype=np.complex128)*delta_s_init #s-wave superconducting order parameter vector for each site in square lattice
 
-delta_d_init = 0.38+0j #d-wave superconducting order parameter
+delta_d_init = 0.3+0j #d-wave superconducting order parameter
 total_y_interactions = jnp.real(jnp.sum(vertical_01_N_int_vec()))
 delta_d_y_vec = jnp.ones(int(total_y_interactions),dtype=np.complex128)*delta_d_init*(-1) #d-wave sc link order parameter vector for vertical interactions
 total_x_interactions = jnp.real(jnp.sum(horizontal_10_N_interactions()))
@@ -447,10 +455,10 @@ elif d_wave_sc == True:
 eigenenergies_window = eigenenergies[int((n*df)/2)-int((n*df)/4):int((n*df)/2)+int((n*df)/4)] #Window half the spectrum around zero energy
 #eigenstates_window = eigenstates[:,int((n*df)/2)-200:int((n*df/2))+200]
 print('Saving DOS and half the spectrum of eigenvalues around zero energy:',eigenenergies_window.shape)
-omega_axes = jnp.arange(-1,1+0.02,0.02) #Energy range, points, and spacing for DOS calculation
+omega_axes = jnp.arange(-1.6,1.6+0.02,0.02) #Energy range, points, and spacing for DOS calculation
 DOS = lorentzian_DOS_v(eeta, omega_axes, eigenenergies) #--> Pass normalized 1D DOS array to a plotter function to plot the DOS for a given energy range
 DOS = DOS/jnp.max(DOS) #Normalize the DOS to 1 with the maximum value
 if s_wave_sc == True:
     np.savez('/home/susva433/Test_Data/SC_s_wave_lattice_N=58_delta_s_init=0.38_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_s=delta_s_new_vec)
 elif d_wave_sc == True:
-    np.savez('/home/susva433/Test_Data/SC_d_square_lattice_N=58_delta_d_init=0.38_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_d_y=delta_d_y_new_vec, delta_d_x=delta_d_x_new_vec)
+    np.savez('/home/susva433/Test_Data/SC_d_square_lattice_N=58_delta_d_init=0.3_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_d_y=delta_d_y_new_vec, delta_d_x=delta_d_x_new_vec)
