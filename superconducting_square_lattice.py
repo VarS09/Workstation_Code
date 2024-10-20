@@ -1,11 +1,13 @@
 import os
 #os.environ['XLA_PYTHON_CLIENT_PREALLOCATE'] = 'false'
+#os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 os.environ['XLA_PYTHON_CLIENT_MEM_FRACTION'] = '0.99'
 #os.environ["OPENBLAS_NUM_THREADS"] = "32"
 #os.environ["MKL_NUM_THREADS"] = "32"
 #os.environ["BLIS_NUM_THREADS"] = "32"
 import jax
 jax.config.update("jax_enable_x64", True)
+jax.config.update("jax_default_device", jax.devices("gpu")[1])
 from jax import jit
 import numpy as np
 import jax.numpy as jnp
@@ -48,6 +50,15 @@ logging.info('------------------------------------------------------------------
 # |    |     |     |     |     |                    13-19-24-28 is the [11] edge with 4 sites (in the diagonal)
 # 6 -- 12 -- 18 -- 23 -- 27 -- 30                   The code returns a normal square lattice with N_diag = 0 or 1
 
+#Workflow of the code:
+#1. Construct pattern matrices for vertical and horizontal interactions based on the true lattice structure with "n" sites. This is upper triangular matrix with 1's at the interaction sites and 0's at non-interacting sites
+#4. Obtain the indices of the sites with horizontal and vertical interactions through pattern matrices of size "n x n" in the true lattice structure
+#2. Kronecker product or place/update the site-dependent sub-matrices to obtain the composite Hamiltonian matrix in Hilbert space of size df*n x df*n with "df" -> degrees of freedom per site 
+#3. Full Hamiltonian matrix = On-site Hamiltonian + Off-site Hamiltonian + hermitian conjugate (Off-site Hamiltonian) 
+#5. Diagonalize the composite Hamiltonian matrix to obtain eigenenergies and eigenvectors
+#6. Compute the self-consistent on-site and off-site link parameters using the relevant interaction index vectors to access the correct u,v amplitudes from the eigenvectors (and eigenenergies)
+#7. Update the Hamiltonian matrix with the new on-site and off-site link parameters using the index vectors and recursively compute the self-consistent parameters until convergence is achieved
+
 #Normal functions
 hermitian_conjugate = lambda H: jnp.conjugate(jnp.transpose(H))
 abs_square = lambda z: jnp.abs(z)**2
@@ -64,6 +75,7 @@ average_jit = jit(jnp.mean)
 eigh_jit = jit(jnp.linalg.eigh)
 herm_conj_jit = jit(hermitian_conjugate)
 abs_square_jit = jit(abs_square)
+exp_jit = jit(jnp.exp)
 
 #General info/debug functions
 def debug_func():
@@ -169,7 +181,7 @@ def horizontal_10_N_pbc_vec(): #Only applies to a square lattice
 def horizontal_10_NN_pbc_vec(): #Only applies to a square lattice
     return np.pad(np.ones(N),(0,N),'constant') #vector to be placed at k=N*(N-2) in diag matrix because bond is between (i)th and (i+N*(N-2))th sites in a square lattice --> np.abs(N - (n-N*(N-2))) = N
 
-#DOS and LDOS functions for post-diagonalization data processing
+#DOS, LDOS, and charge density functions for post-diagonalization data processing
 @partial(jit, in_shardings=None, out_shardings=None)
 def lorentzian(eeta, x, x0):
     return (1/np.pi)*(eeta/((x-x0)**2 + eeta**2))
@@ -194,6 +206,26 @@ def lorentzian_LDOS(eeta, omega, site_index, eigen_index_vec, energy):
     return jnp.sum(lorentzian_LDOS_weighing_v(eeta, omega, site_index, eigen_index_vec, energy)) #Add contribution from each eigenvector and corresponding eigenenergy for one site
 lorentzian_LDOS_v = jax.vmap(lorentzian_LDOS, in_axes=(None, None, 0, None, None)) #batching for all sites 
 
+@partial(jit, in_shardings=None, out_shardings=None)
+def fermi_dirac_distribution(energy, T): #Fermi-Dirac distribution for finite temperature
+    return 1/(exp_jit(energy/T)+1)
+
+def spin_up_charge_density(site_index,eigen_index):
+    ui_up = dynamic_slice(eigenstates, (df*(site_index),eigen_index), (1,1))[0,0] 
+    vi_up = dynamic_slice(eigenstates, (df*(site_index)+2,eigen_index), (1,1))[0,0]
+    return abs_square_jit(ui_up)*fermi_dirac_distribution(eigenenergies[eigen_index],T) + abs_square_jit(vi_up)*fermi_dirac_distribution(eigenenergies[eigen_index]*(-1),T)
+spin_up_charge_density_v = jax.vmap(spin_up_charge_density, in_axes=(None, 0)) #batching for all eigenvectors and corresponding eigenenergies for one lattice site
+
+def spin_down_charge_density(site_index,eigen_index):
+    ui_down = dynamic_slice(eigenstates, (df*(site_index)+1,eigen_index), (1,1))[0,0] 
+    vi_down = dynamic_slice(eigenstates, (df*(site_index)+3,eigen_index), (1,1))[0,0]
+    return abs_square_jit(ui_down)*fermi_dirac_distribution(eigenenergies[eigen_index],T) + abs_square_jit(vi_down)*fermi_dirac_distribution(eigenenergies[eigen_index]*(-1),T)
+spin_down_charge_density_v = jax.vmap(spin_down_charge_density, in_axes=(None, 0)) #batching for all eigenvectors and corresponding eigenenergies for one lattice site
+
+def charge_density(site_index,eigen_index):
+    return jnp.sum(spin_up_charge_density_v(site_index,eigen_index)) + jnp.sum(spin_down_charge_density_v(site_index,eigen_index))
+charge_density_v = jax.vmap(charge_density, in_axes=(0,None)) #batching for all sites
+
 #General functions related to the Hamiltonian matrix construction/updation/verification
 @partial(jit, in_shardings=None, out_shardings=None)
 def is_hermitian(H):
@@ -207,7 +239,7 @@ construct_sc_mat_v = jax.vmap(construct_sc_mat, in_axes=(0))
 #s-wave superconductivity functions -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 @partial(jit, in_shardings=None, out_shardings=None)
 def s_wave_selfconsistent_condition(ui_up, ui_down, vi_up, vi_down, eigen_index):
-    return (ui_up * conjugate_jit(vi_down)-ui_down*conjugate_jit(vi_up))*tanh_jit(eigenenergies[eigen_index]/(2*T)) #Finite-temperature formula  
+    return (ui_up * conjugate_jit(vi_down)-ui_down * conjugate_jit(vi_up))*tanh_jit(eigenenergies[eigen_index]/(2*T)) #Finite-temperature formula  
     #(ui_up * conjugate_jit(vi_down)+ui_down*conjugate_jit(vi_up))*tanh_jit(eigenenergies[eigen_index]/(2*T)) is for eigenvectors of form [ui_up, ui_down, vi_up, vi_down] --> This is the true self-consistent condition formula
     #However, the eigenvectors we obtain are of the form [ui_up, ui_down, -vi_up, vi_down]. As vi_up has a negative sign, we adjust this in the formula to get the correct s-wave SC order parameter
 
@@ -252,7 +284,7 @@ def delta_s_selfconsistency(delta_s_vec):
     logging.info('########################')
     logging.info('Starting Self-Consistency Calculation for Run: %s',run_count)
     H = construct_H_comp_with_s_wave_sc(delta_s_vec)
-    H = jax.device_put(H, jax.devices('gpu')[0]) #Move H_comp to GPU 1 for diagonalizing
+    H = jax.device_put(H, jax.devices('gpu')[1]) #Move H_comp to GPU 1 for diagonalizing
     print('Hamiltonian is Hermition:',is_hermitian(H))
     print('Memory after after moving H_comp to GPU for diagonalizing:')
     gpu_memory_stats()
@@ -344,10 +376,10 @@ def delta_d_selfconsistency(delta_d_y_vec,delta_d_x_vec):
     logging.info('########################')
     logging.info('Starting Self-Consistency Calculation for Run: %s',run_count)
     H = construct_H_comp_with_d_wave_sc(delta_d_y_vec, delta_d_x_vec)
-    H = jax.device_put(H, jax.devices('gpu')[0]) #Move H_comp to GPU 1 for diagonalizing
+    H = jax.device_put(H, jax.devices('gpu')[1]) #Move H_comp to GPU 1 for diagonalizing
     print('Hamiltonian is Hermition:',is_hermitian(H))
     print('Memory after after moving H_comp to GPU for diagonalizing:')
-    gpu_memory_stats()
+    gpu_1_memory_stats()
     t0 = time.time()
     eigenenergies, eigenstates = eigh_jit(H) #jitting does not decrease the time taken for diagonalization significantly
     #eigenenergies.block_until_ready()
@@ -385,7 +417,7 @@ def delta_d_selfconsistency(delta_d_y_vec,delta_d_x_vec):
 #Can vary N and N_repeat accordingly to GPU diagonalize just a slightly larger lattice 
 
 #Model Parameters
-N = 30 #number of lattice sites in x and y direction
+N = 50 #number of lattice sites in x and y direction
 N_diag = 0 #number of lattice sites in the isosceles right triangle hypotenuse edge
 N_repeat = N - N_diag #number of lattice sites in the repeating/extra horizontal and vertical chains besides the isosceles right triangle
 n = int((N_diag*(N_diag+1))/2) + N_repeat*N_diag + (N_diag+N_repeat)*N_repeat #Total number of lattice sites
@@ -401,23 +433,23 @@ d_wave_sc = True #d-wave SC
 normal_state = False #Normal state
 T = 1e-16 #Temperature
 
-delta_s_init = 0.28+0j #s-wave superconducting order parameter
+delta_s_init = 0.38+0j #s-wave superconducting order parameter
 delta_s_vec = jnp.ones(n,dtype=np.complex128)*delta_s_init #s-wave superconducting order parameter vector for each site in square lattice
 
-delta_d_init = 0.243+0j #d-wave superconducting order parameter
+delta_d_init = 0.245+0j #d-wave superconducting order parameter
 total_y_interactions = jnp.real(jnp.sum(vertical_01_N_int_vec()))
 delta_d_y_vec = jnp.ones(int(total_y_interactions),dtype=np.complex128)*delta_d_init*(-1) #d-wave sc link order parameter vector for vertical interactions
 total_x_interactions = jnp.real(jnp.sum(horizontal_10_N_interactions()))
 delta_d_x_vec = jnp.ones(int(total_x_interactions),dtype=np.complex128)*delta_d_init #d-wave sc link order parameter vector for horizontal interactions
-print(total_y_interactions,total_x_interactions) #vertical interactions = horizontal interactions --> if the pattern matrices is correct
+print('Total number of vertical and horizontal interactions:',total_y_interactions,total_x_interactions) #vertical interactions = horizontal interactions --> if the pattern matrices is correct
 
 #Code Parameters
 eeta = 0.04 #Lorentzian broadening factor for DOS and LDOS calculations
 max_runs = 50
 convergence_limit = 1e-4
-alpha = 0.4 #Mixing parameter for the new and old s-wave SC order parameter vectors
-site_index_vec = jnp.arange(n) #For on-site calculations
-eigen_index_vec = jnp.arange(int(n*df/2),int(n*df)) #Only consider the positive energy eigenvectors for the SC self-consistent condition
+alpha = 1 #Mixing parameter for the new and old s-wave SC order parameter vectors
+site_index_vec = jnp.arange(n) #For on-site/site-dependent calculations calculations
+eigen_index_vec = jnp.arange(int(n*df/2),int(n*df)) #Only consider the positive eigenenergies and eigenvectors for the SC self-consistent condition
 full_eigen_index_vec = jnp.arange(n*df) #For accessing specific values in all eigenvectors
 omega = 0.0 #Energy value for LDOS calculation
 omega_axes = jnp.arange(-1.6,1.6+0.02,0.02) #Energy range, points, and spacing for DOS calculation
@@ -509,9 +541,17 @@ eigenenergies_window = eigenenergies[int((n*df)/2)-int((n*df)/4):int((n*df)/2)+i
 print('Saving DOS and half the spectrum of eigenvalues around zero energy:',eigenenergies_window.shape)
 DOS = lorentzian_DOS_v(eeta, omega_axes, eigenenergies) #--> Pass normalized 1D DOS array to a plotter function to plot the DOS for a given energy range
 DOS = DOS/jnp.max(DOS) #Normalize the DOS to 1 with the maximum value
-LDOS = lorentzian_LDOS_v(eeta, omega, site_index_vec, full_eigen_index_vec, eigenenergies) 
+print(DOS.shape)
+LDOS = lorentzian_LDOS_v(eeta, omega, site_index_vec, full_eigen_index_vec, eigenenergies) #--> 1D array of size "n" with LDOS values for each site
 LDOS = LDOS/jnp.max(LDOS) #Normalize the LDOS to 1 with the maximum value
-if s_wave_sc == True:
-    np.savez('/home/susva433/Test_Data/SC_s_wave_lattice_N=58_delta_s_init=0.38_eeta=0.04.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, delta_s=delta_s_new_vec)
+print(LDOS.shape)
+Charge_Density = charge_density_v(site_index_vec, eigen_index_vec) #--> 1D array of size "n" with charge density values for each site
+Charge_Density = Charge_Density/jnp.max(Charge_Density) #Normalize the charge density to 1 with the maximum value
+print(Charge_Density.shape)
+
+if normal_state == True:
+    np.savez('/home/susva433/Test_Data/Normal_state_square_lattice_N=58.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, Charge_Density=Charge_Density)
+elif s_wave_sc == True:
+    np.savez('/home/susva433/Test_Data/SC_s_wave_lattice_N=30_delta_s_init=0.38_eeta=0.04_V=2.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, Charge_Density = Charge_Density, delta_s=delta_s_new_vec)
 elif d_wave_sc == True:
-    np.savez('/home/susva433/Test_Data/SC_d_square_lattice_N=58_delta_d_init=0.3_eeta=0.04_V=2.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, LDOS = LDOS, delta_d_y=delta_d_y_new_vec, delta_d_x=delta_d_x_new_vec)
+    np.savez('/home/susva433/Test_Data/SC_d_square_lattice_N=50_delta_d_init=0.3_eeta=0.04_V=2.npz',eigenenergies=eigenenergies_window, omega_axes=omega_axes, DOS=DOS, LDOS = LDOS, Charge_Density = Charge_Density, delta_d_y=delta_d_y_new_vec, delta_d_x=delta_d_x_new_vec)
